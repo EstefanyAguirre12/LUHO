@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="../usuarios/index.php">Usuarios<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../usuarios/index.php">Usuarios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../productos/index.php">Productos</a>
@@ -17,6 +17,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../marcymat/index.php">Marca & Material</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../clientes/index.php">Clientes</a>
             </li>
         </ul>
         <!-- Links Imagen -->
