@@ -196,8 +196,10 @@
 								</div>	
 						    </div>				
 							<div class="row my-3 d-flex justify-content-center">
-								<!--Agregar-->
-								<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-plus" aria-hidden="true"></i></button>
+								<!--Modificar-->
+								<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button>
+								<!--Eliminar-->
+								<button type="button" class="btn btn-grey btn-rounded z-depth-1a"><i class="fas fa-trash-alt"></i></button>
 							</div>
 						</div>
 					</div>

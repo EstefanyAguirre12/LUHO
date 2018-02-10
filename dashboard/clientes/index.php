@@ -16,13 +16,13 @@
 		<?php include("../components/menu.php") ?>
 		<!-- Header -->
 		<header class="font-cover" id="productos">
-			<h1>MANTENIMIENTO <br><br> DE USUARIOS <br> <span>[ LUHO ]</span></h1>
+			<h1>MANTENIMIENTO <br><br> DE Clientes <br> <span>[ LUHO ]</span></h1>
 		</header>
-		<!-- Tabla de Usuarios -->
+		<!-- Tabla de Clientes -->
 		<div class="container">
 			<br>
 			<div class="text-right">
-				<a href="" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#agregarusuarios">Agregar Usuarios</a>
+				<a href="" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#agregarclientes">Agregar Clientes</a>
 			</div>
 			<div class="text-center" >
 				<table class="table" ><!-- if using bootstrap this auto creates-->
@@ -45,7 +45,7 @@
 							<td><br>Giggles</td>					
 							<td><br>Giggles</td>					
 							<td><br>Giggles</td>										
-							<td><button class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#editarusuarios">Editar</button></td> <!--look on bootstrap for sizes-->						
+							<td><button class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#editarclientes">Editar</button></td> <!--look on bootstrap for sizes-->						
 						</tr>
 						<tr>
 							<td><br>Giggles</td>					
@@ -54,7 +54,7 @@
 							<td><br>Giggles</td>
 							<td><br>Giggles</td>										
 							<td><br>Giggles</td>					
-							<td><button class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#editarusuarios">Editar</button></td> <!--look on bootstrap for sizes-->						
+							<td><button class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#editarclientes">Editar</button></td> <!--look on bootstrap for sizes-->						
 		 			    </tr>
 						<tr>
 							<td><br>Giggles</td>					
@@ -63,21 +63,21 @@
 							<td><br>Giggles</td>					
 							<td><br>Giggles</td>										
 							<td><br>Giggles</td>					
-							<td><button class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#editarusuarios">Editar</button></td> <!--look on bootstrap for sizes-->						
+							<td><button class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" data-toggle="modal" data-target="#editarclientes">Editar</button></td> <!--look on bootstrap for sizes-->						
 						</tr>
 					
 					</tbody>
 				</table>
 		    </div>
-			<!--/Tabla de Usuarios -->	               
-			<!-- Modal Editar usuarios-->
-			<div class="modal fade" id="editarusuarios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<!--/Tabla de Clientes -->	               
+			<!-- Modal Editar clientes-->
+			<div class="modal fade" id="editarclientes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<!--Content-->
 					<div class="modal-content form-elegant">
 						<!--Header-->
 						<div class="modal-header text-center">
-							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Usuarios</strong></h3>
+							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Clientes</strong></h3>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -134,15 +134,15 @@
 					<!--/.Content-->
 				</div>
 			</div>
-			<!-- /Modal Editar Usuarios-->
-			<!-- Modal Agregar Usuarios-->
-			<div class="modal fade" id="agregarusuarios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<!-- /Modal Editar Clientes-->
+			<!-- Modal Agregar Clientes-->
+			<div class="modal fade" id="agregarclientes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<!--Content-->
 					<div class="modal-content form-elegant">
 						<!--Header-->
 						<div class="modal-header text-center">
-							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Usuarios</strong></h3>
+							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Clientes</strong></h3>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
