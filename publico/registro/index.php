@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<!-- BOOTSTRAP SHIT-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<!-- FONTS SHIT-->
-<link rel="stylesheet" href="css/fontawesome-all.css">
-
-<link rel="stylesheet" href="css/style.css">
-
-
+  <!-- BOOTSTRAP-->
+  <link rel="stylesheet" href="../../web/css/bootstrap.min.css">
+        <!-- Material Design Bootstrap -->
+	   	<link href="../../web/css/mdb.min.css" rel="stylesheet">
+  
+  <!-- FONTS -->
+  <link rel="stylesheet" href="../../web/css/fontawesome-all.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../web/css/style.css"> 
 
     <title>Luho Registration</title>
 </head>
@@ -148,7 +148,7 @@ aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler
 <a class="nav-link" href="#" data-toggle="modal" data-target="#carritoModal"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal"><i class="fas fa-user" aria-hidden="true"></i></a>
+<a class="nav-link" href="#" data-toggle="modal" data-target="#modalLRForm"><i class="fas fa-user" aria-hidden="true"></i></a>
 </li>
 </ul>
 <!-- Links -->
@@ -156,6 +156,14 @@ aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler
 </div>
 </nav>
 
+
+
+
+<div class="text-center">
+    <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Launch Modal LogIn/Register</a>
+</div>
+                
+          
 
 
 
@@ -337,6 +345,13 @@ aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler
              <input type="password" class="form-control" id="Contrasena2" placeholder="Confirma tu contrasena">
         </div>
     </div>
+    <label class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Check this custom checkbox</span>
+</label>
+
+
     <a href="#" class="badge badge-info">Terminos y condiciones</a>
     <div class="form-group">
       <div class="form-check">
@@ -346,8 +361,16 @@ aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler
         </label>
       </div>
     </div>
+    
     <button type="submit" class="btn btn-primary">Registrarme</button>
+    
   </form>
+  <div class="form-group">
+    <input type="checkbox" id="checkbox100" checked="checked">
+    <label for="checkbox100">Classic checkbox</label>
+</div>
+<button type="submit" class="btn btn-primary">Registrarme</button>
+
 </div>
 </div>
 </div>

@@ -15,8 +15,7 @@
 	<body>
 		<?php include("../components/menu.php") ?>
 		<!-- Header -->
-		<header class="font-cover" id="productos">
-			<h1>MARCA <br><br> & MATERIAL <br> <span>[ LUHO ]</span></h1>
+		<header class="font-cover tamanoheader" id="marcymat">
 		</header>
 		<!--/Tabla de Marca/Material -->	               
 		<div class="container"> 

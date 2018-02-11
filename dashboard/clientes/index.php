@@ -15,8 +15,7 @@
 	<body>	
 		<?php include("../components/menu.php") ?>
 		<!-- Header -->
-		<header class="font-cover" id="productos">
-			<h1>MANTENIMIENTO <br><br> DE Clientes <br> <span>[ LUHO ]</span></h1>
+		<header class="font-cover tamanoheader" id="clientes">
 		</header>
 		<!-- Tabla de Clientes -->
 		<div class="container">

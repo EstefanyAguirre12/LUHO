@@ -1,5 +1,5 @@
 <!-- NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <!-- Deplegable button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -12,14 +12,15 @@
                         <div class="row">
                             <div class="col-md-5 col-xl-3 sub-menu mt-5 mb-5 pl-4">
                                 <ol class="list-unstyled mx-4 dark-grey-text">
-                                    <li class="sub-title font-up mt-sm"><a class="menu-item" href="">Todos los productos</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="">Todos los productos</a></li>
+                                    <h6 class="font-weight-bold" >HOMBRES</h6>
+                                    <li class="sub-title font-up"><a class="menu-item" href="">Relojes</a></li>
                                     <li class="sub-title font-up"><a class="menu-item" href="">Anillos</a></li>
+                                    <h6 class="font-weight-bold" >MUJERES</h6>
+                                    <li class="sub-title font-up"><a class="menu-item" href="">Anillos</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="">Pulseras</a></li>
                                     <li class="sub-title font-up"><a class="menu-item" href="">Charms</a></li>
                                     <li class="sub-title font-up"><a class="menu-item" href="">Relojes</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Pulseras</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Lifestyle</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Technology</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Design</a></li>
                                 </ol>
                             </div>
                             <div class="col-md-7 col-xl-9">
@@ -96,7 +97,7 @@
                     </div>
                     <!--LINKS-->
                     <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../principal/index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Contactanos</a>

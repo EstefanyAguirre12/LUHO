@@ -68,12 +68,6 @@ th {
     background-color: #000000;
 }
 
-/*Fondo productos*/
-#productos{
-    background-image: url(../img/Fondo1.jpg);
-}
-
-
 /*Form gestion de datos*/
 .form-elegant .font-small {
   font-size: 0.8rem; }
@@ -107,11 +101,7 @@ th {
     margin:0 auto;
 }
 
-/*Fondo Login dashboard*/
-#login{
-    background-image: url(../img/FondoLogin.gif);
 
-}
 
 .wrapper {
   position: absolute;
@@ -1505,3 +1495,40 @@ transition: all 0.3s ease 0s;
 .form-elegant .modal-body, .form-elegant .modal-footer {
   font-weight: 400; }
    
+/*//////////////FONDOS///////////////////*/
+.tamanoheader{
+  height: 400px;
+}
+/*Fondo Login dashboard*/
+#login{
+  background-image: url(../img/dashboard/FondoLogin.gif);
+}
+/*Fondos Tablas Header*/
+#catyoc{
+  background-image: url(../img/dashboard/fondocatyoc.jpg);
+}
+#clientes{
+  background-image: url(../img/dashboard/fondoclientes.jpg);
+}
+#usuarios{
+  background-image: url(../img/dashboard/fondousuarios.jpg);
+}
+#marcymat{
+  background-image: url(../img/dashboard/fondomarcymat.jpg);
+}
+#productos{
+  background-image: url(../img/dashboard/fondoproductos.jpg);
+}
+/*Fondos Inicio Dashboard*/
+#f1{
+  background-image: url(../img/dashboard/30.jpg);
+}
+#f2{
+  background-image: url(../img/dashboard/70.jpg);
+}
+
+/*INICIO DASHBOARD*/
+.margen{
+  margin-bottom: 20px;
+}
+

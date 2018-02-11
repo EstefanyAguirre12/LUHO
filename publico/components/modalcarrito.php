@@ -25,21 +25,21 @@
                             <td>Rolex President</td>
                             <td>1</td>
                             <td>$11,999</td>
-                            <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                            <td><button type="button" class="btn btn-white">Eliminar</button></td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Swarovski Bracelet</td>
                             <td>1</td>
                             <td>$2,999</td>
-                            <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                            <td><button type="button" class="btn btn-white">Eliminar</button></td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>Heart charm Pandora</td>
                             <td>2</td>
                             <td>$120.00</td>
-                            <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                            <td><button type="button" class="btn btn-white">Eliminar</button></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
@@ -50,8 +50,8 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar comrpando</button>
-                <button type="button" class="btn btn-primary">Proceder a comprar</button>
+                <button type="button" class="btn btn-grey" data-dismiss="modal">Continuar comrpando</button>
+                <button type="button" class="btn btn-dark">Proceder a comprar</button>
             </div>
         </div>
     </div>

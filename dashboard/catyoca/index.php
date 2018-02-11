@@ -15,8 +15,7 @@
 	<body>
 		<?php include("../components/menu.php") ?>
 		<!-- Header -->
-		<header class="font-cover" id="productos">
-			<h1>CATEGORIA <br><br> & OCASION <br> <span>[ LUHO ]</span></h1>
+		<header class="font-cover tamanoheader" id="catyoc">
 		</header>
 		<!--/Tabla de Categoria/Ocasion -->	               
 		<div class="container"> 

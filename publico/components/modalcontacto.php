@@ -29,8 +29,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button class="btn btn-primary" type="submit">Enviar</button>
+                <button type="button" class="btn btn-grey" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-dark" type="submit">Enviar</button>
             </div>
         </div>
     </div>
