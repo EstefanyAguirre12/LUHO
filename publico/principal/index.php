@@ -180,7 +180,7 @@
             </div>
             <div class="right title">
                 <div class="content">
-                    <h2>Check out this guy.</h2>
+                    <h2>Rolex.</h2>
                     <p>What an interesting looking person! I wonder if they've ever climbed Mount Everest, or seen the Egyptian Pyramids. If not, I hope that one day they get to. You go random stock image person! Follow your dreams!</p>
                 </div>
             </div>
