@@ -162,9 +162,9 @@
             </div>
             <div class="left title">
                 <div class="content">
-                    <h2>LUHO luxury Jwelry.</h2>
-                    <p>Wooow. What a wonderful image. And look! there are even more images on the right side. Amazing. If you click below, I bet you'll get teleported to a magical land.</p>
-                    <a href="#" class="btn-primary">Learn more</a>
+                    <h2>LUHO Jwelry.</h2>
+                    <p>LUHO Jwelry es una joyeria con piezas de alta calidad y de gran valor en el mercador, distribuidor de grandes marcas con gran prestigio en El Salvador, para los clientes mas exigentes.</p>
+                   <!-- <a href="#" class="btn-primary">Learn more</a> -->
                 </div>
             </div>
             <div class="right tiles">
@@ -181,7 +181,10 @@
             <div class="right title">
                 <div class="content">
                     <h2>Rolex.</h2>
-                    <p>What an interesting looking person! I wonder if they've ever climbed Mount Everest, or seen the Egyptian Pyramids. If not, I hope that one day they get to. You go random stock image person! Follow your dreams!</p>
+                    <p>"Mientras miro mi Rolex tengo el tiempo necesario."</p>
+                    <p>Rolex, pionero del reloj de pulsera desde 1905, es el precursor de innovaciones emblemáticas en la relojería, entre las que destacan el primer reloj
+                         de pulsera hermético, el Oyster, y el mecanismo de cuerda automática del rotor Perpetual. Durante más de un siglo, los relojes Rolex han acompañado
+                          a exploradores y triunfadores por todo el mundo, desde la cima de las montañas más altas hasta los puntos más profundos del océano.</p>
                 </div>
             </div>
             <div class="left tiles">
@@ -197,8 +200,10 @@
             </div>
             <div class="left title">
                 <div class="content">
-                    <h2>That is one pretty building.</h2>
-                    <p>I once thought about becoming an architect. I wanted to create a house fit for a king. But then I failed maths. So I became a frontend developer instead.</p>
+                    <h2>Pandora Jewelry.</h2>
+                    <p>
+                PANDORA diseña, fabrica y comercializa joyas hechas a mano y contemporáneas hechas de materiales de alta calidad a precios asequibles. La joyería PANDORA 
+                se vende en más de 100 países en seis continentes a través y alrededor de 7,800 puntos de venta, incluyendo más de 2,400 tiendas conceptuales.</p>
                 </div>
             </div>
             <div class="right tiles">
@@ -214,8 +219,11 @@
             </div>
             <div class="right title">
                 <div class="content">
-                    <h2>The future is now.</h2>
-                    <p>Check out that technology! Imagine if we went back in time and put one of those in the hands of a neanderthal. Do you think they'd be impressed, or just try to club us to death?</p>
+                    <h2>Swarovski Jewelry.</h2>
+                    <p>
+                Desde 1895, el dominio del fundador Daniel Swarovski de corte de cristal ha definido la compañía. Su pasión perdurable por la innovación y el diseño lo ha
+                 convertido en la marca de bisutería y accesorios más importante del mundo. Hoy en día, la familia continúa con la tradición de ofrecer un estilo diario 
+                 extraordinario a las mujeres de todo el mundo.</p>
                 </div>
             </div>
             <div class="left tiles">

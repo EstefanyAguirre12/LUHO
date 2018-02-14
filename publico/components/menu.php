@@ -14,7 +14,7 @@
                                 <ol class="list-unstyled mx-4 dark-grey-text">
                                     <li class="sub-title font-up"><a class="menu-item" href="">Todos los productos</a></li>
                                     <h6 class="font-weight-bold" >HOMBRES</h6>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Relojes</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="../ventas/index.html">Relojes</a></li>
                                     <li class="sub-title font-up"><a class="menu-item" href="">Anillos</a></li>
                                     <h6 class="font-weight-bold" >MUJERES</h6>
                                     <li class="sub-title font-up"><a class="menu-item" href="">Anillos</a></li>
