@@ -46,7 +46,7 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r dark-grey-text">
                 <h6 class="title font-bold"><strong>LUHO links</strong></h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p><a href="#!" class="dark-grey-text">Ayuda</a></p>
+                <p><a href="#!" data-toggle="modal" data-target="#ayudamodal" class="dark-grey-text">Ayuda</a></p>
                 <p><a href="#!" class="dark-grey-text">Terminos y condiciones</a></p>
                 <p><a href="#!" class="dark-grey-text">Comentarios</a></p>
                 <p><a href="#!" class="dark-grey-text">Nosotros</a></p>
