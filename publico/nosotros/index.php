@@ -23,6 +23,8 @@
         <?php include("../components/modalcarrito.php") ?>
         <!-- MODAL LOGIN -->
         <?php include("../components/modalogin.php") ?> 
+        <!-- MODAL AYUDA-->
+        <?php include("../components/modalayuda.php") ?>
 
     <!-- Header -->
 		<header class="font-cover" id="">
@@ -32,7 +34,7 @@
 
 
 
-    <div class="container">
+    <div class="container ds">
         <h2>Quienes somos?</h2>
         <p>En el planeta de Cybertron una guerra es librada entre los Autobots, guiados por el sabio Optimus Prime, y los astutos 
             Decepticons, dirigidos por el temido Megatron. Las dos facciones luchan para obtener el talismán Allspark y su poder

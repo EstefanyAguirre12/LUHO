@@ -29,13 +29,13 @@
                                         <h6 class="sub-title p-sm mb-4 font-up font-bold dark-grey-text">Featured</h6>
                                         <!--Featured image-->
                                         <div class="view overlay hm-white-slight pb-3">
-                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(42).jpg" class="img-fluid z-depth-1" alt="First sample image">
+                                            <img src="../../web/img/gold.jpg" class="img-fluid z-depth-1" alt="First sample image">
                                             <div class="mask flex-center">
                                                 <p></p>
                                             </div>
                                         </div>
-                                        <h4 class="mb-2"><a class="news-title" href="">Lorem ipsum dolor sit amet, consectetur isum adipisicing elit.</a></h4>
-                                        <p class="font-small font-up text-muted">By <a class="m-sm" href="#!">Anna Doe</a> - July 15, 2017</p>
+                                        <h4 class="mb-2"><a class="news-title" href="">Me preguntan por calidad. Pero yo les pregunto, Puede pagarlo?</a></h4>
+                                        <p class="font-small font-up text-muted">By <a class="m-sm" href="#!">Roland Vanegas</a> - Feb 14, 2018</p>
                                     </div>
                                     <div class="col-xl-6 mt-5 mb-4 pr-5 clearfix d-none d-xl-block">
                                         <h6 class="sub-title p-sm mb-4 font-up font-bold dark-grey-text">Ofertas</h6>
@@ -44,15 +44,15 @@
                                                 <div class="col-md-4">
                                                     <!--Image-->
                                                     <div class="view overlay hm-white-slight z-depth-1">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg" class="img-fluid" alt="Minor sample post image">
+                                                        <img src="../../web/img/joya13.jpg" class="img-fluid" alt="Minor sample post image">
                                                         <div class="mask flex-center">
                                                             <p></p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <a class="news-title smaller mb-1" href="">Duis aute irure dolor reprehenderit in voluptate.</a>
-                                                    <p class="font-small font-up text-muted">July 14, 2017</p>
+                                                    <a class="news-title smaller mb-1" href=""> 15% off en tu segundo articulo de PANDORA.</a>
+                                                    <p class="font-small font-up text-muted">Feb 14, 2018</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -61,15 +61,15 @@
                                                 <div class="col-md-4">
                                                     <!--Image-->
                                                     <div class="view overlay hm-white-slight z-depth-1">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(44).jpg" class="img-fluid" alt="Minor sample post image">
+                                                        <img src="../../web/img/rg2.jpg" class="img-fluid" alt="Minor sample post image">
                                                         <div class="mask flex-center">
                                                             <p></p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <a class="news-title smaller mb-1" href="">Tempore autem reiciendis iste nam dicta.</a>
-                                                    <p class="font-small font-up text-muted">July 14, 2017</p>
+                                                    <a class="news-title smaller mb-1" href="">Compra dos Rolex President y compra el tercero tambien!.</a>
+                                                    <p class="font-small font-up text-muted">Feb 14, 2018</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,15 +78,15 @@
                                                 <div class="col-md-4">
                                                     <!--Image-->
                                                     <div class="view overlay hm-white-slight z-depth-1">
-                                                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(41).jpg" class="img-fluid" alt="Minor sample post image">
+                                                        <img src="../../web/img/joya4.jpg" class="img-fluid" alt="Minor sample post image">
                                                         <div class="mask flex-center">
                                                             <p></p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <a class="news-title smaller mb-1" href="">Eligendi dicta sunt amet, totam ea recusandae.</a>
-                                                    <p class="font-small font-up text-muted">July 14, 2017</p>
+                                                    <a class="news-title smaller mb-1" href="">10% off en Swarovski.</a>
+                                                    <p class="font-small font-up text-muted">Feb 14, 2018</p>
                                                 </div>
                                             </div>
                                         </div>

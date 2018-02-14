@@ -22,6 +22,8 @@
         <?php include("../components/modalcarrito.php") ?>
         <!-- MODAL LOGIN -->
         <?php include("../components/modalogin.php") ?> 
+        <!-- MODAL AYUDA -->
+        <?php include("../components/modalayuda.php") ?>
         <!-- MY SLIDER-->
         <div class="demo-cont">
             <!-- slider start -->
@@ -151,7 +153,7 @@
         <!-- slider end -->
         <!-- GALLERY-->
         <div class="header" id="top">
-            <h1>Nosotros</h1>
+            <h1>Nuestras marcas.</h1>
             <!--<i class="fa fa-angle-down animated bounce"></i>-->
         </div>
         <div class="section animate">
@@ -160,8 +162,8 @@
             </div>
             <div class="left title">
                 <div class="content">
-                    <h2>A glorious nature shot.</h2>
-                    <p>Wow. What a wonderful image. And look! there are even more images on the right side. Amazing. If you click below, I bet you'll get teleported to a magical land.</p>
+                    <h2>LUHO luxury Jwelry.</h2>
+                    <p>Wooow. What a wonderful image. And look! there are even more images on the right side. Amazing. If you click below, I bet you'll get teleported to a magical land.</p>
                     <a href="#" class="btn-primary">Learn more</a>
                 </div>
             </div>
@@ -178,15 +180,15 @@
             </div>
             <div class="right title">
                 <div class="content">
-                    <h2>Check out this guy.</h2>
+                    <h2>Rolex.</h2>
                     <p>What an interesting looking person! I wonder if they've ever climbed Mount Everest, or seen the Egyptian Pyramids. If not, I hope that one day they get to. You go random stock image person! Follow your dreams!</p>
                 </div>
             </div>
             <div class="left tiles">
-                <img src="https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1464655646192-3cb2ace7a67e?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
+                <img src="../../web/img/rg4.jpg" />
+                <img src="../../web/img/rg4.jpg" />
+                <img src="../../web/img/rg4.jpg" />
+                <img src="../../web/img/rg4.jpg" />
             </div>
         </div>
         <div class="section">
@@ -200,10 +202,10 @@
                 </div>
             </div>
             <div class="right tiles">
-                <img src="https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1465326117523-6450112b60b2?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
+                <img src="../../web/img/pd1.jpg" />
+                <img src="../../web/img/pd1.jpg" />
+                <img src="../../web/img/pd1.jpg" />
+                <img src="../../web/img/pd1.jpg" />
             </div>
         </div>
         <div class="section">
@@ -217,15 +219,15 @@
                 </div>
             </div>
             <div class="left tiles">
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
+                <img src="../../web/img/sw1.jpg" />
+                <img src="../../web/img/sw1.jpg" />
+                <img src="../../web/img/sw1.jpg" />
+                <img src="../../web/img/sw1.jpg" />
             </div>
         </div>
         <div class="footer">
             <a href="#top" class="scrollTo"></a>
-            <h1>Scroll Up</h1>
+            <h1>LUHO.</h1>
         </div>
         <!-- /GALLERY-->
 
