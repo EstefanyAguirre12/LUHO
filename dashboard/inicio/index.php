@@ -22,8 +22,8 @@
 			<div class="row">
 				<!--Grid column-->
 				<div class="col-md-12 text-center mb-3">
-				 <h2 class="font-up mb-3 mt-1 font-bold wow fadeIn" data-wow-delay="0.4s"><br>¡Agrega, modifica y elimina informacion!</h2>
-					<p align="justify">Lorem ipsum dncjxcnjxnvnjxcccccccccccccccccccccccccccccccckolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur uis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit amet, consectetur quis elit. Perspiciatis commodi porro, cumque provident rem corporis odit, ut quas dolores maxime nesciunt possimus quis, soluta velit debitis amet, veritatis cupiditate reprehenderit.Lorem ipsum dolor sit ame.</p>		
+				 <h2 class="font-up mb-3 mt-1 font-bold wow fadeIn" data-wow-delay="0.4s"><br>Todos tus privilegios</h2>
+					<p align="justify">Dentro del dashboard tendras acceso a todos los privilegios en cuanto al mantenimiento de la tienda, podras visualizar cada una de las tablas que contienen la informacion principal de la tienda, podras encontrar informacion de productos, clientes, usuarios, etc. La pagina posee un menu para facilitar la navegacion, otro complemento que posee es la posibilidad de modificar y visualizar tu cuenta.</p>		
 				</div>
 				<!--Grid column-->		
 			</div>
@@ -53,7 +53,7 @@
 						<div style=" font-size:5em; color:dark">
 						<i class="fas fa-plus" aria-hidden="true"></i>
 						</div>
-						<p class="card-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+						<p class="card-text"> Podras agregar los respectivos datos a la tabla que desees.</p>
 					</div>
 					<!--/.Panel-->
 				</div>
@@ -66,7 +66,7 @@
 						<div style="font-size:5em; color:dark">
 						<i class="fas fa-pencil-alt" aria-hidden="true"></i>
 						</div>
-						<p class="card-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+						<p class="card-text"> Podras modificar los respectivos datos a la tabla que desees.</p>
 					</div>
 					<!--/.Panel-->
 				</div>
@@ -79,7 +79,7 @@
 						<div style="font-size:5em; color:dark">
 						<i class="fas fa-trash-alt" aria-hidden="true"></i>
 						</div>
-						<p class="card-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+						<p class="card-text">Podras eliminar los respectivos datos a la tabla que desees.</p>
 					</div>
 					<!--/.Panel-->
 				</div>
