@@ -87,6 +87,8 @@
 			</div>
 			<!-- Grid row -->
 		</div>
+		<?php include("../components/footer.php") ?>
+
 		
 		<!-- SCRIPTS -->
 		<!-- JQuery -->

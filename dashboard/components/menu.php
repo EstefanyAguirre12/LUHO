@@ -25,7 +25,7 @@
         <!-- Links Imagen -->
         <ul class="navbar-nav nav-flex-icons ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user" aria-hidden="true"></i></a>
+                <a class="nav-link" href="../cuenta/index.php"><i class="fas fa-user" aria-hidden="true"></i></a>
             </li>
         </ul>
     </div>

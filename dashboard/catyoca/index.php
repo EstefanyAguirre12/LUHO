@@ -97,12 +97,10 @@
 						</div>
 						<!--Body-->
 						<div class="modal-body mx-4">
-	                        <div class="md-form">
-	                            <div class="md-form">
-		                        	<input type="text" class="form-control" id="categoria" placeholder="Categoria">
-		                        	<label for="categoria" class="col-lg-2 control-label"></label>
-						      	</div>
-	                        </div>		                    			               
+							<div class="md-form">
+								<input type="text" class="form-control" id="categoria" placeholder="Categoria">
+								<label for="categoria" class="col-lg-2 control-label"></label>
+							</div>
 							<div class="row my-3 d-flex justify-content-center">
 								<!--Modificar-->
 								<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button>
