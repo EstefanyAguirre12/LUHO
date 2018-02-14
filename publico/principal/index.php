@@ -163,7 +163,7 @@
             <div class="left title">
                 <div class="content">
                     <h2>LUHO luxury Jwelry.</h2>
-                    <p>Wow. What a wonderful image. And look! there are even more images on the right side. Amazing. If you click below, I bet you'll get teleported to a magical land.</p>
+                    <p>Wooow. What a wonderful image. And look! there are even more images on the right side. Amazing. If you click below, I bet you'll get teleported to a magical land.</p>
                     <a href="#" class="btn-primary">Learn more</a>
                 </div>
             </div>
