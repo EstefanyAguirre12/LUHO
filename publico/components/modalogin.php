@@ -76,7 +76,7 @@
                             <div class="form-group col-lg-12">
                                 <input type="checkbox" id="checkbox100" >
                                 <label class="form-check-label" for="checkbox100">
-                                <a  href="#" class="badge badge-grey" data-toggle="modal" data-target="#centralModalInfo">Acepto los terminos y condiciones</a></label>
+                                <a  href="#" class="badge badge-grey" data-toggle="modal" data-target="#terminosmodal">Acepto los terminos y condiciones</a></label>
                             </div>
                             <div class="text-center mt-2">
                                 <button class="btn btn-grey">Registrarse <i class="fa fa-sign-in ml-1"></i></button>
@@ -95,29 +95,4 @@
     </div>
 </div>
 <!--Modal: Login / Register Form-->
-      
-    <!-- Central Modal Medium Info -->
-    <div class="modal fade bottom" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-frame modal-bottom" role="document">
-            <!--Content-->
-            <div class="modal-content">
-                <!--Header-->
-                <div class="modal-header">
-                    <p class="heading lead">Terminos & Condiciones</p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="black-text">&times;</span>
-                    </button>
-                </div>
-    
-                <!--Body-->
-                <div class="modal-body">
-                    <div class="text-left">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                            ab officiis totam. <button class="btn btn-grey" data-dismiss="modal" aria-label="Close">Aceptar</button></p>
-                    </div>
-                </div>
-            </div>
-            <!--/.Content-->
-        </div>
-    </div>
-    <!-- Central Modal Medium Info-->
+  
