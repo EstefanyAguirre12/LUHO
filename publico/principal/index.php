@@ -24,6 +24,8 @@
         <?php include("../components/modalogin.php") ?> 
         <!-- MODAL AYUDA -->
         <?php include("../components/modalayuda.php") ?>
+         <!-- MODAL TERMINOS-->
+         <?php include("../components/modalterminos.php") ?>
         <!-- MY SLIDER-->
         <div class="demo-cont">
             <!-- slider start -->
@@ -164,7 +166,7 @@
                 <div class="content">
                     <h2>LUHO Jwelry.</h2>
                     <p>LUHO Jwelry es una joyeria con piezas de alta calidad y de gran valor en el mercador, distribuidor de grandes marcas con gran prestigio en El Salvador, para los clientes mas exigentes.</p>
-                   <!-- <a href="#" class="btn-primary">Learn more</a> -->
+                    <a href="#" class="btn btn-dark">Learn more</a>
                 </div>
             </div>
             <div class="right tiles">
@@ -183,8 +185,7 @@
                     <h2>Rolex.</h2>
                     <p>"Mientras miro mi Rolex tengo el tiempo necesario."</p>
                     <p>Rolex, pionero del reloj de pulsera desde 1905, es el precursor de innovaciones emblemáticas en la relojería, entre las que destacan el primer reloj
-                         de pulsera hermético, el Oyster, y el mecanismo de cuerda automática del rotor Perpetual. Durante más de un siglo, los relojes Rolex han acompañado
-                          a exploradores y triunfadores por todo el mundo, desde la cima de las montañas más altas hasta los puntos más profundos del océano.</p>
+                         de pulsera hermético, el Oyster.</p>
                 </div>
             </div>
             <div class="left tiles">

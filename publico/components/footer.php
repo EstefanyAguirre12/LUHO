@@ -28,8 +28,8 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mb-r dark-grey-text">
                 <h6 class="title font-bold"><strong>LUHO</strong></h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Hey que pasa guapisimos aqui vegeta 777 en un nuevo gameplay comentado de planeta
-                minecraft en español castellano.</p>
+                <p> "Hay LUHOS que solo puedes darte una vez en la vida."</p>
+                <p>-Roland Vanegas.</p>
             </div>
             <!--/.First column-->
             <!--Second column-->
@@ -47,9 +47,9 @@
                 <h6 class="title font-bold"><strong>LUHO links</strong></h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p><a href="#!" data-toggle="modal" data-target="#ayudamodal" class="dark-grey-text">Ayuda</a></p>
-                <p><a href="#!" class="dark-grey-text">Terminos y condiciones</a></p>
+                <p><a href="#!" data-toggle="modal" data-target="#terminosmodal" class="dark-grey-text">Terminos y condiciones</a></p>
                 <p><a href="#!" class="dark-grey-text">Comentarios</a></p>
-                <p><a href="#!" class="dark-grey-text">Nosotros</a></p>
+                <p><a href="../nosotros/index.php" class="dark-grey-text">Nosotros</a></p>
             </div>
             <!--/.Third column-->
             <!--Fourth column-->
