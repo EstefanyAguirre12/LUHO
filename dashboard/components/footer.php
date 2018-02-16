@@ -11,11 +11,11 @@
                 <!--Grid column-->
                 <div class="col-12 col-md-7 text-center text-md-right">
                     <!--Facebook-->
-                    <a class="icons-sm fb-ic ml-0"><i class="fab fa-facebook-square fa-2x"> </i></a>
+                    <a class="icons-sm fb-ic ml-0" href="http://www.facebook.com"><i class="fab fa-facebook-square fa-2x"> </i></a>
                     <!--Twitter-->
-                    <a class="icons-sm tw-ic"><i class="fab fa-twitter fa-2x"> </i></a>
+                    <a class="icons-sm tw-ic" href="http://www.twitter.com"><i class="fab fa-twitter fa-2x"> </i></a>
                     <!--Instagram-->
-                    <a class="icons-sm ins-ic"><i class="fab fa-instagram fa-2x"> </i></a>
+                    <a class="icons-sm ins-ic" href="http://www.instagram.com"><i class="fab fa-instagram fa-2x"> </i></a>
                 </div>
                 <!--Grid column-->
             </div>
