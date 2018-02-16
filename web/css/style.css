@@ -1439,7 +1439,7 @@ font-size: 22px;
 
 .service-box:hover
 {
-background: rgb(241, 188, 88)
+background: rgb(32, 32, 32)
 }
 
 .service-box:before
@@ -1464,7 +1464,7 @@ right: 0;
 .service-box i{
 display: block;
 font-size: 65px;
-color: #967128;
+color: #242323;
 margin-bottom: 14px;
 transition: all 0.3s ease 0s;
 }
@@ -1530,7 +1530,9 @@ transition: all 0.3s ease 0s;
 #f2{
   background-image: url(../img/dashboard/60.jpg);
 }
-
+#bv{
+  background-image: url(../img/joya6.jpg);
+}
 /*INICIO DASHBOARD*/
 .margen{
   margin-bottom: 20px;
