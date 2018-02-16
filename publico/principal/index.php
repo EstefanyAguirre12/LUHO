@@ -166,7 +166,7 @@
                 <div class="content">
                     <h2>LUHO Jwelry.</h2>
                     <p>LUHO Jwelry es una joyeria con piezas de alta calidad y de gran valor en el mercador, distribuidor de grandes marcas con gran prestigio en El Salvador, para los clientes mas exigentes.</p>
-                    <a href="#" class="btn btn-dark">Leer mas.</a>
+                    <a href="../nosotros/index.php" class="btn btn-dark">Leer mas.</a>
                 </div>
             </div>
             <div class="right tiles">

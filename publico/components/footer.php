@@ -36,9 +36,9 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r dark-grey-text">
                 <h6 class="title font-bold"><strong>Productos</strong></h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p><a href="#!" class="dark-grey-text">ROLEX</a></p>
-                <p><a href="#!" class="dark-grey-text">PANDORA</a></p>
-                <p><a href="#!" class="dark-grey-text">SWAROVSKI</a></p>
+                <p><a href="../ventas/index.php" class="dark-grey-text">ROLEX</a></p>
+                <p><a href="../ventas/index.php" class="dark-grey-text">PANDORA</a></p>
+                <p><a href="../ventas/index.php" class="dark-grey-text">SWAROVSKI</a></p>
                 <!--<p><a href="#!" class="dark-grey-text">Bootstrap Angular</a></p>-->
             </div>
             <!--/.Second column-->

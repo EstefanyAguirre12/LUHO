@@ -15,12 +15,12 @@
                                     <li class="sub-title font-up"><a class="menu-item" href="">Todos los productos</a></li>
                                     <h6 class="font-weight-bold" >HOMBRES</h6>
                                     <li class="sub-title font-up"><a class="menu-item" href="../ventas/index.php">Relojes</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Anillos</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="../ventas/index.php">Anillos</a></li>
                                     <h6 class="font-weight-bold" >MUJERES</h6>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Anillos</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Pulseras</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Charms</a></li>
-                                    <li class="sub-title font-up"><a class="menu-item" href="">Relojes</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="../ventas/index.php">Anillos</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="../ventas/index.php">Pulseras</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="../ventas/index.php">Charms</a></li>
+                                    <li class="sub-title font-up"><a class="menu-item" href="../ventas/index.php">Relojes</a></li>
                                 </ol>
                             </div>
                             <div class="col-md-7 col-xl-9">
@@ -97,7 +97,7 @@
                     </div>
                     <!--LINKS-->
                     <li class="nav-item active">
-                    <a class="nav-link" href="../principal/index.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../principal/index.php">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Contactanos</a>
