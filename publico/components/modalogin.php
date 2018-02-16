@@ -52,26 +52,61 @@
 
                     <!--Panel 8-->
                     <div class="tab-pane fade" id="panel8" role="tabpanel">
-
                         <!--Body-->
                         <div class="modal-body">
-                            <div class="form-group">
-                                <label for="email" class="col-lg-2 control-label">Email:</label>
-                                <div class="col-lg-12">
-                                    <input type="email" class="form-control" id="email" placeholder="Ejemplo@tucorreo.com">
+                            <div class="row">
+		              			<!--Grid column-->
+			                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre" class="col-lg-2 control-label">Nombre:</label>
+                                        <div class="col-lg-12">
+                                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="contra" class="col-lg-2 control-label">Contraseña:</label>
-                                <div class="col-lg-12">
-                                    <input type="password" class="form-control" id="contra" placeholder="Tu contraseña">
+		                    	<!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="apellido" class="col-lg-2 control-label">Apellido:</label>
+                                        <div class="col-lg-12">
+                                            <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="contra" class="col-lg-2 control-label">Contraseña:</label>
-                                <div class="col-lg-12">
-                                    <input type="password" class="form-control" id="contra" placeholder="Repite tu contraseña">
+			                    <!--Grid column-->
+			                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="usuario" class="col-lg-2 control-label">Usuario:</label>
+                                        <div class="col-lg-12">
+                                            <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                                        </div>
+                                    </div>
+			                    </div>
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contra" class="col-lg-2 control-label">Contraseña:</label>
+                                        <div class="col-lg-12">
+                                            <input type="password" class="form-control" id="contra" placeholder="Tu contraseña">
+                                        </div>
+                                    </div>		                 
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="email" class="col-lg-2 control-label">Email:</label>
+                                        <div class="col-lg-12">
+                                            <input type="email" class="form-control" id="email" placeholder="ejemplo@tucorreo.com">
+                                        </div>
+                                    </div>		                 
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="direccion" class="col-lg-2 control-label">Direccion:</label>
+                                        <div class="col-lg-12">
+                                            <input type="text" class="form-control" id="direccion" placeholder="Direccion">
+                                        </div>
+                                    </div>		                 
+						        </div>
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="checkbox" id="checkbox100" >
@@ -84,12 +119,8 @@
                         </div>
                     </div>
                     <!--/.Panel 8--> 
-
-
-
                 </div>
             </div>
-
         </div>
         <!--/.Content-->
     </div>

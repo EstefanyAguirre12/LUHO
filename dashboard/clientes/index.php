@@ -10,7 +10,7 @@
 		<!-- Estilo css -->
 		<link href="../../web/css/style.css" rel="stylesheet">
 	   	<!-- FONTS -->
-      	<link rel="stylesheet" href="../../web/css/fontawesome-all.css">
+      	<link href="../../web/css/fontawesome-all.css" rel="stylesheet">
 	</head>
 	<body>	
 		<?php include("../components/menu.php") ?>
@@ -198,6 +198,7 @@
 			</div>
 			<!-- /Modal Agregar Usaurios-->
 		</div>
+		
 		<!-- FOOTER -->
 		<?php include("../components/footer.php") ?>
 

@@ -82,142 +82,142 @@
 				</div>
 			</div>
 		</div>
-			<!--/Tabla de Categoria/Ocasion -->	               
-			<!-- Modal Editar Categoria-->
-			<div class="modal fade" id="editarcategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<!--Content-->
-					<div class="modal-content form-elegant">
-						<!--Header-->
-						<div class="modal-header text-center">
-							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Categoria</strong></h3>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
+		<!--/Tabla de Categoria/Ocasion -->	               
+		<!-- Modal Editar Categoria-->
+		<div class="modal fade" id="editarcategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<!--Content-->
+				<div class="modal-content form-elegant">
+					<!--Header-->
+					<div class="modal-header text-center">
+						<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Categoria</strong></h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body mx-4">
+						<div class="md-form">
+							<input type="text" class="form-control" id="categoria" placeholder="Categoria">
+							<label for="categoria" class="col-lg-2 control-label"></label>
 						</div>
-						<!--Body-->
-						<div class="modal-body mx-4">
+						<div class="row my-3 d-flex justify-content-center">
+							<!--Modificar-->
+							<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button>
+							<!--Eliminar-->
+							<button type="button" class="btn btn-grey btn-rounded z-depth-1a"><i class="fas fa-trash-alt"></i></button>
+						</div>
+					</div>
+				</div>
+			<!--/.Content-->
+			</div>
+		</div>
+		<!-- /Modal Editar Categoria -->
+		<!-- Modal Editar Ocasion -->
+		<div class="modal fade" id="editarocasion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<!--Content-->
+				<div class="modal-content form-elegant">
+					<!--Header-->
+					<div class="modal-header text-center">
+						<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Ocasion</strong></h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body mx-4">
+						<div class="md-form">
+							<div class="md-form">
+								<input type="text" class="form-control" id="ocasion" placeholder="Ocasion">
+								<label for="ocasion" class="col-lg-2 control-label"></label>
+							</div>
+						</div>		                    			               
+						<div class="row my-3 d-flex justify-content-center">
+							<!--Modificar-->
+							<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button>
+							<!--Eliminar-->
+							<button type="button" class="btn btn-grey btn-rounded z-depth-1a"><i class="fas fa-trash-alt"></i></button>
+						</div>
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!-- /Modal Editar Ocasion-->
+		<!-- Modal Agregar Categoria -->
+		<div class="modal fade" id="agregarcategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<!--Content-->
+				<div class="modal-content form-elegant">
+					<!--Header-->
+					<div class="modal-header text-center">
+						<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Categoria</strong></h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body mx-4">
+						<div class="md-form">
 							<div class="md-form">
 								<input type="text" class="form-control" id="categoria" placeholder="Categoria">
 								<label for="categoria" class="col-lg-2 control-label"></label>
 							</div>
-							<div class="row my-3 d-flex justify-content-center">
-								<!--Modificar-->
-								<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button>
-								<!--Eliminar-->
-								<button type="button" class="btn btn-grey btn-rounded z-depth-1a"><i class="fas fa-trash-alt"></i></button>
-							</div>
+						</div>		                    			               
+						<div class="row my-3 d-flex justify-content-center">
+							<!--Agregar-->
+							<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-plus" aria-hidden="true"></i></button>
 						</div>
 					</div>
-					<!--/.Content-->
 				</div>
+				<!--/.Content-->
 			</div>
-			<!-- /Modal Editar Categoria -->
-			<!-- Modal Editar Ocasion -->
-			<div class="modal fade" id="editarocasion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<!--Content-->
-					<div class="modal-content form-elegant">
-						<!--Header-->
-						<div class="modal-header text-center">
-							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Ocasion</strong></h3>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body mx-4">
-	                        <div class="md-form">
-	                            <div class="md-form">
-		                        	<input type="text" class="form-control" id="ocasion" placeholder="Ocasion">
-		                        	<label for="ocasion" class="col-lg-2 control-label"></label>
-						      	</div>
-	                        </div>		                    			               
-							<div class="row my-3 d-flex justify-content-center">
-								<!--Modificar-->
-								<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button>
-								<!--Eliminar-->
-								<button type="button" class="btn btn-grey btn-rounded z-depth-1a"><i class="fas fa-trash-alt"></i></button>
+		</div>
+		<!-- /Modal Agregar Categoria -->
+		<!-- Modal Agregar ocasion -->
+		<div class="modal fade" id="agregarocasion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<!--Content-->
+				<div class="modal-content form-elegant">
+					<!--Header-->
+					<div class="modal-header text-center">
+						<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Ocasión</strong></h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body mx-4">
+						<div class="md-form">
+							<div class="md-form">
+								<input type="text" class="form-control" id="ocasion" placeholder="Ocasion">
+								<label for="ocasion" class="col-lg-2 control-label"></label>
 							</div>
+						</div>		                    			               
+						<div class="row my-3 d-flex justify-content-center">
+							<!--Agregar-->
+							<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-plus" aria-hidden="true"></i></button>
 						</div>
 					</div>
-					<!--/.Content-->
 				</div>
+				<!--/.Content-->
 			</div>
-			<!-- /Modal Editar Ocasion-->
-			<!-- Modal Agregar Categoria -->
-			<div class="modal fade" id="agregarcategoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<!--Content-->
-					<div class="modal-content form-elegant">
-						<!--Header-->
-						<div class="modal-header text-center">
-							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Categoria</strong></h3>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body mx-4">
-	                        <div class="md-form">
-	                            <div class="md-form">
-		                        	<input type="text" class="form-control" id="categoria" placeholder="Categoria">
-		                        	<label for="categoria" class="col-lg-2 control-label"></label>
-						      	</div>
-	                        </div>		                    			               
-							<div class="row my-3 d-flex justify-content-center">
-								<!--Agregar-->
-								<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-plus" aria-hidden="true"></i></button>
-							</div>
-						</div>
-					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!-- /Modal Agregar Categoria -->
-			<!-- Modal Agregar ocasion -->
-			<div class="modal fade" id="agregarocasion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<!--Content-->
-					<div class="modal-content form-elegant">
-						<!--Header-->
-						<div class="modal-header text-center">
-							<h3 class="modal-title w-100 dark-grey-text font-bold my-3" id="myModalLabel"><strong>Ocasión</strong></h3>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body mx-4">
-	                        <div class="md-form">
-	                            <div class="md-form">
-		                        	<input type="text" class="form-control" id="ocasion" placeholder="Ocasion">
-		                        	<label for="ocasion" class="col-lg-2 control-label"></label>
-						      	</div>
-	                        </div>		                    			               
-							<div class="row my-3 d-flex justify-content-center">
-								<!--Agregar-->
-								<button type="button" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="fas fa-plus" aria-hidden="true"></i></button>
-							</div>
-						</div>
-					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!-- /Modal Agregar ocasion -->
+		</div>
+		<!-- /Modal Agregar ocasion -->
 
-			<!-- FOOTER -->
-			<?php include("../components/footer.php") ?>
+		<!-- FOOTER -->
+		<?php include("../components/footer.php") ?>
 
-			<!-- SCRIPTS -->
-			<script src="../../web/js/jquery.min.js"></script>
-			<!-- JQuery -->
-			<script type="text/javascript" src="../../web/js/jquery-3.2.1.min.js"></script>
-			<!-- Bootstrap tooltips -->
-			<script type="text/javascript" src="../../web/js/popper.min.js"></script>
-			<!-- Bootstrap core JavaScript -->
-			<script type="text/javascript" src="../../web/js/bootstrap.min.js"></script>
-			<!-- MDB core JavaScript -->
-			<script type="text/javascript" src="../../web/js/mdb.min.js"></script>
+		<!-- SCRIPTS -->
+		<script src="../../web/js/jquery.min.js"></script>
+		<!-- JQuery -->
+		<script type="text/javascript" src="../../web/js/jquery-3.2.1.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="../../web/js/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="../../web/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="../../web/js/mdb.min.js"></script>
 	</body>
 </html>

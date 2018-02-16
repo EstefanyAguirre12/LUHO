@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-	<meta charset="UTF-8">
-  	<title>LUHO</title>
-  	<!-- Estilo css -->
-	<link rel="stylesheet" href="../../web/css/style.css">
-    <link rel="stylesheet" href="../../web/css/normalize.css">
-</head >
+	<head>
+		<meta charset="UTF-8">
+		<title>LUHO</title>
+		<!-- Estilo css -->
+		<link rel="stylesheet" href="../../web/css/style.css">
+		<link rel="stylesheet" href="../../web/css/normalize.css">
+	</head >
 	<body class="font-cover" id="login">
   		<div class="wrapper">
 			<div class="containerlogin">

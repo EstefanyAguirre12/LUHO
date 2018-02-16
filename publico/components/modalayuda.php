@@ -78,13 +78,17 @@
         <!-- Card body -->
         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                accusamus labore sustainable VHS.
+                <p>Las entregas de nuestros productos varian segun el plan de envio que usted
+                    contrato a la hora de realizar y confirmar su compra. 
+                </p>
+                <h5> Envio gratuito.</h5>
+                <p>Todas las compras cuentan con nuestro envio gratuito, que tiene un plazo de 7 dias maximo
+                    para hacer la entrega.
+                </p>
+                <h5>Envio Luxury</h5>
+                <p>El plan de envio Luxury© hace un recargo en el total de tu compra y la entrega se hace en un plazo maximo
+                    de 48H.
+                </p>
             </div>
         </div>
     </div>
@@ -96,8 +100,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-grey" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-dark">Save changes</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Gracias</button>
             </div>
         </div>
     </div>
