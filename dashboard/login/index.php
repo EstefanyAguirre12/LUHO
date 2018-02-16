@@ -14,7 +14,7 @@
 				<form class="form">
 					<input type="text" placeholder="Usuario">
 					<input type="password" placeholder="Contraseña">
-					<input type="button" id="login-button" value="Iniciar Sesión" onClick="location.href='../inicio/index.html'" />
+					<input type="button" id="login-button" value="Iniciar Sesión" onClick="location.href='../inicio/index.php'" />
 				</form>
 			</div>	
 		</div>
