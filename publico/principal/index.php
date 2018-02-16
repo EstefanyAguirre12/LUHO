@@ -3,15 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>LUHO</title>      
-        <!-- BOOTSTRAP-->
-        <link rel="stylesheet" href="../../web/css/bootstrap.min.css">
-        	<!-- Material Design Bootstrap -->
-	   	<link href="../../web/css/mdb.min.css" rel="stylesheet">
-		
-        <!-- FONTS -->
-        <link rel="stylesheet" href="../../web/css/fontawesome-all.css">
-        <!-- CSS -->
+        <!-- Estilo css -->
         <link rel="stylesheet" href="../../web/css/style.css">     
+        <!-- Bootstrap core CSS -->
+        <link href="../../web/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="../../web/css/mdb.min.css" rel="stylesheet">
+        <!-- FONTS -->
+        <link rel="stylesheet" href="../../web/css/fontawesome-all.css">     
     </head>
     <body>
         <!-- NAVBAR -->
@@ -24,8 +23,9 @@
         <?php include("../components/modalogin.php") ?> 
         <!-- MODAL AYUDA -->
         <?php include("../components/modalayuda.php") ?>
-         <!-- MODAL TERMINOS-->
-         <?php include("../components/modalterminos.php") ?>
+        <!-- MODAL TERMINOS-->
+        <?php include("../components/modalterminos.php") ?>
+        
         <!-- MY SLIDER-->
         <div class="demo-cont">
             <!-- slider start -->

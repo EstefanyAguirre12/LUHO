@@ -25,32 +25,23 @@
     <div class="container mt-5 mb-4 text-center text-md-left">
         <div class="row mt-3">
             <!--First column-->
-            <div class="col-md-3 col-lg-4 col-xl-3 mb-r dark-grey-text">
+            <div class="col-md-5 col-lg-6 col-xl-5 mb-r dark-grey-text">
                 <h6 class="title font-bold"><strong>LUHO</strong></h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Hey que pasa guapisimos aqui vegeta 777 en un nuevo gameplay comentado de planeta
-                minecraft en español castellano.</p>
+                <p>"Hay LUHOS que solo puedes darte una vez en la vida."</p>
+                <p>-Roland Vanegas.</p>
             </div>
             <!--/.First column-->
             <!--First column-->
             <div class="col-md-3 col-lg-4 col-xl-3 mb-r dark-grey-text">
-                <h6 class="title font-bold"><strong>LUHO</strong></h6>
+                <h6 class="title font-bold"><strong>Dashboard</strong></h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Hey que pasa guapisimos aqui vegeta 777 en un nuevo gameplay comentado de planeta
-                minecraft en español castellano.</p>
-            </div>
-            <!--/.First column-->
-            <!--First column-->
-            <div class="col-md-3 col-lg-4 col-xl-3 mb-r dark-grey-text">
-                <h6 class="title font-bold"><strong>LUHO</strong></h6>
-                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Hey que pasa guapisimos aqui vegeta 777 en un nuevo gameplay comentado de planeta
-                minecraft en español castellano.</p>
+                <p>Todos los privilegios solo para ti. A tu disposicion todo lo que se necesita para que LUHO sea posible.</p>
             </div>
             <!--/.First column-->
             <!--Fourth column-->
             <div class="col-md-4 col-lg-3 col-xl-3 dark-grey-text">
-                <h6 class="title font-bold"><strong>Contact</strong></h6>
+                <h6 class="title font-bold"><strong>Contactanos</strong></h6>
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p><i class="fas fa-home fa-lg"></i> Sivar, San Salvador 503, SV</p>
                 <p><i class="far fa-envelope fa-lg"></i> LuhoLuxury@gmail.com</p>

@@ -1247,7 +1247,7 @@ body {
 }
 
 .fundillo{
-  background-image: url("../img/fondo12.jpg");
+  background-image: url("../img/dashboard/reloj.jpeg");
   background-size: cover;
 }
 
@@ -1528,7 +1528,7 @@ transition: all 0.3s ease 0s;
   background-image: url(../img/dashboard/30.jpg);
 }
 #f2{
-  background-image: url(../img/dashboard/70.jpg);
+  background-image: url(../img/dashboard/90.jpeg);
 }
 
 /*INICIO DASHBOARD*/
@@ -1536,3 +1536,18 @@ transition: all 0.3s ease 0s;
   margin-bottom: 20px;
 }
 
+.scroll-comments {
+  display: block;
+  max-height: 200px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.checked {
+  color: orange;
+}
+
+
+.cuenta{
+  margin-top: 100px;
+}

@@ -20,7 +20,7 @@
         <?php include("../components/menu.php") ?>
 
         <!-- FORMULARIO CUENTA-->
-        <div class="container registeer">   
+        <div class="container registeer cuenta">   
             <h1 class="text-center" >Mi cuenta</h1>
             <div class="row">
                 <div class="form-group col-md-6">
@@ -47,7 +47,7 @@
                     <input type="text" class="form-control" id="direccion" placeholder="Direccón">
                     <label for="direccion" class="col-lg-2 control-label"></label>
                 </div>
-                <a href="" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Modificar cuenta</a>
+                <a href="" class="btn btn-dark btn-rounded mr-md-3 z-depth-1a" >Modificar cuenta</a>
             </div>              
         </div>
 

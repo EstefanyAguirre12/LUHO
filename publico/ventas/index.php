@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>LUHO</title>
 			<!-- Estilo css -->
-			<link href="css/style.css" rel="stylesheet">
+			<link rel="stylesheet" href="../../web/css/style.css">     
 			<!-- Bootstrap core CSS -->
 		   	<link href="../../web/css/bootstrap.min.css" rel="stylesheet">
 		   	<!-- Material Design Bootstrap -->
@@ -16,7 +16,16 @@
 		<!-- NAVBAR -->
         <?php include("../components/menu.php") ?>
         <!-- MODAL CONTACTO -->
-        <?php include("../components/modalproductos.php") ?>
+        <?php include("../components/modalcontacto.php") ?>
+        <!-- MODAL CARRITO -->
+        <?php include("../components/modalcarrito.php") ?>
+        <!-- MODAL LOGIN -->
+        <?php include("../components/modalogin.php") ?> 
+        <!-- MODAL AYUDA -->
+        <?php include("../components/modalayuda.php") ?>
+        <!-- MODAL TERMINOS-->
+        <?php include("../components/modalterminos.php") ?>
+        
 		<header class="font-cover" id="fondo">
 			<h1>PANDORA <br> <span>[ ANILLOS ]</span></h1>
 		</header>
@@ -32,7 +41,7 @@
 			            <div class="card card-cascade narrower">
 			                <!--Card image-->
 			                <div class="view overlay hm-white-slight"  data-toggle="modal" data-target="#modalproductos">
-			                    <img src="img/an1.jpg" class="img-fluid" alt="">
+			                    <img src="../../web/img/an1.jpg" class="img-fluid" alt="">
 			                    <a>
 			                        <div class="mask"></div>
 			                    </a>
@@ -72,7 +81,7 @@
 			            <div class="card card-cascade narrower">
 			                <!--Card image-->
 			                 <div class="view overlay hm-white-slight"  data-toggle="modal" data-target="#modalproductos">
-			                    <img src="img/an2.jpg" class="img-fluid" alt="">
+			                    <img src="../../web/img/an2.jpg" class="img-fluid" alt="">
 			                    <a>
 			                        <div class="mask"></div>
 			                    </a>
@@ -111,7 +120,7 @@
 			            <div class="card card-cascade narrower">
 			                <!--Card image-->
 			                 <div class="view overlay hm-white-slight"  data-toggle="modal" data-target="#modalproductos">
-			                    <img src="img/an3.jpg" class="img-fluid" alt="">
+			                    <img src="../../web/img/an3.jpg" class="img-fluid" alt="">
 			                    <a>
 			                        <div class="mask"></div>
 			                    </a>
@@ -150,7 +159,7 @@
 			            <div class="card card-cascade narrower">
 			                <!--Card image-->
 			                 <div class="view overlay hm-white-slight"  data-toggle="modal" data-target="#modalproductos">
-			                    <img src="img/an4.jpg" class="img-fluid" alt="">
+			                    <img src="../../web/img/an4.jpg" class="img-fluid" alt="">
 			                    <a>
 			                        <div class="mask"></div>
 			                    </a>
@@ -188,24 +197,21 @@
 	    		<!--Grid row-->
 			</section>
 			<!--Section: Products v.1-->
-		</div>
-
+		</div>	
+		<!-- FOOTER -->
+        <?php include("../components/footer.php") ?> 
+					
+		<!-- SCRIPTS -->
+		<!-- JQuery -->
+		<script type="text/javascript" src="../../web/js/jquery-3.2.1.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="../../web/js/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="../../web/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="../../web/js/mdb.min.js"></script>
 		
-
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-<script src="js/index.js"></script>
-<!-- SCRIPTS -->
-<!-- JQuery -->
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="js/mdb.min.js"></script>
-
-</body>
+	</body>
 </html>
 
 
