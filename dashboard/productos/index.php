@@ -329,15 +329,19 @@
 				</div>
 			</div>
 			<!-- /Modal Agregar Productos-->
-			<!-- SCRIPTS -->
-			<script src="../../web/js/jquery.min.js"></script>
-			<!-- JQuery -->
-			<script type="text/javascript" src="../../web/js/jquery-3.2.1.min.js"></script>
-			<!-- Bootstrap tooltips -->
-			<script type="text/javascript" src="../../web/js/popper.min.js"></script>
-			<!-- Bootstrap core JavaScript -->
-			<script type="text/javascript" src="../../web/js/bootstrap.min.js"></script>
-			<!-- MDB core JavaScript -->
-			<script type="text/javascript" src="../../web/js/mdb.min.js"></script>
+		</div>
+		<!-- FOOTER -->
+		<?php include("../components/footer.php") ?>
+
+		<!-- SCRIPTS -->
+		<script src="../../web/js/jquery.min.js"></script>
+		<!-- JQuery -->
+		<script type="text/javascript" src="../../web/js/jquery-3.2.1.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="../../web/js/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="../../web/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="../../web/js/mdb.min.js"></script>
 	</body>
 </html>

@@ -87,9 +87,10 @@
 			</div>
 			<!-- Grid row -->
 		</div>
+				
+		<!-- FOOTER -->
 		<?php include("../components/footer.php") ?>
 
-		
 		<!-- SCRIPTS -->
 		<!-- JQuery -->
 		<script type="text/javascript" src="../../web/js/jquery-3.2.1.min.js"></script>
