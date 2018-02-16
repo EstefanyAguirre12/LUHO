@@ -43,7 +43,7 @@
                                     <span>LUHO</span>
                                 </div>
                                 <div class="fnc-slide__heading-line">
-                                    <span>fancy shit</span>
+                                    <span>Jewelry.</span>
                                 </div>
                                 </h2>
                                 <button type="button" class="fnc-slide__action-btn">
@@ -160,20 +160,20 @@
         </div>
         <div class="section animate">
             <div class="middle">
-                <img src="https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
+                <img src="../../web/img/sw2.jpg" />
             </div>
             <div class="left title">
                 <div class="content">
                     <h2>LUHO Jwelry.</h2>
                     <p>LUHO Jwelry es una joyeria con piezas de alta calidad y de gran valor en el mercador, distribuidor de grandes marcas con gran prestigio en El Salvador, para los clientes mas exigentes.</p>
-                    <a href="#" class="btn btn-dark">Learn more</a>
+                    <a href="#" class="btn btn-dark">Leer mas.</a>
                 </div>
             </div>
             <div class="right tiles">
-                <img src="https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
-                <img src="https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=2&auto=format&crop=entropy&fit=crop&w=250&h=250&q=80" />
+                <img src="../../web/img/sw2.jpg" />
+                <img src="../../web/img/sw2.jpg" />
+                <img src="../../web/img/sw2.jpg" />
+                <img src="../../web/img/sw2.jpg" />
             </div>
         </div>
         <div class="section">

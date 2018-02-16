@@ -26,7 +26,7 @@
                             <div class="col-md-7 col-xl-9">
                                 <div class="row">
                                     <div class="col-xl-6 mt-5 mb-4 pr-5 clearfix d-none d-md-block">
-                                        <h6 class="sub-title p-sm mb-4 font-up font-bold dark-grey-text">Featured</h6>
+                                        <h6 class="sub-title p-sm mb-4 font-up font-bold dark-grey-text">Noticias</h6>
                                         <!--Featured image-->
                                         <div class="view overlay hm-white-slight pb-3">
                                             <img src="../../web/img/gold.jpg" class="img-fluid z-depth-1" alt="First sample image">

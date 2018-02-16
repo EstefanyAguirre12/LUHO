@@ -48,7 +48,6 @@
                 <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p><a href="#!" data-toggle="modal" data-target="#ayudamodal" class="dark-grey-text">Ayuda</a></p>
                 <p><a href="#!" data-toggle="modal" data-target="#terminosmodal" class="dark-grey-text">Terminos y condiciones</a></p>
-                <p><a href="#!" class="dark-grey-text">Comentarios</a></p>
                 <p><a href="../nosotros/index.php" class="dark-grey-text">Nosotros</a></p>
             </div>
             <!--/.Third column-->

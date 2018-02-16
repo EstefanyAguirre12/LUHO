@@ -178,19 +178,9 @@ fncSlider(".example-slider", {autoSlidingDelay: 4000});
 
 var $demoCont = document.querySelector(".demo-cont");
 
-[].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function($btn) {
-  $btn.addEventListener("click", function() {
-    $demoCont.classList.toggle("credits-active");
-  });
-});
 
-document.querySelector(".demo-cont__credits-close").addEventListener("click", function() {
-  $demoCont.classList.remove("credits-active");
-});
 
-document.querySelector(".js-activate-global-blending").addEventListener("click", function() {
-  document.querySelector(".example-slider").classList.toggle("m--global-blending-active");
-});
+
 //Fin Slider pagina principal
 
 /*=========================================================================== JS DE LA AMAZING GALLERY =========================================*/
