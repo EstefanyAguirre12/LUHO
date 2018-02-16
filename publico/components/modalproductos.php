@@ -8,8 +8,8 @@
                         <!--Carousel Wrapper-->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="img/an11.jpg" class="img-fluid" alt="photo">
-                                <img src="img/an11.jpg" class="img-fluid" alt="photo">												
+                                <img src="../../web/img/an11.jpg" class="img-fluid" alt="photo">
+                                <img src="../../web/img/an11.jpg" class="img-fluid" alt="photo">												
                             </div>                                  
                         </div>
                     </div>							
@@ -28,9 +28,7 @@
                                 </div>
                                 <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nesciunt atque nemo neque ut officiis nostrum incidunt
-                                        maiores, magni optio et sunt suscipit iusto nisi totam quis, nobis mollitia
-                                        necessitatibus.
+                                    Anillo Tiara de Mi Princesa PANDORA Rose con circonita cúbica transparente
                                     </div>
                                 </div>
                             </div>
@@ -89,16 +87,13 @@
                                 <div class="col-md-6">
                                     <div class="md-form">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-grey">Action</button>
+                                            <button type="button" class="btn btn-grey">Material</button>
                                             <button type="button" class="btn btn-grey dropdown-toggle px-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <span class="sr-only">Toggle Dropdown</span>
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                <a class="dropdown-item" href="#">Oro</a>
+                                                <a class="dropdown-item" href="#">Plata</a>
                                             </div>
                                         </div>
                                     </div>

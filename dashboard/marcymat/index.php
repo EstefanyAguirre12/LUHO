@@ -207,6 +207,10 @@
 				</div>
 			</div>
 			<!-- /Modal Agregar ocasion -->
+
+			<!-- FOOTER -->
+			<?php include("../components/footer.php") ?>
+
 			<!-- SCRIPTS -->
 			<script src="../../web/js/jquery.min.js"></script>
 			<!-- JQuery -->

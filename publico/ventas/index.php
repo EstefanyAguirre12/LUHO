@@ -6,15 +6,17 @@
 			<!-- Estilo css -->
 			<link rel="stylesheet" href="../../web/css/style.css">     
 			<!-- Bootstrap core CSS -->
-		   	<link href="../../web/css/bootstrap.min.css" rel="stylesheet">
-		   	<!-- Material Design Bootstrap -->
-		   	<link href="../../web/css/mdb.min.css" rel="stylesheet">
-		   	<!-- FONTS -->
-      		<link rel="stylesheet" href="../../web/css/fontawesome-all.css">
+			<link href="../../web/css/bootstrap.min.css" rel="stylesheet">
+			<!-- Material Design Bootstrap -->
+			<link href="../../web/css/mdb.min.css" rel="stylesheet">
+			<!-- FONTS -->
+			<link rel="stylesheet" href="../../web/css/fontawesome-all.css"> 
 	</head>
 	<body>
 		<!-- NAVBAR -->
-        <?php include("../components/menu.php") ?>
+		<?php include("../components/menu.php") ?>
+		<!-- MODAL PRODUCTOS-->
+		<?php include("../components/modalproductos.php") ?>
         <!-- MODAL CONTACTO -->
         <?php include("../components/modalcontacto.php") ?>
         <!-- MODAL CARRITO -->
@@ -22,12 +24,13 @@
         <!-- MODAL LOGIN -->
         <?php include("../components/modalogin.php") ?> 
         <!-- MODAL AYUDA -->
-        <?php include("../components/modalayuda.php") ?>
+		<?php include("../components/modalayuda.php") ?>
         <!-- MODAL TERMINOS-->
-        <?php include("../components/modalterminos.php") ?>
+		<?php include("../components/modalterminos.php") ?>
+		
         
-		<header class="font-cover" id="fondo">
-			<h1>PANDORA <br> <span>[ ANILLOS ]</span></h1>
+		<header class="font-cover" id="fondoproductos">
+			<h1>ANILLOS <br> <span>[ LUHO ]</span></h1>
 		</header>
 		<!--Section: Productos-->
 		<div class="container">
@@ -198,11 +201,15 @@
 			</section>
 			<!--Section: Products v.1-->
 		</div>	
+		
 		<!-- FOOTER -->
         <?php include("../components/footer.php") ?> 
 					
 		<!-- SCRIPTS -->
 		<!-- JQuery -->
+		<script src="../../web/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../web/js/jquery.min.js"></script>
+
 		<script type="text/javascript" src="../../web/js/jquery-3.2.1.min.js"></script>
 		<!-- Bootstrap tooltips -->
 		<script type="text/javascript" src="../../web/js/popper.min.js"></script>

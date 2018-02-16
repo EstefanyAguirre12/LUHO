@@ -1247,7 +1247,7 @@ body {
 }
 
 .fundillo{
-  background-image: url("../img/dashboard/reloj.jpeg");
+  background-image: url("../img/dashboard/10.png");
   background-size: cover;
 }
 
@@ -1528,7 +1528,7 @@ transition: all 0.3s ease 0s;
   background-image: url(../img/dashboard/30.jpg);
 }
 #f2{
-  background-image: url(../img/dashboard/90.jpeg);
+  background-image: url(../img/dashboard/60.jpg);
 }
 
 /*INICIO DASHBOARD*/
@@ -1550,4 +1550,9 @@ transition: all 0.3s ease 0s;
 
 .cuenta{
   margin-top: 100px;
+}
+
+
+#fondoproductos{
+  background-image: url(../img/1234.gif);
 }
