@@ -188,7 +188,6 @@ por juzgar y amedentrar a sus alumnos prohiviendoles asi el derecho a hacer sus 
 que para eso estan los recreos y o espacios de hora almuerzo.
 </p>
 </div>
-
 </div>
                                                                                  <!-- Aqui va lo que seria el texto de cada integrante-->
 
