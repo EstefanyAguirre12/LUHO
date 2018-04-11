@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>LUHO</title>
-			<!-- Estilo css -->
-			<link rel="stylesheet" href="../../web/css/style.css">     
-			<!-- Bootstrap core CSS -->
-			<link href="../../web/css/bootstrap.min.css" rel="stylesheet">
-			<!-- Material Design Bootstrap -->
-			<link href="../../web/css/mdb.min.css" rel="stylesheet">
-			<!-- FONTS -->
-			<link rel="stylesheet" href="../../web/css/fontawesome-all.css"> 
+		<!-- Estilo css -->
+		<link rel="stylesheet" href="../../web/css/style.css">     
+		<!-- Bootstrap core CSS -->
+		<link href="../../web/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Material Design Bootstrap -->
+		<link href="../../web/css/mdb.min.css" rel="stylesheet">
+		<!-- FONTS -->
+		<link rel="stylesheet" href="../../web/css/fontawesome-all.css"> 
 	</head>
 	<body>
 		<!-- NAVBAR -->
