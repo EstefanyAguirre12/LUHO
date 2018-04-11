@@ -1,5 +1,5 @@
-  <!--Footer-->
-  <footer class="page-footer center-on-small-only blue-grey lighten-5 pt-0">
+<!--Footer-->
+<footer class="page-footer center-on-small-only blue-grey lighten-5 pt-0">
     <div style="background-color: black;">
         <div class="container">
             <!--Grid row-->
@@ -11,11 +11,11 @@
                 <!--Grid column-->
                 <div class="col-12 col-md-7 text-center text-md-right">
                     <!--Facebook-->
-                    <a class="icons-sm fb-ic ml-0" href="http://www.facebook.com"><i class="fab fa-facebook-square fa-2x"> </i></a>
+                    <a class="icons-sm fb-ic ml-0" href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"> </i></a>
                     <!--Twitter-->
-                    <a class="icons-sm tw-ic" href="http://www.twitter.com"><i class="fab fa-twitter fa-2x"> </i></a>
+                    <a class="icons-sm tw-ic" href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"> </i></a>
                     <!--Instagram-->
-                    <a class="icons-sm ins-ic" href="http://www.instagram.com"><i class="fab fa-instagram fa-2x"> </i></a>
+                    <a class="icons-sm ins-ic" href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"> </i></a>
                 </div>
                 <!--Grid column-->
             </div>

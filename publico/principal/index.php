@@ -47,8 +47,8 @@
                                 </div>
                                 </h2>
                                 <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                    <span data-text="Credits">Credits</span>
+                                LUHO
+                                    <span data-text="Credits">LUHO</span>
                                 </button>
                             </div>
                         </div>
@@ -70,8 +70,8 @@
                                 </div>
                                 </h2>
                                 <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                    <span data-text="Credits">Credits</span>
+                                LUHO
+                                    <span data-text="Credits">LUHO</span>
                                 </button>
                             </div>
                         </div>
@@ -93,8 +93,8 @@
                                 </div>
                                 </h2>
                                 <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                    <span data-text="Credits">Credits</span>
+                                LUHO
+                                    <span data-text="Credits">LUHO</span>
                                 </button>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
                                 </div>
                                 </h2>
                                 <button type="button" class="fnc-slide__action-btn">
-                                Credits
-                                    <span data-text="Credits">Credits</span>
+                                LUHO
+                                    <span data-text="Credits">LUHO</span>
                                 </button>
                             </div>
                         </div>
