@@ -53,10 +53,10 @@ class Compra extends Validator{
     public function readCompra(){
 		$sql = "SELECT Fecha, Idusuario FROM compra WHERE Idcompra = ?";
 		$params = array($this->id);
-		$categoria = Database::getRow($sql, $params);
-		if($categoria){
-			$this->categoria = $categoria['Categoria'];
-			$this->genero = $categoria['Genero'];
+		$compra = Database::getRow($sql, $params);
+		if($compra){
+			$this->fecha = $compra['Fecha'];
+			$this->idusuario = $compra['Idusuario'];
 			return true;
 		}else{
 			return null;
@@ -64,13 +64,13 @@ class Compra extends Validator{
     }
     //Modificar compra
     public function updateCompra(){
-		$sql = "UPDATE categoria SET Categoria = ?, Genero = ? WHERE IdCategoria = ?";
-		$params = array($this->categoria, $this->genero, $this->id);
+		$sql = "UPDATE compra SET Fecha = ?, Idusuario = ? WHERE Idcompra = ?";
+		$params = array($this->fecha, $this->idusuario, $this->id);
 		return Database::executeRow($sql, $params);
     }
     //Eliminar compra
 	public function deleteCompra(){
-		$sql = "DELETE FROM categoria WHERE IdCategoria = ?";
+		$sql = "DELETE FROM compra WHERE Idcompra = ?";
 		$params = array($this->id);
 		return Database::executeRow($sql, $params);
 	}

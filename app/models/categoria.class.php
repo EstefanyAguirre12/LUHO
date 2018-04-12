@@ -1,7 +1,7 @@
 <?php
 class Categoria extends Validator{
     private $id = null;
-    private $categoria = null;
+    private $nombre = null;
     private $genero = null;
     
     //Métodos para sobrecarga de propiedades
@@ -18,16 +18,16 @@ class Categoria extends Validator{
 			return $this->id;
     }
     
-    public function setCategoria($value){
+    public function setNombre($value){
 			if($this->validateAlphanumeric($value, 1, 60)){
-				$this->categoria = $value;
+				$this->nombre = $value;
 				return true;
 			}else{
 				return false;
 			}
 		}
-		public function getCategoria(){
-			return $this->categoria;
+		public function getNombre(){
+			return $this->nombre;
 		}
     
     public function setGenero($value){
@@ -58,7 +58,7 @@ class Categoria extends Validator{
     //Insertar categoria
     public function createCategoria(){
 		$sql = "INSERT INTO categoria(Categoria, Genero) VALUES(?, ?)";
-		$params = array($this->categoria, $this->genero);
+		$params = array($this->nombre, $this->genero);
 		return Database::executeRow($sql, $params);
     }
     //Leer categoria
@@ -67,7 +67,7 @@ class Categoria extends Validator{
 		$params = array($this->id);
 		$categoria = Database::getRow($sql, $params);
 		if($categoria){
-			$this->categoria = $categoria['Categoria'];
+			$this->nombre = $categoria['Categoria'];
 			$this->genero = $categoria['Genero'];
 			return true;
 		}else{
@@ -77,7 +77,7 @@ class Categoria extends Validator{
     //Modificar categoria
     public function updateCategoria(){
 		$sql = "UPDATE categoria SET Categoria = ?, Genero = ? WHERE IdCategoria = ?";
-		$params = array($this->categoria, $this->genero, $this->id);
+		$params = array($this->nombre, $this->genero, $this->id);
 		return Database::executeRow($sql, $params);
     }
     //Eliminar categoria
