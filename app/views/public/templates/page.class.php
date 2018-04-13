@@ -143,7 +143,7 @@ class Page extends Component{
     </div>
 </nav>
         ');
-		require_once("../app/views/public/sections/modals_view.php");
+		require_once("../../app/views/public/sections/modals_view.php");
     }
 
 
