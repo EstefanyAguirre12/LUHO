@@ -115,5 +115,41 @@ public function getApellido(){
     return $this->apellido;
 }
 
+ //Metodo para manejar el CRUD
+public function createUsuario(){
+    $hash = password_hash($this->clave, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO usuario(Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+    $params = array($this->usuario, $this->tipousuario, $this->nombre, $this->id, $this->direccion, $this->correo, $this->contrasena, $this->apellido, $hash);
+    return Database::executeRow($sql, $params);
 }
+public function readUsuario(){
+    $sql = "SELECT Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido FROM usuario WHERE IdUsuario = ?";
+    $params = array($this->id);
+    $user = Database::getRow($sql, $params);
+    if($user){
+        $this->usuario = $user['Usuario'];
+        $this->tipousuario = $user['TipoUsuario'];
+        $this->nombre = $user['Nombre'];
+        $this->idusuario = $user['IdUsuario'];
+        $this->direccion = $user['Direccion'];
+        $this->correo = $user['Correo'];
+        $this->contrasena = $user['Contrasena'];
+        $this->apellido = $user['Apellido'];
+        return true;
+    }else{
+        return null;
+    }
+}
+public function updateUsuario(){
+    $sql = "UPDATE Usuario SET Usuario = ?, TipoUsuario = ?, Nombre = ?, Direccion = ?, Correo = ?, Contrasena = ?, Apellido = ? WHERE IdUsuario = ?";
+    $params = array($this->usuario, $this->tipousuario, $this->nombre, $this->direccion, $this->correo, $this->contrasena, $this->apellido, $this->id);
+    return Database::executeRow($sql, $params);
+}
+public function deleteUsuario(){
+    $sql = "DELETE FROM Usuario WHERE IdUsuario = ?";
+    $params = array($this->id);
+    return Database::executeRow($sql, $params);
+}
+}
+
 ?>
