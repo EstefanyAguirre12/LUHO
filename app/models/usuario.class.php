@@ -116,6 +116,12 @@ public function getApellido(){
 }
 
  //Metodo para manejar el CRUD
+ public function getUsuarios(){
+    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido FROM usuario ORDER BY Apellido";
+    $params = array(null);
+    return Database::getRows($sql, $params);
+}
+
 public function createUsuario(){
     $hash = password_hash($this->clave, PASSWORD_DEFAULT);
     $sql = "INSERT INTO usuario(Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
