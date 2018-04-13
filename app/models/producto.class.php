@@ -1,6 +1,7 @@
 <?php
 class producto extends validator{
     private $id = null;
+    private $cantidad = null;
     private $costo = null;
     private $descripcion = null;
     private $detalles = null;
@@ -39,6 +40,18 @@ class producto extends validator{
     }
     public function getCosto(){
         return $this->costo;
+    }
+    public function setCantidad($value){
+        if($this->validateInt($value)){
+            $this->cantidad = $value;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public function getCantidad(){
+        return $this->cantidad;
     }
 
     public function setDescripcion($value){
@@ -184,6 +197,46 @@ class producto extends validator{
         return $this->nombre;
     }
 
+public function createProducto(){
+    $sql = "INSERT INTO producto(Nombre, Modelo, Img, IdTipoEnvio, IdTalla, IdProducto, IdOcasion, IdMaterial, IdMarca, IdCategoria, Detalles, Descripcion, Costo, Cantidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $params = array($this->$nombre, $this->$modelo, $this->$img, $this->idtipoenvio, $this->idtalla, $this->id, $this->idocasion, $this->idmaterial, $this->idmarca, $this->idcategoria, $this->detalles, $this->descripcion, $this->costo, $this->$cantidad);
+    return Database::executeRow($sql, $params);
+}
+public function readProduct(){
+    $sql = "SELECT Nombre, Modelo, Img, IdTipoEnvio, IdTalla, IdProducto, IdOcasion, IdMaterial, IdMarca, IdCategoria, Detalles, Descripcion, Costo, Cantidad FROM producto WHERE IdProducto = ?";
+    $params = array($this->id);
+    $producto = Database::getRow($sql, $params);
+    if($producto){
+        $this->nombre = $producto['Nombre'];
+        $this->modelo = $prodcuto['Modelo'];
+        $this->img = $producto['Img'];
+        $this->idtipoenvio = $producto['IdTipoEnvio'];
+        $this->idtalla = $producto['IdTalla'];
+        $this->id = $producto['IdProducto'];
+        $this->idocasion = $producto['IdOcasion'];
+        $this->idmaterial = $producto['IdMaterial'];
+        $this->idmarca = $producto['IdMarca'];
+        $this->idcategoria = $producto['IdCategoria'];
+        $this->detalles = $producto['Detalles'];
+        $this->descripcion = $producto['Descripcion'];
+        $this->costo = $producto['Costo'];
+        $this->cantidad = $producto['Cantidad'];
+        return true;
+    }
+    else{
+        return null;
+    }
+}
+public function updateProducto(){
+    $ql = "UPDATE producto SET Nombre = ?, Modelo = ?, Img = ?, IdTipoEnvio = ?, IdTalla = ?, IdOcasion = ?, IdMaterial = ?, IdMarca = ?, IdCategoria = ?, Detalles = ?, Descripcion = ?, Costo = ?, Cantidad = ? WHERE IdProducto = ?";
+    $params = array($this->$nombre, $this->$modelo, $this->$img, $this->$idtipoenvio, $this->$idtalla, $this->$idocasion, $this->$idmaterial, $this->$idmarca, $this->$idcategoria, $this->$detalles, $this->$descripcion, $this->$costo, $this->$cantidad, $this->$id);
+    return Database::executeRow($sql, $params);
+}
+public function deleteProducto(){
+    $sql = "DELETE FROM producto WHERE IdProdcuto = ?";
+    $params = array($this->id);
+    return Database::executeRow($sql, $params);
+}
 
 }
 ?>
