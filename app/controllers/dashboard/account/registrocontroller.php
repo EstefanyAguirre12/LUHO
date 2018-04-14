@@ -5,10 +5,13 @@ try{
     if(isset($_POST['crear'])){
         $_POST = $usuario->validateForm($_POST);
         if($usuario->setNombre($_POST['Nombre'])){
-            if($usuario->setApellidos($_POST['apellidos'])){
-                if($usuario->setCorreo($_POST['correo'])){
-                    if($usuario->setAlias($_POST['alias'])){
-                            if($usuario->setClave($_POST['clave1'])){
+            if($usuario->setApellido($_POST['Apellido'])){
+                if($usuario->setCorreo($_POST['Correo'])){
+                    if($usuario->setUsuario($_POST['Usuario'])){
+                            if($usuario->setContrasena($_POST['Contrasena'])){
+                                    if($usuario->setDireccion($_POST['Direccion'])){
+
+                                $usuario->setTipousuario(1);
                                 if($usuario->createUsuario()){
                                     Page::showMessage(1, "Usuario creado", "index.php");
                                 }else{
@@ -17,6 +20,9 @@ try{
                             }else{
                                 throw new Exception("Clave menor a 6 caracteres");
                             }
+                        }else{
+                            throw new Exception("Clave menor a 6 caracteres");
+                        }
                     }else{
                         throw new Exception("Alias incorrecto");
                     }

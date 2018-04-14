@@ -38,7 +38,7 @@ public function getUsuario(){
 }
 
 public function setTipousuario($value){
-    if($this->validateTipousuario($value)){
+    if($this->validateId($value)){
         $this->tipousuario = $value;
         return true;
     }
@@ -117,15 +117,14 @@ public function getApellido(){
 
  //Metodo para manejar el CRUD
  public function getUsuarios(){
-    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido FROM usuario ORDER BY Apellido";
+    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario ORDER BY Apellido";
     $params = array(null);
     return Database::getRows($sql, $params);
 }
 
 public function createUsuario(){
-    $hash = password_hash($this->clave, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO usuario(Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-    $params = array($this->usuario, $this->tipousuario, $this->nombre, $this->id, $this->direccion, $this->correo, $this->contrasena, $this->apellido, $hash);
+    $sql = "INSERT INTO usuario(IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+    $params = array($this->id, $this->usuario, $this->tipousuario, $this->nombre,  $this->direccion, $this->correo, $this->contrasena, $this->apellido);
     return Database::executeRow($sql, $params);
 }
 public function readUsuario(){

@@ -30,7 +30,12 @@ class Ocasion extends Validator{
 		}
     
     //Metodos CRUD
-    
+    //Obtener Ocasion
+    public function getOcasion(){
+		$sql = "SELECT IdOcasion, Ocasion FROM ocasion ORDER BY IdOcasion";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+    }
     //Insertar Ocasion
     public function createOcasion(){
 		$sql = "INSERT INTO ocasion(Ocasion) VALUES(?)";

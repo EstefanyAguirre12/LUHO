@@ -1558,3 +1558,15 @@ transition: all 0.3s ease 0s;
 #fondoproductos{
   background-image: url(../img/1234.gif);
 }
+.table-wrapper {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.margenb{
+  margin-bottom: 100px;
+}
+.margent{
+  margin-top: 50px;
+}

@@ -20,6 +20,8 @@ class Page extends Component{
                 <link href='../../web/css/style.css' rel='stylesheet'>
                 <!-- FONTS -->
                 <link href='../../web/css/fontawesome-all.css' rel='stylesheet'>
+                <script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
+
             </head>
             <body>
         ");
@@ -66,7 +68,7 @@ class Page extends Component{
 
 		}else{
 			print("
-            <nav class='navbar navbar-expand-lg navbar-dark bg-dark '>
+            <nav class='navbar navbar-expand-lg navbar-dark bg-dark fixed-top'>
                 <a class='navbar-brand' href='../inicio/index.php'>LUHO</a>
                 <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
                     <span class='navbar-toggler-icon'></span>
@@ -80,7 +82,10 @@ class Page extends Component{
                             <a class='nav-link' href='../productos/index.php'>Productos</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../catyoca/index.php'>Categoria & Ocasion</a>
+                            <a class='nav-link' href='../ocasion/index.php'>Ocasion</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../categoria/index.php'>Categoria</a>
                         </li>
                         <li class='nav-item'>
                             <a class='nav-link' href='../marcymat/index.php'>Marca & Material</a>
@@ -175,7 +180,6 @@ class Page extends Component{
         <script type='text/javascript' src='../../web/js/bootstrap.min.js'></script>
         <!-- MDB core JavaScript -->
         <script type='text/javascript' src='../../web/js/mdb.min.js'></script>
-        <script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
 
 			</body>
 			</html>
