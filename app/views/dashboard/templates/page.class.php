@@ -175,6 +175,8 @@ class Page extends Component{
         <script type='text/javascript' src='../../web/js/bootstrap.min.js'></script>
         <!-- MDB core JavaScript -->
         <script type='text/javascript' src='../../web/js/mdb.min.js'></script>
+        <script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
+
 			</body>
 			</html>
 		");
