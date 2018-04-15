@@ -20,7 +20,7 @@ class oferta extends validator{
     }
 
     public function setDescripcion($value){
-        if($this->validateAlphanumeric($value)){
+        if($this->validateAlphanumeric($value, 1, 200)){
             $this->descripcion = $value;
             return true;
         }
@@ -33,7 +33,7 @@ class oferta extends validator{
     }
 
     public function setDescuento($value){
-        if($this->validate($value)){                     //No se cual poner!
+        if($this->validateMoney($value)){                     //No se cual poner!
             $this->descuento = $value;
             return true;
         }

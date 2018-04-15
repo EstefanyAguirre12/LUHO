@@ -18,7 +18,7 @@ class talla extends validator{
     }
 
     public function getTalla($value){
-        if($this->validateAlphabetic($value)){
+		if($this->validateAlphanumeric($value, 1, 50)){
             $this->talla = $value;
             return true;
         }

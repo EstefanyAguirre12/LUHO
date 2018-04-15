@@ -30,7 +30,7 @@ class producto extends validator{
     }
 
     public function setCosto($value){
-        if($this->validate($value,2)){
+        if($this->validateMoney($value,2)){
             $this->costo = $value;
             return true;
         }
@@ -41,6 +41,7 @@ class producto extends validator{
     public function getCosto(){
         return $this->costo;
     }
+
     public function setCantidad($value){
         if($this->validateInt($value)){
             $this->cantidad = $value;
@@ -55,7 +56,7 @@ class producto extends validator{
     }
 
     public function setDescripcion($value){
-        if($this->validateAlphanumeric($value, 1, 60)){
+        if($this->validateAlphanumeric($value, 1, 200)){
             $this->descripcion = $value;
             return true;
         }
@@ -68,7 +69,7 @@ class producto extends validator{
     }
 
     public function setDetalles($value){
-        if($this->validateAlphanumeric($value, 1, 60)){
+        if($this->validateAlphanumeric($value, 1, 100)){
             $this->detalles = $value;
             return true;
         }
@@ -81,7 +82,7 @@ class producto extends validator{
     }
 
     public function setIdcategoria($value){
-        if($this->validate($value)){
+        if($this->validateId($value)){
             $this->idcategoria = $value;
             return true;
         }
@@ -94,7 +95,7 @@ class producto extends validator{
     }
 
     public function setIdmarca($value){
-        if($this->validate($value)){
+        if($this->validateId($value)){
             $this->idmarca = $value;
             return true; 
         }
@@ -107,7 +108,7 @@ class producto extends validator{
     }
 
     public function setIdmaterial($value){
-        if($this->validate($value)){
+        if($this->validateId($value)){
             $this->idmaterial = $value;
             return true;
         }
@@ -120,7 +121,7 @@ class producto extends validator{
     }
 
     public function setIdocasion($value){
-        if($this->validate($value)){
+        if($this->validateId($value)){
             $this->idocasion = $value;
             return true;
         }
@@ -133,7 +134,7 @@ class producto extends validator{
     }
 
     public function setIdtalla($value){
-        if($this->vaidate($value)){
+        if($this->validateId($value)){
             $this->idtalla = $value;
             return true;
         }
@@ -146,7 +147,7 @@ class producto extends validator{
     }
 
     public function setIdtipoenvio($value){
-        if($this->validate($value)){
+        if($this->validateId($value)){
             $this->idtipoenvio = $value;
             return true;
         }
@@ -158,6 +159,26 @@ class producto extends validator{
         return $this->idtipoenvio;
     }
 
+    public function setImagen($file){
+		if($this->validateImage($file, $this->imagen, "../../web/img/categorias/", 300, 300)){
+			$this->imagen = $this->getImageName();
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public function getImagen(){
+		return $this->imagen;
+	}
+	public function unsetImagen(){
+		if(unlink("../../web/img/categorias/".$this->imagen)){
+			$this->imagen = null;
+			return true;
+		}else{
+			return false;
+		}
+    }
+    
     public function setImg($value){
         if($this->validateAplhanumeric($value)){
             $this->img = $value;
@@ -172,7 +193,7 @@ class producto extends validator{
     }
 
     public function setModelo($value){
-        if($this->vaidateAlphanumeric($value)){
+        if($this->validateAlphanumeric($value, 1, 50)){
             $this->modelo = $value;
             return true;
         }
@@ -185,7 +206,7 @@ class producto extends validator{
     }
 
     public function setNombre($value){
-        if($this->validateAlphabetic($value)){
+        if($this->validateAlphanumeric($value, 1, 50)){
             $this->nombre = $value;
             return true;
         }

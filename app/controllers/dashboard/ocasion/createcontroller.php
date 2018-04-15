@@ -5,13 +5,13 @@ try{
     if(isset($_POST['crear'])){
         $_POST = $ocasion->validateForm($_POST);
         if($ocasion->setNombre($_POST['Nombre'])){
-                                if($ocasion->createOcasion()){
-                                    Page::showMessage(1, "Usuario creado", "");
-                                }else{
-                                    throw new Exception(Database::getException());
-                                }
+            if($ocasion->createOcasion()){
+                Page::showMessage(1, "Ocasion creada", "index.php");
+            }else{
+                throw new Exception(Database::getException());
+            }
         }else{
-            throw new Exception("Nombres incorrectos");
+            throw new Exception("Nombre incorrecto");
         }
     }
 }catch(Exception $error){

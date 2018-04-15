@@ -18,7 +18,7 @@ class Ocasion extends Validator{
     }
     
     public function setNombre($value){
-			if($this->validateAlphanumeric($value, 1, 60)){
+			if($this->validateAlphanumeric($value, 1, 50)){
 				$this->nombre = $value;
 				return true;
 			}else{
@@ -32,10 +32,15 @@ class Ocasion extends Validator{
     //Metodos CRUD
     //Obtener Ocasion
     public function getOcasion(){
-		$sql = "SELECT IdOcasion, Ocasion FROM ocasion ORDER BY IdOcasion";
+		$sql = "SELECT IdOcasion, Ocasion FROM ocasion ORDER BY Ocasion";
 		$params = array(null);
 		return Database::getRows($sql, $params);
-    }
+		}
+		public function searchOcasion($value){
+			$sql = "SELECT * FROM Ocasion WHERE Ocasion LIKE ?  ORDER BY Ocasion";
+			$params = array("%$value%");
+			return Database::getRows($sql, $params);
+		}
     //Insertar Ocasion
     public function createOcasion(){
 		$sql = "INSERT INTO ocasion(Ocasion) VALUES(?)";

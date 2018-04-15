@@ -18,7 +18,7 @@ class Material extends Validator{
     }
     
     public function setNombre($value){
-			if($this->validateAlphanumeric($value, 1, 60)){
+			if($this->validateAlphanumeric($value, 1, 50)){
 				$this->nombre = $value;
 				return true;
 			}else{

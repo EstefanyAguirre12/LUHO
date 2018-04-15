@@ -19,7 +19,7 @@ class Compra extends Validator{
 	}
 	
 	public function setFecha($value){
-		if($this->validateAlphanumeric($value, 9, 10)){
+		if($this->validateAlphanumeric($value, 10, 10)){
 			$this->fecha = $value;
 			return true;
 		}else{
@@ -45,18 +45,18 @@ class Compra extends Validator{
 	//Metodos para el manejo del CRUD
 	//Insertar compra
     public function createCompra(){
-		$sql = "INSERT INTO compra(Fecha, Idusuario) VALUES(?, ?)";
+		$sql = "INSERT INTO compra(Fecha, IdUsuario) VALUES(?, ?)";
 		$params = array($this->fecha, $this->idusuario);
 		return Database::executeRow($sql, $params);
     }
     //Leer compra
     public function readCompra(){
-		$sql = "SELECT Fecha, Idusuario FROM compra WHERE Idcompra = ?";
+		$sql = "SELECT Fecha, IdUsuario FROM compra WHERE IdCompra = ?";
 		$params = array($this->id);
 		$compra = Database::getRow($sql, $params);
 		if($compra){
 			$this->fecha = $compra['Fecha'];
-			$this->idusuario = $compra['Idusuario'];
+			$this->idusuario = $compra['IdUsuario'];
 			return true;
 		}else{
 			return null;
@@ -64,13 +64,13 @@ class Compra extends Validator{
     }
     //Modificar compra
     public function updateCompra(){
-		$sql = "UPDATE compra SET Fecha = ?, Idusuario = ? WHERE Idcompra = ?";
+		$sql = "UPDATE compra SET Fecha = ?, IdUsuario = ? WHERE IdCompra = ?";
 		$params = array($this->fecha, $this->idusuario, $this->id);
 		return Database::executeRow($sql, $params);
     }
     //Eliminar compra
 	public function deleteCompra(){
-		$sql = "DELETE FROM compra WHERE Idcompra = ?";
+		$sql = "DELETE FROM compra WHERE Idompra = ?";
 		$params = array($this->id);
 		return Database::executeRow($sql, $params);
 	}

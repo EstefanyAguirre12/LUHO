@@ -2,10 +2,9 @@
 class DetalleCompra extends Validator{
 	//Declaración de propiedades
 	private $id = null;
-	private $cantidad = null;
 	private $total = null;
 	private $idcompra = null;
-	private $idproducto = null;
+	private $idcarrito = null;
 
 	//Métodos para sobrecarga de propiedades
 	public function setId($value){
@@ -18,18 +17,6 @@ class DetalleCompra extends Validator{
 	}
 	public function getId(){
 		return $this->id;
-    }
-    
-    public function setCantidad($value){
-		if($this->validateId($value)){
-			$this->cantidad = $value;
-			return true;
-		}else{
-			return false;
-		}
-	}
-	public function getCantidad(){
-		return $this->cantidad;
     }
 
     public function setTotal($value){
@@ -56,35 +43,34 @@ class DetalleCompra extends Validator{
 		return $this->idcompra;
     }
 
-    public function setIdProducto($value){
+    public function setIdCarrito($value){
 		if($this->validateId($value)){
-			$this->idproducto = $value;
+			$this->idcarrito = $value;
 			return true;
 		}else{
 			return false;
 		}
 	}
-	public function getIdProducto(){
-		return $this->idproducto;
+	public function getIdCarrito(){
+		return $this->idcarrito;
     }
 	
 
 	//Metodos para el manejo del CRUD
 	//Insertar detalle compra
     public function createDetCompra(){
-		$sql = "INSERT INTO detallecom(Cantidad, Idcompra, Idproducto, Total) VALUES(?, ?, ?, ?)";
-		$params = array($this->cantidad, $this->idcompra, $this->idproducto, $this->total);
+		$sql = "INSERT INTO detallecompra(IdCompra, IdCarrito, Total) VALUES(?, ?, ?)";
+		$params = array($this->idcompra, $this->idcarrito, $this->total);
 		return Database::executeRow($sql, $params);
     }
     //Leer detalle compra
     public function readDetCompra(){
-		$sql = "SELECT Cantidad, Idcompra, Idproducto, Total FROM detallecom WHERE Iddetalle = ?";
+		$sql = "SELECT IdCompra, IdCarrito, Total FROM detallecompra WHERE IdDetalle = ?";
 		$params = array($this->id);
 		$detalle = Database::getRow($sql, $params);
 		if($detalle){
-			$this->cantidad = $detalle['Cantidad'];
-            $this->idcompra = $detalle['Idcompra'];
-            $this->idproducto = $detalle['Idproducto'];
+			$this->idcompra = $detalle['IdCompra'];
+			$this->idproducto = $detalle['IdCarrito'];
 			$this->total = $detalle['Total'];
 			return true;
 		}else{
@@ -93,13 +79,13 @@ class DetalleCompra extends Validator{
     }
     //Modificar detalle compra
     public function updateDetCompra(){
-		$sql = "UPDATE detallecom SET Cantidad = ?, Idcompra = ?, Idproducto = ?, Total = ? WHERE Iddetalle = ?";
-		$params = array($this->cantidad, $this->idcompra, $this->idproducto, $this->total, $this->id);
+		$sql = "UPDATE detallecompra SET IdCompra = ?, IdCarrito = ?, Total = ? WHERE IdDetalle = ?";
+		$params = array($this->idcompra, $this->idcarrito, $this->total, $this->id);
 		return Database::executeRow($sql, $params);
     }
     //Eliminar detalle compra
 	public function deleteDetCompra(){
-		$sql = "DELETE FROM detallecom WHERE Iddetalle = ?";
+		$sql = "DELETE FROM detallecompra WHERE IdDetalle = ?";
 		$params = array($this->id);
 		return Database::executeRow($sql, $params);
 	}

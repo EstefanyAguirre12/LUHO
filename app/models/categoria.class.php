@@ -19,7 +19,7 @@ class Categoria extends Validator{
     }
     
     public function setNombre($value){
-			if($this->validateAlphanumeric($value, 1, 60)){
+			if($this->validateAlphanumeric($value, 1, 50)){
 				$this->nombre = $value;
 				return true;
 			}else{
@@ -31,7 +31,7 @@ class Categoria extends Validator{
 		}
     
     public function setGenero($value){
-		if($this->validateAlphanumeric($value, 1)){
+		if($this->validateAlphanumeric($value, 1, 1)){
 			$this->genero = $value;
 			return true;
 		}else{
