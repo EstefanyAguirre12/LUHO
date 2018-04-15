@@ -30,7 +30,16 @@ class Marca extends Validator{
 		}
     
     //Metodos CRUD
-    
+	public function getMarca(){
+		$sql = "SELECT IdMarca, Marca FROM marca ORDER BY Marca";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+		}
+		public function searchMarca($value){
+			$sql = "SELECT * FROM Marca WHERE Marca LIKE ?  ORDER BY Marca";
+			$params = array("%$value%");
+			return Database::getRows($sql, $params);
+		}
     //Insertar marca
     public function createMarca(){
 		$sql = "INSERT INTO marca(Marca) VALUES(?)";
