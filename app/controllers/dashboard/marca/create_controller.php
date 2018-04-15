@@ -2,7 +2,7 @@
 require_once("../../app/models/marca.class.php");
 try{
     $marca = new Marca;
-    if(isset($_POST['insertar'])){
+    if(isset($_POST['crear'])){
         $_POST = $marca->validateForm($_POST);
         if($marca->setNombre($_POST['Nombre'])){ 
             if($marca->createMarca()){
@@ -18,5 +18,5 @@ try{
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/marcaymaterial/create_view.php");
+require_once("../../app/views/dashboard/marca/create_view.php");
 ?>
