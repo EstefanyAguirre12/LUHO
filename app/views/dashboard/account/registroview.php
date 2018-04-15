@@ -15,12 +15,16 @@
                 <label for="usuario" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
-                <input type="password" name ="Contrasena" class="form-control validate" id="contrasena" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
-                <label for="contrasena" class="col-lg-2 control-label"></label>
-            </div>
-            <div class="form-group col-md-6">
                 <input type="email" name ="Correo" class="form-control validate" id="email" placeholder="Correo" value='<?php print($usuario->getCorreo()) ?>' required/>
                 <label for="email" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="password" name ="Contrasena1" class="form-control validate" id="contrasena1" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
+                <label for="contrasena1" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="password" name ="Contrasena2" class="form-control validate" id="contrasena2" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
+                <label for="contrasena2" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
                 <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" value='<?php print($usuario->getDireccion()) ?>' required/>

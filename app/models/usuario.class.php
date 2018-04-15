@@ -1,13 +1,13 @@
 <?php
-class usuario extends validator{
-private $id = null;
-private $usuario = null;
-private $tipousuario = null;
-private $nombre = null;
-private $direccion = null;
-private $correo = null;
-private $contrasena = null;
-private $apellido = null;
+class Usuario extends Validator{
+    private $id = null;
+    private $usuario = null;
+    private $tipousuario = null;
+    private $nombre = null;
+    private $direccion = null;
+    private $correo = null;
+    private $contrasena = null;
+    private $apellido = null;
 
 //Metodos para sobrecarga de propiedades
 public function setId($value){
@@ -116,6 +116,27 @@ public function getApellido(){
 }
 
  //Metodo para manejar el CRUD
+ public function checkUsuario(){
+    $sql = "SELECT IdUsuario FROM usuario WHERE Usuario = ?";
+    $params = array($this->usuario);
+    $data = Database::getRow($sql, $params);
+    if($data){
+        $this->id = $data['IdUsuario'];
+        return true;
+    }else{
+        return false;
+    }
+}
+public function checkContra(){
+    $sql = "SELECT Contrasena FROM usuario WHERE IdUsuario = ?";
+    $params = array($this->id);
+    $data = Database::getRow($sql, $params);
+    if(password_verify($this->contrasena, $data['Contrasena'])){
+        return true;
+    }else{
+        return false;
+    }
+}
  public function getUsuarios(){
     $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario ORDER BY Apellido";
     $params = array(null);

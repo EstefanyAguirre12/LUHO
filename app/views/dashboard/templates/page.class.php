@@ -88,7 +88,10 @@ class Page extends Component{
                             <a class='nav-link' href='../categoria/index.php'>Categoria</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../marcymat/index.php'>Marca & Material</a>
+                            <a class='nav-link' href='../material/index.php'>Marca</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../marca/index.php'>Material</a>
                         </li>
                         <li class='nav-item'>
                             <a class='nav-link' href='../clientes/index.php'>Clientes</a>
