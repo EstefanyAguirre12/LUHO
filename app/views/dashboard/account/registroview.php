@@ -19,7 +19,7 @@
                 <label for="email" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
-                <input type="password" name ="Contrasena1" class="form-control validate" id="contrasena1" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
+                <input type="password" name ="Contrasena" class="form-control validate" id="contrasena1" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
                 <label for="contrasena1" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">

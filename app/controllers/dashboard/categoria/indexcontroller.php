@@ -16,7 +16,7 @@ try{
 		$data = $categoria->getCategoria();
 	}
 	if($data){
-		require_once("../../app/views/dashboard/catyoc/tablaview.php");
+		require_once("../../app/views/dashboard/categoria/indexview.php");
 	}else{
 		Page::showMessage(3, "No hay categorías disponibles", "create.php");
 	}
