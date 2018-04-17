@@ -144,9 +144,10 @@ public function checkContra(){
 }
 
 public function createUsuario(){
-    $sql = "INSERT INTO usuario(IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-    $params = array($this->id, $this->usuario, $this->tipousuario, $this->nombre,  $this->direccion, $this->correo, $this->contrasena, $this->apellido);
-    return Database::executeRow($sql, $params);
+	$hash = password_hash($this->clave, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO usuario(IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Apellido, Contrasena) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+    $params = array($this->id, $this->usuario, $this->tipousuario, $this->nombre,  $this->direccion, $this->correo, $this->apellido, $hash);
+    return Database::executeRow($sql, $params);    
 }
 public function readUsuario(){
     $sql = "SELECT Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido FROM usuario WHERE IdUsuario = ?";

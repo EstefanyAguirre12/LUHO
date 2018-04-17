@@ -19,6 +19,25 @@ class Component{
 		print("</select>");
 		print("<label>$label</label>");
 	}
+	public static function showGeneros($label, $name, $value, $data){
+		print("<select name='$name' required>");
+		if($data){
+			if(!$value){
+				print("<option value='' disabled selected>Seleccione una opción</option>");
+			}
+			foreach($data as $row){
+				if($value == $row[0]){
+					print("<option value='$row[0]' selected>$row[0]</option>");
+				}else{
+					print("<option value='$row[0]'>$row[0]</option>");
+				}
+			}
+		}else{
+			print("<option value='' disabled selected>No hay opciones disponibles</option>");
+		}
+		print("</select>");
+		print("<label>$label</label>");
+	}
 
 	public static function showMessage($type, $message, $url){
 		if(is_numeric($message)){

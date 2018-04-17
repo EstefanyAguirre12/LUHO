@@ -48,7 +48,12 @@ class Categoria extends Validator{
 		$sql = "SELECT IdCategoria, Categoria, Genero FROM categoria ORDER BY IdCategoria";
 		$params = array(null);
 		return Database::getRows($sql, $params);
-    }
+		}
+		public function getGeneros(){
+			$sql = "SELECT DISTINCT Genero FROM categoria ORDER BY Genero";
+			$params = array(null);
+			return Database::getRows($sql, $params);
+			}
     //Buscar categoria con parametros
     public function searchCategoria($value){
 		$sql = "SELECT * FROM categoria WHERE Categoria LIKE ? OR Genero LIKE ? ORDER BY Categoria";
