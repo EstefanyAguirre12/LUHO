@@ -30,7 +30,17 @@ class Material extends Validator{
 		}
     
     //Metodos CRUD
-    
+	public function getMaterial(){
+		$sql = "SELECT IdMaterial, Material FROM Material ORDER BY Material";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+		}
+		public function searchTalla($value){
+			$sql = "SELECT * FROM Material WHERE Material LIKE ?  ORDER BY Material";
+			$params = array("%$value%");
+			return Database::getRows($sql, $params);
+		}
+	
     //Insertar Material
     public function createMaterial(){
 		$sql = "INSERT INTO material(Material) VALUES(?)";
