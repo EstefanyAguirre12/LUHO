@@ -4,7 +4,7 @@ try{
 	$categoria = new Categoria;
 	if(isset($_POST['buscar'])){
 		$_POST = $categoria->validateForm($_POST);
-		$data = $categoria->searchCategoria($_POST['busqueda']);
+		$data = $categoria->searchCategoria($_POST['Buscar']);
 		if($data){
 			$rows = count($data);
 			Page::showMessage(4, "Se encontraron $rows resuldatos", null);

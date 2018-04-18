@@ -20,33 +20,7 @@ a {
   color: #fff;
 }
 
-/*Header parallax*/
-header {
-  background-color: #b7756e;
-  color: #fff;
-  text-align: center;
-  padding: 30px 0 120px;
-}
-header h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 65px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  line-height: 0.8;
-  padding-top: 50px;
-  text-align: center;
-  text-transform: uppercase;
-}
-header h1 span {
-  font-size: 25px;
-  letter-spacing: 7px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-header p {
-  padding-top: 30px;
-}
-/*Fin Header parallax*/
+
 
 /*Tabla imagen*/
 td img {

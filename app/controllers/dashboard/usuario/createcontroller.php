@@ -9,8 +9,7 @@ try{
                 if($usuario->setCorreo($_POST['Correo'])){
                     if($usuario->setUsuario($_POST['Usuario'])){
                         if($usuario->setDireccion($_POST['Direccion'])){
-                            if($usuario->setTipousuario($_POST['TUsuario'])){
-
+                            $usuario->setTipousuario(2);
                             if($_POST['clave1'] == $_POST['clave2']){
                                 if($usuario->setContrasena($_POST['clave1'])){
                                     if($usuario->createUsuario()){
@@ -21,9 +20,6 @@ try{
                                 }else{
                                     throw new Exception("Clave menor a 6 caracteres");
                                 }
-                                }else{
-                                throw new Exception("Claves diferentes");
-                            }
                             }else{
                                 throw new Exception("Claves diferentes");
                             }
@@ -46,5 +42,5 @@ try{
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/account/registroview.php");
+require_once("../../app/views/dashboard/usuario/createview.php");
 ?>

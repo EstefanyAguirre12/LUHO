@@ -91,15 +91,14 @@ public function getCorreo(){
 
 public function setContrasena($value){
     if($this->validatePassword($value)){
-        $this->contrasena = $value;
+        $this->clave = $value;
         return true;
-    }
-    else{
+    }else{
         return false;
     }
 }
 public function getContrasena(){
-    return $this->contrasena;
+    return $this->clave;
 }
 
 public function setApellido($value){
@@ -137,9 +136,28 @@ public function checkContra(){
         return false;
     }
 }
+public function logOut(){
+    return session_destroy();
+}
  public function getUsuarios(){
-    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario ORDER BY Apellido";
+    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario where TipoUsuario=2 ORDER BY Apellido";
     $params = array(null);
+    return Database::getRows($sql, $params);
+}
+public function getClientes(){
+    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario where TipoUsuario=1 ORDER BY Apellido";
+    $params = array(null);
+    return Database::getRows($sql, $params);
+}
+public function getGeneros(){
+    $sql = "SELECT IdTipo, Tipo FROM tipousuario ORDER BY Tipo";
+    $params = array(null);
+    return Database::getRows($sql, $params);
+}
+
+public function searchUsuario($value){
+    $sql = "SELECT * FROM usuario WHERE Usuario LIKE ? OR Nombre LIKE ? and TipoUsuario=2 ORDER BY Usuario";
+    $params = array("%$value%", "%$value%" );
     return Database::getRows($sql, $params);
 }
 
@@ -168,12 +186,12 @@ public function readUsuario(){
     }
 }
 public function updateUsuario(){
-    $sql = "UPDATE Usuario SET Usuario = ?, TipoUsuario = ?, Nombre = ?, Direccion = ?, Correo = ?, Contrasena = ?, Apellido = ? WHERE IdUsuario = ?";
-    $params = array($this->usuario, $this->tipousuario, $this->nombre, $this->direccion, $this->correo, $this->contrasena, $this->apellido, $this->id);
+    $sql = "UPDATE usuario SET Usuario = ?, Nombre = ?, Direccion = ?, Correo = ?, Apellido = ? WHERE IdUsuario = ?";
+    $params = array($this->usuario, $this->nombre, $this->direccion, $this->correo, $this->apellido, $this->id);
     return Database::executeRow($sql, $params);
 }
 public function deleteUsuario(){
-    $sql = "DELETE FROM Usuario WHERE IdUsuario = ?";
+    $sql = "DELETE FROM usuario WHERE IdUsuario = ?";
     $params = array($this->id);
     return Database::executeRow($sql, $params);
 }

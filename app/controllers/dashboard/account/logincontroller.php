@@ -7,11 +7,11 @@ try{
 			$_POST = $object->validateForm($_POST);
 			if($object->setUsuario($_POST['Usuario'])){
 				if($object->checkUsuario()){
-					if($object->setContrasena($_POST['Contrasena'])){
+					if($object->setContrasena($_POST['Clave'])){
 						if($object->checkContra()){
 							$_SESSION['IdUsuario'] = $object->getId();
 							$_SESSION['Usuario'] = $object->getUsuario();
-							Page::showMessage(1, "Autenticación correcta", "index.php");
+							Page::showMessage(1, "Autenticación correcta", "../inicio/index.php");
 						}else{
 							throw new Exception("Clave inexistente");
 						}

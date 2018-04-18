@@ -37,7 +37,7 @@ class Ocasion extends Validator{
 		return Database::getRows($sql, $params);
 		}
 		public function searchOcasion($value){
-			$sql = "SELECT * FROM Ocasion WHERE Ocasion LIKE ?  ORDER BY Ocasion";
+			$sql = "SELECT * FROM ocasion WHERE Ocasion LIKE ?  ORDER BY Ocasion";
 			$params = array("%$value%");
 			return Database::getRows($sql, $params);
 		}
