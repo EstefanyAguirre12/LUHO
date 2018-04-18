@@ -1,5 +1,5 @@
 <?php
-class talla extends validator{
+class Tipoenvio extends validator{
     private $id = null;
     private $nombre = null;
 

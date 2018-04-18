@@ -42,34 +42,34 @@ class Page extends Component{
                             <a class='nav-link' href='../marca/index.php'>Marca</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../catyoca/index.php'>Material</a>
+                            <a class='nav-link' href='../material/index.php'>Material</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../marcymat/index.php'>Ocasion</a>
+                            <a class='nav-link' href='../ocasion/index.php'>Ocasion</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../clientes/index.php'>Ofertas</a>
+                            <a class='nav-link' href='..//index.php'>Ofertas</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../clientes/index.php'>Producto</a>
+                            <a class='nav-link' href='../producto/index.php'>Producto</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../clientes/index.php'>Talla</a>
+                            <a class='nav-link' href='../talla/index.php'>Talla</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../clientes/index.php'>Tipo Envio</a>
+                            <a class='nav-link' href='../tipoenvio/index.php'>Tipo Envio</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../clientes/index.php'>Usuario</a>
+                            <a class='nav-link' href='../usuario/index.php'>Usuario</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../clientes/index.php'>Cliente</a>
+                            <a class='nav-link' href='../cliente/index.php'>Cliente</a>
                         </li>
                     </ul>
                     <!-- Links Imagen -->
                     <ul class='navbar-nav nav-flex-icons ml-auto'>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../account/index.php'><i class='fas fa-user' aria-hidden='true'></i></a>
+                            <a class='nav-link' href='../account/cuenta.php'><i class='fas fa-user' aria-hidden='true'></i></a>
                         </li>
                         <li class='nav-item'>
                         <a class='nav-link' href='../account/logout.php'><i class='fas fa-sign-in-alt' aria-hidden='true'></i></a>
