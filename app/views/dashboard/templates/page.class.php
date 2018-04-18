@@ -36,19 +36,34 @@ class Page extends Component{
                 <div class='collapse navbar-collapse' id='navbarNav'>
                     <ul class='navbar-nav'>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../usuarios/index.php'>Usuarios</a>
+                            <a class='nav-link' href='../categoria/index.php'>Categoria</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../productos/index.php'>Productos</a>
+                            <a class='nav-link' href='../marca/index.php'>Marca</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../catyoca/index.php'>Categoria & Ocasion</a>
+                            <a class='nav-link' href='../catyoca/index.php'>Material</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../marcymat/index.php'>Marca & Material</a>
+                            <a class='nav-link' href='../marcymat/index.php'>Ocasion</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='../clientes/index.php'>Clientes</a>
+                            <a class='nav-link' href='../clientes/index.php'>Ofertas</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../clientes/index.php'>Producto</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../clientes/index.php'>Talla</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../clientes/index.php'>Tipo Envio</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../clientes/index.php'>Usuario</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../clientes/index.php'>Cliente</a>
                         </li>
                     </ul>
                     <!-- Links Imagen -->

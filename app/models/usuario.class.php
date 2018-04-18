@@ -136,6 +136,14 @@ public function checkContra(){
         return false;
     }
 }
+
+public function changePassword(){
+    $hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
+    $sql = "UPDATE usuario SET Contrasena = ? WHERE IdUsuario = ?";
+    $params = array($hash, $this->id);
+    return Database::executeRow($sql, $params);
+}
+
 public function logOut(){
     return session_destroy();
 }
