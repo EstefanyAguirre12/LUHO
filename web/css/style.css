@@ -42,28 +42,6 @@ th {
     background-color: #000000;
 }
 
-/*Form gestion de datos*/
-.form-elegant .font-small {
-  font-size: 0.8rem; }
-
-.form-elegant .z-depth-1a {
-  -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
-  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
-
-.form-elegant .z-depth-1-half,
-.form-elegant .btn:hover {
-  -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
-  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
-
-.form-elegant .modal-header {
-  border-bottom: none; }
-
-.modal-dialog .form-elegant .btn .fa {
-  color: #2196f3!important; }
-
-.form-elegant .modal-body, .form-elegant .modal-footer {
-  font-weight: 400; }
-/*Form*/
 
 /*Login dashboard*/
 .full-width{
@@ -105,58 +83,6 @@ th {
   -webkit-transition-timing-function: ease-in-put;
           transition-timing-function: ease-in-put;
   font-weight: 200;
-}
-
-form {
-  padding: 20px 0;
-  position: relative;
-  z-index: 2;
-}
-form input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 250px;
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin: 0 auto 10px auto;
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  font-weight: 300;
-}
-form input:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-form input:focus {
-  background-color: white;
-  width: 300px;
-  color: #928c8c;
-}
-form button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  background-color: white;
-  border: 0;
-  padding: 10px 15px;
-  color: #928c8c;
-  border-radius: 3px;
-  width: 250px;
-  cursor: pointer;
-  font-size: 18px;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-}
-form button:hover {
-  background-color: #f5f7f9;
 }
 
 @-webkit-keyframes square {
@@ -947,10 +873,7 @@ body {
 
 
 /* CSS DE LA AMAZING GALLERY===========================------------------------------------------------------------------------------------------------=============*/
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
-body {
-  font-family: 'Roboto', sans-serif;
-}
+
 
 .header, .footer {
   background: #2e2e2e;
@@ -1543,4 +1466,8 @@ transition: all 0.3s ease 0s;
 }
 .margent{
   margin-top: 50px;
+}
+.file{
+  visibility: hidden;
+  position: absolute;
 }
