@@ -19,9 +19,8 @@ try{
                                             if($producto->setIdocasion($_POST['Ocasion'])){
 
                                                 if($producto->setIdTalla($_POST['Talla'])){
-
-                                                    if(is_uploaded_file($_FILES['archivo']['tmp_name'])){
-                                                        if($producto->setImagen($_FILES['archivo'])){
+                                                    if(is_uploaded_file($_FILES['imag']['tmp_name'])){
+                                                        if($producto->setImagen($_FILES['imag'])){
                                                             if($producto->createProducto()){
                                                                 Page::showMessage(1, "Producto creado", "index.php");
                                                             }else{

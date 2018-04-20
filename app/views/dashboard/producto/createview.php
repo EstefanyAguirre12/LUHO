@@ -50,12 +50,22 @@
                 Page::showSelect("Talla", "Talla", $producto->getIdTalla(), $producto->getTallas());
                 ?>
             </div>
-            <div class="form-group col-md-6">
-                <label for="img" id="text"> Imagen </label>
-                <input type="file" class="file" name="archivo"/>
+
+
+            <div class='form-group col-lg-6 center'>
+                <label for='img'>Imagen de la marca</label>
+                <input type='file' class='file' name ="imag" required/>
+                <div class='input-group col-xs-12'>
+                    <input type='text' class='form-control input-lg validate' placeholder='Imagen de la marca'/>
+                    <span class='input-group-btn'>
+                        <button class='browse btn btn-primary input-lg' type='button'>Subir</button>
+                    </span>
+                </div>
             </div>
+
             <button type='submit' name='crear' class='btn waves-effect blue tooltipped'><i class='material-icons'>save</i></button>
         </div> 
+        
                      
     </div>
    

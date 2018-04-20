@@ -20,7 +20,6 @@
 	</div>
 </div>
 
-
 <div class="container text-center margenb" >
 				<div class="px-4">
 					<div class="table-wrapper">
