@@ -37,23 +37,23 @@ class Page extends Component{
                 <a class='nav-link dropdown-toggle' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>LUHO</a>
                 <div class='dropdown-menu mega-menu row z-depth-1' aria-labelledby='navbarDropdownMenuLink'>
                     <div class='row' >
-
-                        <div class='col-md-5 col-xl-3 sub-menu mt-5 mb-5 pl-4'>
+                    
+                        ");
+                        
+                        foreach($categorias as $categoria){
+                            print("
+                            <div class='col-md-5 col-xl-3 sub-menu mt-5 mb-5 pl-4'>
                             <ol class='list-unstyled mx-4 dark-grey-text'>
                                 <li class='sub-title font-up'><a class='menu-item' href=''>Todos los productos</a></li>
                                 <h6 class='font-weight-bold' >HOMBRES</h6'>
-                                <li class='sub-title font-up'><a class='menu-item' href='../ventas/index.php'>Relojes</a></li>
-                                <li class='sub-title font-up'><a class='menu-item' href='../ventas/index.php'>Anillos</a></li>
+                                <li class='sub-title font-up'><a class='menu-item' href='../ventas/index.php'>$categoria[Categoria]</a></li>
                                 <h6 class='font-weight-bold' >MUJERES</h6>
-                                <li class='sub-title font-up'><a class='menu-item' href='../ventas/index.php'>Anillos</a></li>
-                                <li class='sub-title font-up'><a class='menu-item' href='../ventas/index.php'>Pulseras</a></li>
-                                <li class='sub-title font-up'><a class='menu-item' href='../ventas/index.php'>Charms</a></li>
                                 <li class='sub-title font-up'><a class='menu-item' href='../ventas/index.php'>Relojes</a></li>
                             </ol>
-                        </div>
-                        ");
-
+                            ");
+                        }
                         print("
+                        </div>
 
                         <div class='col-md-7 col-xl-9'>
                             <div class='row'>
