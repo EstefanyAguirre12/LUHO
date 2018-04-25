@@ -8,7 +8,7 @@ try{
                 if(isset($_POST['modificar'])){
                     $_POST = $material->validateForm($_POST);
                     if($material->setNombre($_POST['Nombre'])){
-                        if($material->updateMarca()){
+                        if($material->updateMaterial()){
                             Page::showMessage(1, "material modificado", "index.php");
                         }else{
                             throw new Exception(Database::getException());

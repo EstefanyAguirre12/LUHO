@@ -5,7 +5,7 @@ class talla extends validator{
 
     //Metodos para sobrecarga de propiedades
     public function setId($value){
-        if($this->validate($value)){
+        if($this->validateId($value)){
             $this->id = $value;
             return true;
         }
@@ -51,7 +51,7 @@ class talla extends validator{
     public function readTalla(){
 		$sql = "SELECT Talla FROM Talla WHERE IdTalla = ?";
 		$params = array($this->id);
-		$marca = Database::getRow($sql, $params);
+		$talla = Database::getRow($sql, $params);
 		if($talla){
 			$this->nombre = $talla['Talla'];
 			return true;

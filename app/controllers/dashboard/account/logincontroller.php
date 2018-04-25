@@ -19,14 +19,14 @@ try{
 						throw new Exception("Clave menor a 6 caracteres");
 					}
 				}else{
-					throw new Exception("Alias inexistente");
+					throw new Exception("Usuario inexistente");
 				}
 			}else{
-				throw new Exception("Alias incorrecto");
+				throw new Exception("Usuario incorrecto");
 			}
 		}
 	}else{
-		Page::showMessage(3, "No hay usuarios disponibles", "register.php");
+		Page::showMessage(3, "No hay usuarios disponibles", "registro.php");
 	}
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), null);

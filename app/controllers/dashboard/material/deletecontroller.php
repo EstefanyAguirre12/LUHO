@@ -4,9 +4,9 @@ try{
 	if(isset($_GET['id'])){
 		$material = new Material;
 		if($material->setId($_GET['id'])){
-			if($material->readTalla()){
+			if($material->readMaterial()){
 				if(isset($_POST['eliminar'])){
-					if($material->deleteTalla()){
+					if($material->deleteMaterial()){
                         Page::showMessage(1, "Material eliminada", "index.php");
 					}else{
 						throw new Exception(Database::getException());

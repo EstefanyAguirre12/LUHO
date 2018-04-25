@@ -1,4 +1,3 @@
-
 <form method='post'>
     <div class="container registeer cuenta">   
         <div class="row">

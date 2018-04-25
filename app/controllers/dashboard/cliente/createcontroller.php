@@ -24,10 +24,10 @@ try{
                                 throw new Exception("Claves diferentes");
                             }
                         }else{
-                            throw new Exception("Clave menor a 6 caracteres");
+                            throw new Exception("Direccion incorrecta");
                         }
                     }else{
-                        throw new Exception("Alias incorrecto");
+                        throw new Exception("Usuario incorrecto");
                     }
                 }else{
                     throw new Exception("Correo incorrecto");

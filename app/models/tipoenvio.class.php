@@ -5,7 +5,7 @@ class Tipoenvio extends validator{
 
     //Metodos para sobrecarga de propiedades
     public function setId($value){
-        if($this->validate($value)){
+        if($this->validateId($value)){
             $this->id = $value;
             return true;
         }
@@ -18,7 +18,7 @@ class Tipoenvio extends validator{
     }
 
     public function setNombre($value){
-        if($this->validateAlphabetic($value)){
+		if($this->validateAlphanumeric($value, 1, 50)){
             $this->nombre = $value;
             return true;
         }

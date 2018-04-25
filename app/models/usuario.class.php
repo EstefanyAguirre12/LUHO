@@ -164,7 +164,7 @@ public function getGeneros(){
 }
 
 public function searchUsuario($value){
-    $sql = "SELECT * FROM usuario WHERE Usuario LIKE ? OR Nombre LIKE ? and TipoUsuario=2 ORDER BY Usuario";
+    $sql = "SELECT * FROM usuario WHERE TipoUsuario=2 AND (Usuario LIKE ? OR Nombre LIKE ?)  ORDER BY Usuario";
     $params = array("%$value%", "%$value%" );
     return Database::getRows($sql, $params);
 }

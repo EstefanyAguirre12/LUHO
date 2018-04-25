@@ -1,6 +1,5 @@
 
 <div class="container margent"> 
-
 	<div class="row">	
 		<div class="col-md-12">
 			<form method='post'>
@@ -15,52 +14,51 @@
 					</div>
 				</div>			
 			</form>
-	
 		</div>
 	</div>
 </div>
 
 
 <div class="container text-center margenb" >
-				<div class="px-4">
-					<div class="table-wrapper">
-						<!--Table-->
-						<table class="table" ><!-- if using bootstrap this auto creates-->
-							<thead>
-								<tr>
-									<th>Nombre</th>
-									<th>Apellido</th>
-									<th>Usuario</th>
-									<th>Correo</th>	
-									<th>Direccion</th>														
-								</tr>
-							</thead>
-							<tbody>
-								<?php
-									foreach($data as $row){
-									print("
-									<tr>
-										<td>$row[Nombre]</td>
-										<td>$row[Apellido]</td>
-										<td>$row[Usuario]</td>
-										<td>$row[Correo]</td>
-										<td>$row[Direccion]</td>
-										<td>
-										<a href='update.php?id=$row[IdUsuario]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
-										</td> <!--look on bootstrap for sizes-->	
-										<td>
-										<a href='delete.php?id=$row[IdUsuario]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
-										</td> <!--look on bootstrap for sizes-->	
-									
-									<tr>
-									");
-									}
-								?>												
-							</tbody>
-						</table>
-						<!--Table-->
-					</div>
-				</div>			
-			</div>
+	<div class="px-4">
+		<div class="table-wrapper">
+			<!--Table-->
+			<table class="table" ><!-- if using bootstrap this auto creates-->
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Usuario</th>
+						<th>Correo</th>	
+						<th>Direccion</th>														
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						foreach($data as $row){
+						print("
+						<tr>
+							<td>$row[Nombre]</td>
+							<td>$row[Apellido]</td>
+							<td>$row[Usuario]</td>
+							<td>$row[Correo]</td>
+							<td>$row[Direccion]</td>
+							<td>
+							<a href='update.php?id=$row[IdUsuario]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
+							</td> <!--look on bootstrap for sizes-->	
+							<td>
+							<a href='delete.php?id=$row[IdUsuario]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
+							</td> <!--look on bootstrap for sizes-->	
+						
+						<tr>
+						");
+						}
+					?>												
+				</tbody>
+			</table>
+			<!--Table-->
+		</div>
+	</div>			
+</div>
 
     

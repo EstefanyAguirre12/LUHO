@@ -1,23 +1,22 @@
 <?php
-require_once("../../app/models/usuario.class.php");
+require_once("../../app/models/producto.class.php");
 try{
-	$usuario = new Usuario;
+	$producto = new Producto;
 	if(isset($_POST['buscar'])){
-		$_POST = $usuario->validateForm($_POST);
-		$data = $usuario->searchUsuario($_POST['Buscar']);
+		$_POST = $producto->validateForm($_POST);
+		$data = $producto->searchProducto($_POST['Buscar']);
 		if($data){
 			$rows = count($data);
 			Page::showMessage(4, "Se encontraron $rows resuldatos", null);
 		}else{
 			Page::showMessage(4, "No se encontraron resultados", null);
-			$data = $usuario->getClientes();
+			$data = $producto->getProductos();
 		}
 	}else{
-		$data = $usuario->getClientes();
+		$data = $producto->getProductos();
 	}
-	
 	if($data){
-		require_once("../../app/views/dashboard/cliente/indexview.php");
+		require_once("../../app/views/dashboard/producto/indexview.php");
 	}else{
 		Page::showMessage(3, "No hay ocasiones disponibles", "create.php");
 	}

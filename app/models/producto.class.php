@@ -1,5 +1,5 @@
 <?php
-class producto extends validator{
+class Producto extends validator{
     private $id = null;
     private $cantidad = null;
     private $costo = null;
@@ -147,25 +147,38 @@ class producto extends validator{
 
 
    
-    public function setImagen($file){
-		if($this->validateImage($file, $this->img, "../../web/img/productos/", 500, 500)){
-			$this->img = $this->getImageName();
-			return true;
-		}else{
-			return false;
-		}
-	}
-	public function getImagen(){
-		return $this->img;
-	}
-	public function unsetImagen(){
-		if(unlink("../../web/img/productos/".$this->img)){
-			$this->img = null;
-			return true;
-		}else{
-			return false;
-		}
-	}
+     public function setImagen($file){
+	 	if($this->validateImage($file, $this->img, "../../web/img/productos/", 500, 500)){
+	 		$this->img = $this->getImageName();
+	 		return true;
+	 	}else{
+	 		return false;
+	 	}
+	 }
+	 public function getImagen(){
+	 	return $this->img;
+	 }
+	 public function unsetImagen(){
+	 	if(unlink("../../web/img/productos/".$this->img)){
+	 		$this->img = null;
+	 		return true;
+	 	}else{
+	 		return false;
+	 	}
+	 }
+
+    public function setImg($value){
+        if($this->validateAlphanumeric($value, 1, 50)){
+            $this->img = $value;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public function getImg(){
+        return $this->img;
+    }
 
     public function setModelo($value){
         if($this->validateAlphanumeric($value, 1, 50)){
@@ -222,23 +235,33 @@ class producto extends validator{
         $params = array(null);
         return Database::getRows($sql, $params);
     }
-
+    public function getProductos(){
+		$sql = "SELECT p.IdProducto, P.Nombre, P.Modelo, P.Descripcion, P.Detalles, P.Costo, c.Categoria, ma.Material, m.Marca, o.Ocasion, t.Talla, p.Cantidad, p.Img FROM producto P, categoria C, material ma, marca m, ocasion o, talla t WHERE p.IdCategoria=c.IdCategoria and p.IdMarca= m.IdMarca and p.IdOcasion=o.IdOcasion and p.IdMaterial= ma.IdMaterial and p.IdTalla= t.IdTalla";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+    }
+    
+    
+public function searchProducto($value){
+    $sql = "SELECT p.IdProducto, P.Nombre, P.Modelo, P.Descripcion, P.Detalles, P.Costo, c.Categoria, ma.Material, m.Marca, o.Ocasion, t.Talla, p.Cantidad, p.Img FROM producto P, categoria C, material ma, marca m, ocasion o, talla t WHERE p.IdCategoria=c.IdCategoria and p.IdMarca= m.IdMarca and p.IdOcasion=o.IdOcasion and p.IdMaterial= ma.IdMaterial and p.IdTalla= t.IdTalla and Nombre LIKE ? OR Modelo LIKE ? ORDER BY Nombre";
+    $params = array("%$value%", "%$value%" );
+    return Database::getRows($sql, $params);
+}
       
 public function createProducto(){
-    $sql = "INSERT INTO producto(Nombre, Modelo, Img, IdTalla, IdProducto, IdOcasion, IdMaterial, IdMarca, IdCategoria, Detalles, Descripcion, Costo, Cantidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    $params = array($this->$nombre, $this->$modelo, $this->$img, $this->idtalla, $this->id, $this->idocasion, $this->idmaterial, $this->idmarca, $this->idcategoria, $this->detalles, $this->descripcion, $this->costo, $this->$cantidad);
+    $sql = "INSERT INTO producto(Nombre, Modelo, Img, IdTalla, IdOcasion, IdMaterial, IdMarca, IdCategoria, Detalles, Descripcion, Costo, Cantidad) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $params = array($this->nombre, $this->modelo, $this->img, $this->idtalla, $this->idocasion, $this->idmaterial, $this->idmarca, $this->idcategoria, $this->detalles, $this->descripcion, $this->costo, $this->cantidad);
     return Database::executeRow($sql, $params);
 }
-public function readProduct(){
-    $sql = "SELECT Nombre, Modelo, Img, IdTalla, IdProducto, IdOcasion, IdMaterial, IdMarca, IdCategoria, Detalles, Descripcion, Costo, Cantidad FROM producto WHERE IdProducto = ?";
+public function readProducto(){
+    $sql = "SELECT Nombre, Modelo, Img, IdTalla, IdOcasion, IdMaterial, IdMarca, IdCategoria, Detalles, Descripcion, Costo, Cantidad FROM producto WHERE IdProducto = ?";
     $params = array($this->id);
     $producto = Database::getRow($sql, $params);
     if($producto){
         $this->nombre = $producto['Nombre'];
-        $this->modelo = $prodcuto['Modelo'];
+        $this->modelo = $producto['Modelo'];
         $this->img = $producto['Img'];
         $this->idtalla = $producto['IdTalla'];
-        $this->id = $producto['IdProducto'];
         $this->idocasion = $producto['IdOcasion'];
         $this->idmaterial = $producto['IdMaterial'];
         $this->idmarca = $producto['IdMarca'];
@@ -254,8 +277,8 @@ public function readProduct(){
     }
 }
 public function updateProducto(){
-    $ql = "UPDATE producto SET Nombre = ?, Modelo = ?, Img = ?, IdTalla = ?, IdOcasion = ?, IdMaterial = ?, IdMarca = ?, IdCategoria = ?, Detalles = ?, Descripcion = ?, Costo = ?, Cantidad = ? WHERE IdProducto = ?";
-    $params = array($this->$nombre, $this->$modelo, $this->$img, $this->$idtalla, $this->$idocasion, $this->$idmaterial, $this->$idmarca, $this->$idcategoria, $this->$detalles, $this->$descripcion, $this->$costo, $this->$cantidad, $this->$id);
+    $sql = "UPDATE producto SET Nombre = ?, Modelo = ?, Img = ?, IdTalla = ?, IdOcasion = ?, IdMaterial = ?, IdMarca = ?, IdCategoria = ?, Detalles = ?, Descripcion = ?, Costo = ?, Cantidad = ? WHERE IdProducto = ?";
+    $params = array($this->nombre, $this->modelo, $this->img, $this->idtalla, $this->idocasion, $this->idmaterial, $this->idmarca, $this->idcategoria, $this->detalles, $this->descripcion, $this->costo, $this->cantidad, $this->id);
     return Database::executeRow($sql, $params);
 }
 public function deleteProducto(){

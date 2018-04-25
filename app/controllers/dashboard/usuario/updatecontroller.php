@@ -18,10 +18,10 @@ try{
                                             throw new Exception(Database::getException());
                                         }
                                     }else{
-                                        throw new Exception("Clave menor a 6 caracteres");
+                                        throw new Exception("Direccion incorrecta");
                                     }
                                 }else{
-                                    throw new Exception("Alias incorrecto");
+                                    throw new Exception("Usuario incorrecto");
                                 }
                             }else{
                                 throw new Exception("Correo incorrecto");
@@ -34,13 +34,13 @@ try{
                     }
                 }
             }else{
-                Page::showMessage(2, "Ocasion inexistente", "index.php");
+                Page::showMessage(2, "Usuario inexistente", "index.php");
             }
         }else{
-            Page::showMessage(2, "Ocasion incorrecta", "index.php");
+            Page::showMessage(2, "Usuario incorrecta", "index.php");
         }
     }else{
-        Page::showMessage(3, "Seleccione ocasion", "index.php");
+        Page::showMessage(3, "Seleccione Usuario", "index.php");
     }
 
 }catch(Exception $error){

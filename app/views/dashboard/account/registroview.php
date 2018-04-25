@@ -27,9 +27,9 @@
                 <label for="contrasena2" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
-						<?php
-						Page::showSelect("Tipo de Usuario", "TUsuario", $usuario->getTipousuario(), $usuario->getGeneros());
-						?>
+                <?php
+                Page::showSelect("Tipo de Usuario", "TUsuario", $usuario->getTipousuario(), $usuario->getGeneros());
+                ?>
             </div>
             <div class="form-group col-md-6">
                 <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" value='<?php print($usuario->getDireccion()) ?>' required/>

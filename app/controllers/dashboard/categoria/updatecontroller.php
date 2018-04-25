@@ -16,7 +16,7 @@ try{
                             throw new Exception(Database::getException());
                         }
                     }else{
-                        throw new Exception("Nombre incorrecto");
+                        throw new Exception("Genero incorrecto");
                     }
                 }else{
                     throw new Exception("Nombre incorrecto");

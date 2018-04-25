@@ -48,7 +48,7 @@ class Page extends Component{
                             <a class='nav-link' href='../ocasion/index.php'>Ocasion</a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='..//index.php'>Ofertas</a>
+                            <a class='nav-link' href='../oferta/index.php'>Ofertas</a>
                         </li>
                         <li class='nav-item'>
                             <a class='nav-link' href='../producto/index.php'>Producto</a>
@@ -68,6 +68,9 @@ class Page extends Component{
                     </ul>
                     <!-- Links Imagen -->
                     <ul class='navbar-nav nav-flex-icons ml-auto'>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='../account/contra.php'><i class='fas fa-key' aria-hidden='true'></i></a>
+                        </li>
                         <li class='nav-item'>
                             <a class='nav-link' href='../account/cuenta.php'><i class='fas fa-user' aria-hidden='true'></i></a>
                         </li>

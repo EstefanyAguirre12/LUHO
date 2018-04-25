@@ -2,13 +2,12 @@
 require_once("../../app/models/categoria.class.php");
 try{
     $categoria = new Categoria;
-    if(isset($_POST['crear'])){
-        $_POST = $categoria->validateForm($_POST);
-        if($categoria->setNombre($_POST['Nombre'])){
-            if($categoria->setGenero($_POST['Genero'])){
-
-            if($categoria->createCategoria()){
-                Page::showMessage(1, "Categoria creada", "index.php");
+        if(isset($_POST['crear'])){
+            $_POST = $categoria->validateForm($_POST);
+                if($categoria->setNombre($_POST['Nombre'])){
+                    if($categoria->setGenero($_POST['Genero'])){
+                         if($categoria->createCategoria()){
+                            Page::showMessage(1, "Categoria creada", "index.php");
             }else{
                 throw new Exception(Database::getException());
             }

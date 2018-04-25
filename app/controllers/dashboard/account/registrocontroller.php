@@ -10,28 +10,27 @@ try{
                     if($usuario->setUsuario($_POST['Usuario'])){
                         if($usuario->setDireccion($_POST['Direccion'])){
                             if($usuario->setTipousuario($_POST['TUsuario'])){
-
-                            if($_POST['clave1'] == $_POST['clave2']){
-                                if($usuario->setContrasena($_POST['clave1'])){
-                                    if($usuario->createUsuario()){
-                                        Page::showMessage(1, "Usuario creado", "index.php");
+                                if($_POST['clave1'] == $_POST['clave2']){
+                                    if($usuario->setContrasena($_POST['clave1'])){
+                                        if($usuario->createUsuario()){
+                                            Page::showMessage(1, "Usuario creado", "index.php");
+                                        }else{
+                                            throw new Exception(Database::getException());
+                                        }
                                     }else{
-                                        throw new Exception(Database::getException());
+                                        throw new Exception("Clave menor a 6 caracteres");
                                     }
-                                }else{
-                                    throw new Exception("Clave menor a 6 caracteres");
-                                }
                                 }else{
                                 throw new Exception("Claves diferentes");
                             }
                             }else{
-                                throw new Exception("Claves diferentes");
+                                throw new Exception("Tipo usuario incorrecto");
                             }
                         }else{
-                            throw new Exception("Clave menor a 6 caracteres");
+                            throw new Exception("Direccion incorrecta");
                         }
                     }else{
-                        throw new Exception("Alias incorrecto");
+                        throw new Exception("Usuario incorrecto");
                     }
                 }else{
                     throw new Exception("Correo incorrecto");

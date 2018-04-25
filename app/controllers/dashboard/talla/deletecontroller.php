@@ -6,7 +6,7 @@ try{
 		if($talla->setId($_GET['id'])){
 			if($talla->readTalla()){
 				if(isset($_POST['eliminar'])){
-					if($marca->deleteTalla()){
+					if($talla->deleteTalla()){
                         Page::showMessage(1, "Talla eliminada", "index.php");
 					}else{
 						throw new Exception(Database::getException());

@@ -35,7 +35,7 @@ class Material extends Validator{
 		$params = array(null);
 		return Database::getRows($sql, $params);
 		}
-		public function searchTalla($value){
+		public function searchMaterial($value){
 			$sql = "SELECT * FROM Material WHERE Material LIKE ?  ORDER BY Material";
 			$params = array("%$value%");
 			return Database::getRows($sql, $params);

@@ -19,16 +19,16 @@ try{
                                 throw new Exception("Clave nueva menor a 6 caracteres");
                             }
                         }else{
-                            throw new Exception("Claves nuevas diferentes");
+                            throw new Exception("Claves diferentes");
                         }
                     }else{
                         throw new Exception("Clave actual incorrecta");
                     }
                 }else{
-                    throw new Exception("Clave actual menor a 6 caracteres");
+                    throw new Exception("Clave menor a 6 caracteres");
                 }
             }else{
-                throw new Exception("Claves actuales diferentes");
+                throw new Exception("Claves diferentes");
             }
         }else{
             Page::showMessage(2, "Usuario incorrecto", "index.php");

@@ -8,7 +8,7 @@ try{
                 if(isset($_POST['modificar'])){
                     $_POST = $talla->validateForm($_POST);
                     if($talla->setNombre($_POST['Nombre'])){
-                        if($talla->updateMarca()){
+                        if($talla->updateTalla()){
                             Page::showMessage(1, "talla modificada", "index.php");
                         }else{
                             throw new Exception(Database::getException());
