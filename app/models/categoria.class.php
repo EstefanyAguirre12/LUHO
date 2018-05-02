@@ -43,12 +43,24 @@ class Categoria extends Validator{
     }
     
     //Metodos CRUD
-    //Obtener categoria
-    public function getCategoria(){
-		$sql = "SELECT IdCategoria, Categoria, Genero FROM categoria ORDER BY IdCategoria";
+		//Obtener categoria
+		public function getCategoria(){
+			$sql = "SELECT IdCategoria, Categoria, Genero FROM categoria ORDER BY IdCategoria";
+			$params = array(null);
+			return Database::getRows($sql, $params);
+			}
+    public function getCategoriaF(){
+		$sql = "SELECT IdCategoria, Categoria, Genero FROM categoria Where Genero='F' ORDER BY IdCategoria";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 		}
+		public function getCategoriaM(){
+			$sql = "SELECT IdCategoria, Categoria, Genero FROM categoria Where Genero='M' ORDER BY IdCategoria";
+			$params = array(null);
+			return Database::getRows($sql, $params);
+			}
+	
+
 		public function getGeneros(){
 			$sql = "SELECT DISTINCT Genero FROM categoria ORDER BY Genero";
 			$params = array(null);

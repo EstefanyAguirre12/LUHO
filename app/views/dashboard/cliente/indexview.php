@@ -44,10 +44,10 @@
 							<td>$row[Correo]</td>
 							<td>$row[Direccion]</td>
 							<td>
-							<a href='update.php?id=$row[IdUsuario]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
+							<a href='update.php?id=$row[IdCliente]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
 							<td>
-							<a href='delete.php?id=$row[IdUsuario]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
+							<a href='delete.php?id=$row[IdCliente]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
 						
 						<tr>

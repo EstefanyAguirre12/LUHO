@@ -1,10 +1,10 @@
 <?php
-require_once("../../app/models/usuario.class.php");
+require_once("../../app/models/cliente.class.php");
 try{
     if(isset($_GET['id'])){
-        $usuario = new Usuario;
+        $usuario = new Cliente;
         if($usuario->setId($_GET['id'])){
-            if($usuario->readUsuario()){
+            if($usuario->readCliente()){
                 if(isset($_POST['modificar'])){
                     $_POST = $usuario->validateForm($_POST);
                     if($usuario->setNombre($_POST['Nombre'])){
@@ -12,8 +12,8 @@ try{
                             if($usuario->setCorreo($_POST['Correo'])){
                                 if($usuario->setUsuario($_POST['Usuario'])){
                                     if($usuario->setDireccion($_POST['Direccion'])){
-                                        if($usuario->updateUsuario()){
-                                            Page::showMessage(1, "Usuario moficado", "index.php");
+                                        if($usuario->updateCliente()){
+                                            Page::showMessage(1, "Cliente moficado", "index.php");
                                         }else{
                                             throw new Exception(Database::getException());
                                         }

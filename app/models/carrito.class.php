@@ -1,7 +1,7 @@
 <?php
 class Carrito extends Validator{
     private $id = null;
-    private $idusuario = null;
+    private $idcliente = null;
     private $idproducto = null;
     private $cantidad = null;
 
@@ -19,17 +19,17 @@ class Carrito extends Validator{
 			return $this->id;
     }
 
-    public function setIdUsuario($value){
+    public function setIdCliente($value){
         if($this->validateId($value)){
-            $this->idusuario = $value;
+            $this->idcliente = $value;
             return true;  
         }
         else{
             return false;
         }
     }
-    public function getIdUsuario(){
-			return $this->idusuario;
+    public function getIdCliente(){
+			return $this->idcliente;
     }
     
     public function setIdProducto($value){
@@ -62,23 +62,30 @@ class Carrito extends Validator{
     //Metodos CRUD
     //Obtener carrito
     public function getCarrito(){
-		$sql = "SELECT IdCarrito, IdUsuario, IdProducto, Cantidad FROM carrito ORDER BY IdCarrito";
-		$params = array(null);
+		$sql = "SELECT IdCarrito, p.Nombre, p.Costo, c.Cantidad FROM carrito c, producto p where p.IdProducto = c.IdProducto and c.IdCliente=?";
+		$params = array($this->id);
+		return Database::getRows($sql, $params);
+    }
+
+       //Buscar carrito con parametros
+       public function searchCarrito($value){
+		$sql = "SELECT * FROM carrito c, producto p WHERE c.IdProducto = p.IdProducto and c.IdCliente=? and (Nombre LIKE ? OR costo LIKE ?) ORDER BY Nombre";
+		$params = array($this->id,"%$value%", "%$value%");
 		return Database::getRows($sql, $params);
     }
     //Insertar carrito
     public function createCarrito(){
-		$sql = "INSERT INTO carrito(IdUsuario, IdProducto, Cantidad) VALUES(?, ?, ?)";
-		$params = array($this->idusuario, $this->idproducto, $this->cantidad);
+		$sql = "INSERT INTO carrito(IdCliente, IdProducto, Cantidad) VALUES(?, ?, ?)";
+		$params = array($this->idcliente, $this->idproducto, $this->cantidad);
 		return Database::executeRow($sql, $params);
     }
     //Leer carrito
     public function readCarrito(){
-		$sql = "SELECT IdUsuario, IdProducto, Cantidad FROM carrito WHERE IdCarrito = ?";
+		$sql = "SELECT IdCliente, IdProducto, Cantidad FROM carrito WHERE IdCarrito = ?";
 		$params = array($this->id);
 		$carro = Database::getRow($sql, $params);
 		if($carro){
-			$this->idusuario = $carro['IdUsuario'];
+			$this->idcliente = $carro['IdCliente'];
             $this->idproducto = $carro['IdProducto'];
             $this->cantidad = $carro['Cantidad'];
 			return true;
@@ -88,8 +95,8 @@ class Carrito extends Validator{
     }
     //Modificar carrito
     public function updateCarrito(){
-		$sql = "UPDATE carrito SET IdUsuario= ?, IdProducto= ?, Cantidad= ? WHERE IdCarrito = ?";
-		$params = array($this->idusuario, $this->idproducto, $this->cantidad, $this->id);
+		$sql = "UPDATE carrito SET IdCliente= ?, IdProducto= ?, Cantidad= ? WHERE IdCarrito = ?";
+		$params = array($this->idcliente, $this->idproducto, $this->cantidad, $this->id);
 		return Database::executeRow($sql, $params);
     }
     //Eliminar carrito

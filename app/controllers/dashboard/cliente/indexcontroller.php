@@ -1,10 +1,10 @@
 <?php
-require_once("../../app/models/usuario.class.php");
+require_once("../../app/models/cliente.class.php");
 try{
-	$usuario = new Usuario;
+	$usuario = new Cliente;
 	if(isset($_POST['buscar'])){
 		$_POST = $usuario->validateForm($_POST);
-		$data = $usuario->searchUsuario($_POST['Buscar']);
+		$data = $usuario->searchCliente($_POST['Buscar']);
 		if($data){
 			$rows = count($data);
 			Page::showMessage(4, "Se encontraron $rows resuldatos", null);

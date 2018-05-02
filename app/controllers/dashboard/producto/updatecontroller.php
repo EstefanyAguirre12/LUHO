@@ -10,7 +10,6 @@ try{
                     if($producto->setNombre($_POST['Nombre'])){
                         if($producto->setModelo($_POST['Modelo'])){
                             if($producto->setDescripcion($_POST['Descripcion'])){
-                                if($producto->setDetalles($_POST['Det'])){
                                     if($producto->setCosto($_POST['Costo'])){
                                         if($producto->setCantidad($_POST['Cantidad'])){         
                                             if($producto->setIdcategoria($_POST['Categoria'])){     
@@ -59,9 +58,6 @@ try{
                                     }
                                 }else{
                                     throw new Exception("Costo incorrecto");
-                                }
-                                }else{
-                                    throw new Exception("Detalle incorrecto");
                                 }
                             }else{
                                 throw new Exception("Descripción incorrecta");

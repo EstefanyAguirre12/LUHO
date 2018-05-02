@@ -4,7 +4,7 @@ class Component{
 		print("<select name='$name' required>");
 		if($data){
 			if(!$value){
-				print("<option value='' disabled selected>Seleccione una opción</option>");
+				print("<option value='' disabled selected>$label</option>");
 			}
 			foreach($data as $row){
 				if($value == $row[0]){
@@ -17,7 +17,27 @@ class Component{
 			print("<option value='' disabled selected>No hay opciones disponibles</option>");
 		}
 		print("</select>");
-		print("<label>$label</label>");
+	}
+
+	public static function filtrar($label, $name, $value, $data){
+		print("<select name='$name' required>");
+		print("<optgroup label='team 1'>");
+		if($data){
+			if(!$value){
+				print("<option value='' disabled selected>$label</option>");
+			}
+			foreach($data as $row){
+				if($value == $row[0]){
+					print("<option value='$row[0]' selected>$row[1]</option>");
+				}else{
+					print("<option value='$row[0]'>$row[1]</option>");
+				}
+			}
+		}else{
+			print("<option value='' disabled selected>No hay opciones disponibles</option>");
+		}
+		print("</optgroup>");
+		print("</select>");
 	}
 	public static function showGeneros($label, $name, $value, $data){
 		print("<select name='$name' required>");

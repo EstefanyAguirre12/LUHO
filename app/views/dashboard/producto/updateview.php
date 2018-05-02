@@ -14,10 +14,6 @@
                 <label for="descripcion" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
-                <input type="text" name ="Det" class="form-control validate" id="deta" placeholder="Detalles" value='<?php print($producto->getDetalles()) ?>' required/>
-                <label for="deta" class="col-lg-2 control-label"></label>
-            </div>
-            <div class="form-group col-md-6">
                 <input type="text" name ="Costo" class="form-control validate" id="costo" placeholder="Costo" value="<?php print($producto->getCosto()) ?>" required/>
                 <label for="costo" class="col-lg-2 control-label"></label>
             </div>

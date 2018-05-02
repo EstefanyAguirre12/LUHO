@@ -28,7 +28,6 @@
 						<th>Nombre</th>
 						<th>Modelo</th>
 						<th>Descripcion</th>
-						<th>Detalles</th>
 						<th>Costo</th>
 						<th>Categoria</th>	
 						<th>Material</th>	
@@ -49,7 +48,6 @@
 							<td>$row[Nombre]</td>
 							<td>$row[Modelo]</td>
 							<td>$row[Descripcion]</td>
-							<td>$row[Detalles]</td>
 							<td>$row[Costo]</td>
 							<td>$row[Categoria]</td>
 							<td>$row[Material]</td>

@@ -179,6 +179,7 @@ class Page extends Component{
         <!-- MDB core JavaScript -->
         <script type='text/javascript' src='../../web/js/mdb.min.js'></script>
         <script type='text/javascript' src='../../web/js/jsdash.js'></script>
+        <script type='text/javascript' src='../../web/js/select.js'></script>
 
 			</body>
 			</html>

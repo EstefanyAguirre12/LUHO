@@ -1,13 +1,13 @@
 <?php
-require_once("../../app/models/usuario.class.php");
+require_once("../../app/models/cliente.class.php");
 try{
 	if(isset($_GET['id'])){
-		$usuario = new Usuario;
+		$usuario = new Cliente;
 		if($usuario->setId($_GET['id'])){
-			if($usuario->readUsuario()){
+			if($usuario->readCliente()){
 				if(isset($_POST['eliminar'])){
-					if($usuario->deleteUsuario()){
-                        Page::showMessage(1, "Usuario eliminado", "index.php");
+					if($usuario->deleteCliente()){
+                        Page::showMessage(1, "Cliente eliminado", "index.php");
 					}else{
 						throw new Exception(Database::getException());
 					}
