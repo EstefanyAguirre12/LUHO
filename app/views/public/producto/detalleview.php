@@ -18,7 +18,11 @@
 			<h4 class='h4-responsive'><strong>Modelo</strong></h4>
 			<p>".$producto->getModelo()."</p>
 			<h4 class='h4-responsive'><strong>Marca</strong></h4>
-			<p>".$producto->getIdmarca()."</p>
+            <p>".$producto->getIdmarca()."</p>
+            <form method='post'>
+            <input id='cantidad' type='number' name='valoracion' min='1' max='5' class='validate'>
+            <button type='submit' name='valor' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a' data-toggle='tooltip' title='Califica el poroducto'><i class='material-icons'>Calificar</i></button>
+        </form>
 		</div>
 		<div class='col-lg-3'>
 			<h4 class='h4-responsive'><strong>Ocasion</strong></h4>
@@ -33,6 +37,7 @@
             <label for='cantidad'>Compra esta limitada a ".$producto->getCantidad()." piezas</label>
             <button type='submit' name='agregar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a' data-toggle='tooltip' title='Agregar al carrito'><i class='material-icons'>Agregar</i></button>
         </form>
+       
             </div>
                             
         ");
@@ -45,8 +50,10 @@
                         <h3>Seccion de Comentarios</h3>
                     </div>
                     <div class="md-form">
+                    
                         <input type="text" class="form-control" class="md-textarea" id="categoria" placeholder="Dejanos tu comentario">
                         <label for="categoria" class="col-lg-2 control-label"></label>
+                        <button type='submit' name='comentario' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a' data-toggle='tooltip' title='Agregar al carrito'><i class='material-icons'>Agregar</i></button>
                     </div>
                     <div class="card">
                         <div class="card-body">

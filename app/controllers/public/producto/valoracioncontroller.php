@@ -1,10 +1,9 @@
 <?php
 require_once("../../app/models/producto.class.php");
 require_once("../../app/models/carrito.class.php");
-require_once("../../app/models/valoracion.class.php");
 try{
 	if(isset($_GET['id'])){
-		$producto = new Producto;
+		$valor = new Valoracion;
 		if($producto->setId($_GET['id'])){
 			if($producto->readProductos()){
 				require_once("../../app/views/public/producto/detalleview.php");
@@ -45,35 +44,7 @@ try{
 }
 	}
 
-	if(isset($_POST['valor'])){
-
-	if(isset($_GET['id'])){
-		$valor = new Valoracion;
-		$_POST = $valor->validateForm($_POST);
-
-		if($valor->setIdCliente($_SESSION['IdCliente'])){
-
-		if($valor->setIdProducto($_GET['id'])){
-			if($valor->setValoracion($_POST['valoracion'])){ 
-				if($valor->createValoracion()){
-					Page::showMessage(1, "Se agrego a tu carrito", "index.php");
-				}else{
-					throw new Exception(Database:: getException());
-				}  
-			}else{
-				throw new Exception("Cantidad incorrecto");
-			}   
-		}else{
-			throw new Exception("Producto incorrecto");
-		}
-	}else{
-		throw new Exception("Seleccione producto");
-	}
-}else{
-    Page::showMessage(2, "Usuario incorrecto");
-}
-}
-
+	
 }catch(Exception $error){
 	Page::showMessage(3, $error->getMessage(), "index.php");
 }
