@@ -3,6 +3,7 @@
 		<div class="col-sm-13 offset-sm-4 text-center">
 			<div class="row">
             	<div class="form-group col-md-6">
+				<label for="nombre">Nombre Material</label>
 					<input type="text" name ="Nombre" class="form-control validate" id="nombre" placeholder="Material"  value="<?php print($material->getNombre()) ?>" required/>
 					<label for="nombre" class="col-lg-2 control-label"></label>
 				</div>

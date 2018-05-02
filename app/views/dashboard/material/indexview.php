@@ -5,6 +5,7 @@
         <form method='post'>
             <div class="row">	
                 <div class="form-group col-md-4">
+                <label for="buscar">Buscar Material</label>
                     <input type="text" name ="Buscar" class="form-control validate" id="buscar" placeholder="Buscar" >
                     <label for="buscar" class="col-lg-2 control-label"></label>
                 </div>
