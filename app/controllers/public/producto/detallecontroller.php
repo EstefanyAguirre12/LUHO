@@ -2,6 +2,8 @@
 require_once("../../app/models/producto.class.php");
 require_once("../../app/models/carrito.class.php");
 require_once("../../app/models/valoracion.class.php");
+require_once("../../app/models/comentario.class.php");
+
 try{
 	if(isset($_GET['id'])){
 		$producto = new Producto;
@@ -73,8 +75,34 @@ try{
     Page::showMessage(2, "Usuario incorrecto");
 }
 }
+if(isset($_POST['crear'])){
+	$_POST = $comentario->validateForm($_POST);
+	if($comentario->setComentario($_POST['Comentario'])){ 
+		if($comentario->createComentario()){
+			Page::showMessage(1, "Tu mensaje se ha creado", "index.php");
+		}else{
+			throw new Exception(Database:: getException());
 
+		}      
+	}else{
+		throw new Exception("Mensaje Incorrecto");
+	}        
+}
+
+$coment = new Comentario;
+
+$comentarios = $coment->getComentarios();
+if($comentarios){
+	require_once("../../app/views/public/producto/detalleview.php");
+}else{
+	Page::showMessage(3, "No hay categorías disponibles", null);
+}
 }catch(Exception $error){
 	Page::showMessage(3, $error->getMessage(), "index.php");
 }
+
+
+   
+
+require_once("../../app/views/public/producto/detalleview.php");
 ?>
