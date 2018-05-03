@@ -61,6 +61,15 @@
                                 <!--Main wrapper-->
                                 <div class="comments-list text-left">
                                     <!--First row-->
+                            <?php 
+                            foreach($comentarios as $coment){
+                                print("
+                                       
+                                ");
+                            }
+                                 ?>
+                                    
+                              
                                     <div class="row">    
                                         <!--Content column-->
                                         <div class="col-sm-10 col-12">

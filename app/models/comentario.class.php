@@ -90,7 +90,7 @@ class Comentario extends validator{
 
     //Metodos CRUD
 	public function getComentarios(){
-		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentario ORDER BY Comentario";
+		$sql = "SELECT * FROM comentarios ORDER BY Comentario";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 		}
@@ -114,13 +114,13 @@ class Comentario extends validator{
     public function readComentario(){
 		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentario WHERE IdComentario = ?";
 		$params = array($this->id);
-		$oferta = Database::getRow($sql, $params);
-		if($oferta){
+		$comentario = Database::getRow($sql, $params);
+		if($comentario){
             $this->idcomentario = $comentario['IdComentario'];
             $this->idproducto = $comentario['IdProducto'];
             $this->idcliente = $comentario['IdCliente'];
             $this->estado = $comentario['Estado'];
-            $this->comentario = $comentario['Comentario']
+            $this->comentario = $comentario['Comentario'];
 			return true;
 		}else{
 			return null;
