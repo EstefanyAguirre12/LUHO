@@ -33,27 +33,38 @@
                         </thead>
                         <tbody>
                             <?php
+                                $total = null;
                                 foreach($data as $row){
+                                    $sub = $row['Cantidad']*$row['Costo'];
                                 print("
                                 <tr>
                                     <td>$row[Nombre]</td>
                                     <td>$$row[Costo]</td>
                                     <td>$row[Cantidad]</td>
+                                    <td>$sub</td>
                                     <td></td>
                                     <td>
                                     <a href='delete.php?id=$row[IdCarrito]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
                                     </td> <!--look on bootstrap for sizes-->	
-                                
                                 <tr>
+                                
+                                "
+                            );
+                            $total = $row['Cantidad']*$row['Costo'] + $total;
 
-                                "                            );
                                 }
+                                print("
+                                <tr>
+                                    <th scope='row'></th>
+                                    <td colspan='2'>Sub Total:</td>
+                                    <td> ".$total."</td>
+                                </tr>	
+                                
+                                "
+                            );
+                            
                             ?>	
-                            <tr>
-                            <th scope="row"></th>
-                            <td colspan="2">Sub Total:</td>
-                            <td>$15,238</td>
-                        </tr>											
+                      										
                         </tbody>
                     </table>
                     <!--Table-->
