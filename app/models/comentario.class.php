@@ -1,5 +1,5 @@
 <?php 
-class Oferta extends validator{
+class Comentario extends validator{
     private $id = null;
     private $idproducto = null;
     private $idcomentario = null;
@@ -89,13 +89,13 @@ class Oferta extends validator{
 
 
     //Metodos CRUD
-	public function getOferta(){
-		$sql = "SELECT IdOferta, IdProducto, Descuento, Descripcion FROM Oferta ORDER BY Descripcion";
+	public function getComentarios(){
+		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentario ORDER BY Comentario";
 		$params = array(null);
 		return Database::getRows($sql, $params);
 		}
-		public function searchOferta($value){
-			$sql = "SELECT * FROM Oferta WHERE Descripcion LIKE ?  ORDER BY Descripcion";
+		public function searchComentario($value){ 
+			$sql = "SELECT * FROM comentario WHERE Comentario LIKE ?  ORDER BY Comentario";
 			$params = array("%$value%");
 			return Database::getRows($sql, $params);
         }
@@ -105,36 +105,37 @@ class Oferta extends validator{
 			return Database::getRows($sql, $params);
 			}
     //Insertar oferta
-    public function createOferta(){
-		$sql = "INSERT INTO oferta(IdProducto,Descuento,Descripcion) VALUES(?,?,?)";
-		$params = array($this->idproducto,$this->descuento,$this->nombre);
+    public function createComentario(){
+		$sql = "INSERT INTO comentario(IdProducto,IdCliente,Estado,Comentario) VALUES(?,?,?,?)";
+		$params = array($this->idproducto,$this->idcliente,$this->estado,$this->comentario);
 		return Database::executeRow($sql, $params);
     }
     //Leer oferta
-    public function readOferta(){
-		$sql = "SELECT IdProducto, IdOferta, Descuento, Descripcion FROM Oferta WHERE IdOferta = ?";
+    public function readComentario(){
+		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentario WHERE IdComentario = ?";
 		$params = array($this->id);
 		$oferta = Database::getRow($sql, $params);
 		if($oferta){
-            $this->idproducto = $oferta['IdProducto'];
-            $this->idoferta = $oferta['IdOferta'];
-            $this->descuento = $oferta['Descuento'];
-            $this->nombre = $oferta['Descripcion'];
+            $this->idcomentario = $comentario['IdComentario'];
+            $this->idproducto = $comentario['IdProducto'];
+            $this->idcliente = $comentario['IdCliente'];
+            $this->estado = $comentario['Estado'];
+            $this->comentario = $comentario['Comentario']
 			return true;
 		}else{
 			return null;
 		}
     }
     //Modificar oferta
-    public function updateOferta(){
-		$sql = "UPDATE oferta SET IdProducto = ?, Descuento = ?, Descripcion = ? WHERE IdOferta = ?";
-        $params = array($this->idproducto, $this->descuento, $this->nombre, $this->id);
+    public function updateComentario(){
+		$sql = "UPDATE comentario SET IdProducto = ?, IdCliente = ?, Estado = ?, Comentario = ? WHERE IdComentario = ?";
+        $params = array($this->idproducto, $this->idcliente, $this->estado, $this->comentario, $this->id);
         
 		return Database::executeRow($sql, $params);
     }
     //Eliminar oferta
 	public function deleteOferta(){
-		$sql = "DELETE FROM Oferta WHERE IdOferta = ?";
+		$sql = "DELETE FROM Comentario WHERE IdComentario = ?";
 		$params = array($this->id);
 		return Database::executeRow($sql, $params);
 	}
