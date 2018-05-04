@@ -22,22 +22,22 @@ try{
                                                                         if(!$producto->setImagen($_FILES['imag'])){
                                                                             throw new Exception($producto->getImageError());
                                                                         }
-                                                                    }           if($producto->updateProducto()){
+                                                                       if($producto->updateProducto()){
                                                                             Page::showMessage(1, "Producto modificado", "index.php");
                                                                         }else{
-                                                                            // if($producto->unsetImagen()){
-                                                                            //     throw new Exception(Database::getException());
-                                                                            // }else{
-                                                                            //     throw new Exception("Elimine la imagen manualmente");
-                                                                            // }
+                                                                             if($producto->unsetImagen()){
+                                                                                 throw new Exception(Database::getException());
+                                                                             }else{
+                                                                                 throw new Exception("Elimine la imagen manualmente");
+                                                                             }
                                                                         }
                                                                         
-                                                                //     }else{
-                                                                //         throw new Exception($producto->getImageError());
-                                                                //     }
-                                                                // }else{
-                                                                //     throw new Exception("Seleccione una imagen");
-                                                                // }
+                                                                     }else{
+                                                                         throw new Exception($producto->getImageError());
+                                                                     }
+                                                                 }else{
+                                                                     throw new Exception("Seleccione una imagen");
+                                                                 }
                                                                 
                                                             }else{
                                                                 throw new Exception("Talla incorrecta");

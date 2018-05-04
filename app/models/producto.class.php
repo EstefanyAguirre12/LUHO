@@ -239,7 +239,7 @@ class Producto extends validator{
         return Database::getRows($sql, $params);
     }
     public function getProductos(){
-		$sql = "SELECT p.IdProducto, P.Nombre, P.Modelo, P.Descripcion, P.Costo, c.Categoria, ma.Material, m.Marca, o.Ocasion, t.Talla, p.Cantidad, p.Img FROM producto P, categoria C, material ma, marca m, ocasion o, talla t WHERE p.IdCategoria=c.IdCategoria and p.IdMarca= m.IdMarca and p.IdOcasion=o.IdOcasion and p.IdMaterial= ma.IdMaterial and p.IdTalla= t.IdTalla";
+		$sql = "SELECT p.Valoracion, p.IdProducto, P.Nombre, P.Modelo, P.Descripcion, P.Costo, c.Categoria, ma.Material, m.Marca, o.Ocasion, t.Talla, p.Cantidad, p.Img FROM producto P, categoria C, material ma, marca m, ocasion o, talla t WHERE p.IdCategoria=c.IdCategoria and p.IdMarca= m.IdMarca and p.IdOcasion=o.IdOcasion and p.IdMaterial= ma.IdMaterial and p.IdTalla= t.IdTalla";
 		$params = array(null);
 		return Database::getRows($sql, $params);
     }

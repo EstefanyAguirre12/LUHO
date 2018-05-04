@@ -148,7 +148,7 @@ public function logOut(){
     return session_destroy();
 }
  public function getClientes(){
-    $sql = "SELECT IdCliente, Usuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM cliente ORDER BY Apellido";
+    $sql = "SELECT IdCliente, Usuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM cliente WHERE Estado=1 ORDER BY Apellido";
     $params = array(null);
     return Database::getRows($sql, $params);
 }
@@ -161,12 +161,12 @@ public function searchCliente($value){
 
 public function createCliente(){
 	$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO cliente(IdCliente, Usuario, Nombre, Direccion, Correo, Apellido, Contrasena) VALUES( ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO cliente(IdCliente, Usuario, Nombre, Direccion, Correo, Apellido, Contrasena, Estado) VALUES( ?, ?, ?, ?, ?, ?, ?, 1)";
     $params = array($this->id, $this->usuario, $this->nombre,  $this->direccion, $this->correo, $this->apellido, $hash);
     return Database::executeRow($sql, $params);    
 }
 public function readCliente(){
-    $sql = "SELECT Usuario, Nombre, IdCliente, Direccion, Correo, Contrasena, Apellido FROM cliente WHERE IdCliente = ?";
+    $sql = "SELECT Usuario, Nombre, IdCliente, Direccion, Correo, Contrasena, Apellido FROM cliente WHERE IdCliente = ? and Estado=1";
     $params = array($this->id);
     $user = Database::getRow($sql, $params);
     if($user){
@@ -188,7 +188,7 @@ public function updateCliente(){
     return Database::executeRow($sql, $params);
 }
 public function deleteCliente(){
-    $sql = "DELETE FROM cliente WHERE IdCliente = ?";
+    $sql = "UPDATE cliente SET Estado=0 WHERE IdCliente = ?";
     $params = array($this->id);
     return Database::executeRow($sql, $params);
 }
