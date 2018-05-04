@@ -56,7 +56,7 @@ if(isset($_SESSION['IdCliente'])){
                                         <p class='font-small font-up text-muted'>By <a class='m-sm' href='#!'>Roland Vanegas</a> - Feb 14, 2018</p>
                                     </div>
                                     <div class='col-xl-6 mt-5 mb-4 pr-5 clearfix d-none d-xl-block'>
-                                        <h6 class='sub-title p-sm mb-4 font-up font-bold dark-grey-text'>Ofertas</h6>
+                                        <h6 class='sub-title p-sm mb-4 font-up font-bold dark-grey-text'>Ofertas(Proximamente)</h6>
                                         <div class='news-single'>
                                             <div class='row'>
                                                 <div class='col-md-4'>
@@ -200,7 +200,7 @@ if(isset($_SESSION['IdCliente'])){
                                         <p class='font-small font-up text-muted'>By <a class='m-sm' href='#!'>Roland Vanegas</a> - Feb 14, 2018</p>
                                     </div>
                                     <div class='col-xl-6 mt-5 mb-4 pr-5 clearfix d-none d-xl-block'>
-                                        <h6 class='sub-title p-sm mb-4 font-up font-bold dark-grey-text'>Ofertas</h6>
+                                        <h6 class='sub-title p-sm mb-4 font-up font-bold dark-grey-text'>Ofertas(Proximamente)</h6>
                                         <div class='news-single'>
                                             <div class='row'>
                                                 <div class='col-md-4'>

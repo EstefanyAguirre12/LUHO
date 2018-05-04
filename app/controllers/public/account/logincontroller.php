@@ -12,7 +12,7 @@ try{
 						if($object->checkContra()){
 							$_SESSION['IdCliente'] = $object->getId();
 							$_SESSION['Usuario'] = $object->getUsuario();
-							Page::showMessage(1, "Autenticación correcta", "../inicio/index.php");
+							Page::showMessage(1, "Autenticación correcta", "../principal/index.php");
 						}else{
 							throw new Exception("Clave inexistente");
 						}

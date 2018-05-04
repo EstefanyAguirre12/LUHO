@@ -19,7 +19,7 @@ print("
                     <label for='busqueda' class='col-lg-2 control-label'></label>
                 </div>
                 <div class='text-right'>
-					<button type='submit' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></button>
+					<button type='submit' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'>Buscar</button>
                 </div>
             </div>			
         </form>
@@ -35,8 +35,8 @@ foreach($productos as $producto){
 			            <!--Card-->
 			            <div class='card card-cascade narrower'>
 			                <!--Card image-->
-			                <div class='view overlay hm-white-slight' >
-			                    <img src='../../web/img/an1.jpg' class='img-fluid' alt=''>
+							<div class='view overlay hm-white-slight' >
+							<img src='../../web/img/productos/$producto[Img]' class='img-fluid' alt=''>
 			                    <a>
 			                        <div class='mask'></div>
 			                    </a>
