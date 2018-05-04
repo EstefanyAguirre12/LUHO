@@ -73,24 +73,25 @@ public function getValoracion(){
     return $this->valoracion;
 }
 
-
+//obtener valoracion
 public function getValoraciones(){
     $sql = "SELECT IdValoracion, valoracion FROM Valoraciones ORDER BY valoracion";
     $params = array(null);
     return Database::getRows($sql, $params);
 }
-
+//buscar valoracion
 public function searchValoracion($value){
     $sql = "SELECT * FROM v.IdCliente WHERE TipoUsuario=2 AND (Usuario LIKE ? OR Nombre LIKE ?)  ORDER BY Usuario";
     $params = array("%$value%", "%$value%" );
     return Database::getRows($sql, $params);
 }
-
+//crear valoracion
 public function createValoracion(){
     $sql = "INSERT INTO valoraciones(IdCliente, IdProducto, valoracion) VALUES(?, ?, ?)";
     $params = array($this->idcliente, $this->idproducto, $this->valoracion);
     return Database::executeRow($sql, $params);    
 }
+//leer valoracion
 public function readValoracion(){
     $sql = "SELECT IdCliente, IdProducto, IdValoracion, valoracion FROM valoraciones WHERE IdValoracion = ?";
     $params = array($this->id);
@@ -104,11 +105,13 @@ public function readValoracion(){
         return null;
     }
 }
+//modificar valoracion
 public function updateValoracion(){
     $sql = "UPDATE valoraciones SET IdCliente = ?, IdProducto = ?, valoracion = ? WHERE IdValoracion = ?";
     $params = array($this->idcliente, $this->idproducto, $this->valoracion, $this->id);
     return Database::executeRow($sql, $params);
 }
+//eliminar valoracion
 public function deleteValoracion(){
     $sql = "DELETE FROM valoraciones WHERE IdValoracion = ?";
     $params = array($this->id);

@@ -41,13 +41,13 @@ class Tipoenvio extends validator{
 			return Database::getRows($sql, $params);
 		}
 	
-    //Insertar Material
+    //Insertar tipo envio
     public function createTipoenvio(){
 		$sql = "INSERT INTO TipoEnvio(tipoenvio) VALUES(?)";
 		$params = array($this->nombre);
 		return Database::executeRow($sql, $params);
     }
-    //Leer Material
+    //Leer tipo envio
     public function readTipoenvio(){
 		$sql = "SELECT TipoEnvio FROM TipoEnvio WHERE IdTipoEnvio = ?";
 		$params = array($this->id);
@@ -59,13 +59,13 @@ class Tipoenvio extends validator{
 			return null;
 		}
     }
-    //Modificar Material
+    //Modificar tipo envio
     public function updateTipoenvio(){
 		$sql = "UPDATE tipoenvio SET TipoEnvio = ? WHERE IdTipoEnvio = ?";
 		$params = array($this->nombre, $this->id);
 		return Database::executeRow($sql, $params);
     }
-    //Eliminar Material
+    //Eliminar tipo envio
 	public function deleteTipoenvio(){
 		$sql = "DELETE FROM tipoenvio WHERE IdTipoEnvio = ?";
 		$params = array($this->id);
