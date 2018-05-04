@@ -1,6 +1,5 @@
-
-<form method='post'>
 <!-- Este es el formulario para crear un cliente-->
+<form method='post'>
     <div class="container registeer cuenta">   
         <div class="row">
             <div class="form-group col-md-6">
@@ -27,12 +26,10 @@
                 <input type="password" name ="clave2" class="form-control validate" id="contrasena2" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
                 <label for="contrasena2" class="col-lg-2 control-label"></label>
             </div>
-          
             <div class="form-group col-md-6">
                 <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" value='<?php print($usuario->getDireccion()) ?>' required/>
                 <label for="direccion" class="col-lg-2 control-label"></label>
             </div>
-
         </div>  
         <a href="index.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Cancelar</a>
         <button type="submit" name="crear" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="material-icons">Agregar</i></button>

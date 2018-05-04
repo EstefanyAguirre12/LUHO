@@ -1,5 +1,5 @@
-<div class="container margent"> 
 <!-- Este es el formulario para buscar una oferta -->
+<div class="container margent"> 
     <div class="row">	
         <div class="col-md-12">
             <form method='post'>
@@ -19,8 +19,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="container text-center margenb" >
     <div class="px-4">
         <div class="table-wrapper">

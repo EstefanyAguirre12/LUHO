@@ -136,35 +136,37 @@ public function checkContra(){
         return false;
     }
 }
-
+//Aqui es para cambiar la contrasena
 public function changePassword(){
     $hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
     $sql = "UPDATE cliente SET Contrasena = ? WHERE IdCliente = ?";
     $params = array($hash, $this->id);
     return Database::executeRow($sql, $params);
 }
-
+//cerrar sesion
 public function logOut(){
     return session_destroy();
 }
+//obtener clientes
  public function getClientes(){
     $sql = "SELECT IdCliente, Usuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM cliente WHERE Estado=1 ORDER BY Apellido";
     $params = array(null);
     return Database::getRows($sql, $params);
 }
-
+//Para buscar clientes
 public function searchCliente($value){
     $sql = "SELECT * FROM cliente WHERE Usuario LIKE ? OR Nombre LIKE ?  ORDER BY Usuario";
     $params = array("%$value%", "%$value%" );
     return Database::getRows($sql, $params);
 }
-
+//Crear clientes
 public function createCliente(){
 	$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
     $sql = "INSERT INTO cliente(IdCliente, Usuario, Nombre, Direccion, Correo, Apellido, Contrasena, Estado) VALUES( ?, ?, ?, ?, ?, ?, ?, 1)";
     $params = array($this->id, $this->usuario, $this->nombre,  $this->direccion, $this->correo, $this->apellido, $hash);
     return Database::executeRow($sql, $params);    
 }
+//Leer clientes
 public function readCliente(){
     $sql = "SELECT Usuario, Nombre, IdCliente, Direccion, Correo, Contrasena, Apellido FROM cliente WHERE IdCliente = ? and Estado=1";
     $params = array($this->id);
@@ -182,11 +184,13 @@ public function readCliente(){
         return null;
     }
 }
+//Modificar clientes
 public function updateCliente(){
     $sql = "UPDATE cliente SET Usuario = ?, Nombre = ?, Direccion = ?, Correo = ?, Apellido = ? WHERE IdCliente = ?";
     $params = array($this->usuario, $this->nombre, $this->direccion, $this->correo, $this->apellido, $this->id);
     return Database::executeRow($sql, $params);
 }
+//Eliminar clientes
 public function deleteCliente(){
     $sql = "UPDATE cliente SET Estado=0 WHERE IdCliente = ?";
     $params = array($this->id);

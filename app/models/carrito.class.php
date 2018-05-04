@@ -107,7 +107,6 @@ class Carrito extends Validator{
 			return null;
 		}
     }
-
     //Modificar carrito
     public function updateCarrito(){
 		$sql = "UPDATE carrito SET EstadoCompra=1 WHERE IdCliente = ?";

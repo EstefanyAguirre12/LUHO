@@ -1,3 +1,4 @@
+<!-- Este es el formulario para modificar un producto -->
 <form method='post' enctype='multipart/form-data'>
     <div class="container registeer cuenta">   
         <div class="row">
@@ -46,8 +47,6 @@
                 Page::showSelect("Talla", "Talla", $producto->getIdTalla(), $producto->getTallas());
                 ?>
             </div>
-
-
             <div class='form-group col-lg-6 center'>
                 <label for='img'>Imagen de la marca</label>
                 <input type='file' class='file' name ="imag" required/>
@@ -58,7 +57,6 @@
                     </span>
                 </div>
             </div>
-           
             <a href="index.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Cancelar</a>
             <button type="submit" name="modificar" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="material-icons">Agregar</i></button>
         </div>                

@@ -18,8 +18,6 @@
 		</div>
 	</div>
 </div>
-
-
 <div class="container text-center margenb" >
 	<div class="px-4">
 		<div class="table-wrapper">
@@ -46,7 +44,6 @@
 							<td>
 							<a href='delete.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
-						
 						<tr>
 						");
 						}

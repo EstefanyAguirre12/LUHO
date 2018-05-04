@@ -1,5 +1,5 @@
-<div class="container margent"> 
 <!-- Este es el formualrio para eliminar una oferta -->
+<div class="container margent"> 
     <div class="row">	
         <div class="col-md-12">
             <form method='post'>

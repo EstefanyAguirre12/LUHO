@@ -1,3 +1,4 @@
+<!-- Este es el formulario para eliminar un producto -->
 <div class="container margent"> 
 	<div class="row">	
 		<div class="col-md-12">

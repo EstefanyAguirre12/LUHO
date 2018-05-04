@@ -35,6 +35,7 @@ class Marca extends Validator{
 		$params = array(null);
 		return Database::getRows($sql, $params);
 		}
+		//Buscar marca
 		public function searchMarca($value){
 			$sql = "SELECT * FROM Marca WHERE Marca LIKE ?  ORDER BY Marca";
 			$params = array("%$value%");
