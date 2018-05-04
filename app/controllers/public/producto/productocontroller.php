@@ -10,27 +10,25 @@ try{
 					if($productos){
 						require_once("../../app/views/public/producto/productoview.php");
 					}else{
-						throw new Exception("No hay productos disponibles");
+						Page::showMessage(3, "No hay productos disponibles", "index.php?id=" . $_GET['id']);
 					}
 				}else{
-					throw new Exception("Busqueda incorrecta");
+					Page::showMessage(3, "Busqueda incorrecta", "index.php?id=" . $_GET['id']);
 				}
 			}else{
 				$productos = $producto->getCategoriaNombre();
 				if($productos){
 					require_once("../../app/views/public/producto/productoview.php");
 				}else{
-					throw new Exception("No hay productos disponibles");
+					Page::showMessage(3, "No hay productos disponibles", "../principal/index.php");
 				}
 			}
 		}else{
-			throw new Exception("Categoría incorrecta");
+			Page::showMessage(3, "Categoria incorrecta", "../principal/index.php");
 		}
 	}else{
-		throw new Exception("Seleccione categoría");
+		Page::showMessage(3, "Seleccione categoria", "../principal/index.php");
 	}
-	
-
 }catch(Exception $error){
 	Page::showMessage(3, $error->getMessage(), "index.php");
 }
