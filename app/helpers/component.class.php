@@ -1,5 +1,6 @@
 <?php
 class Component{
+	//Este es el combobox 
     public static function showSelect($label, $name, $value, $data){
 		print("<select name='$name' required>");
 		if($data){
