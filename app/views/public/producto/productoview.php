@@ -11,14 +11,15 @@ print("
 
 <div class='row'>	
     <div class='col-md-12'>
-        <form method='post'>
+        <form method='get'>
             <div class='row'>	
                 <div class='form-group col-md-4'>
-                    <input type='text' name ='Buscar' class='form-control validate' id='buscar' placeholder='Buscar' >
-                    <label for='buscar' class='col-lg-2 control-label'></label>
+					<input type='text' name='id' class='d-none' id='id' value='".$_GET['id']."'>
+					<input type='text' name='busqueda' class='form-control validate' id='busqueda' placeholder='Buscar por nombre' >
+                    <label for='busqueda' class='col-lg-2 control-label'></label>
                 </div>
                 <div class='text-right'>
-                    <button type='submit'  name='buscar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='material-icons'>Buscar</i></button>
+					<button type='submit' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></button>
                 </div>
             </div>			
         </form>
