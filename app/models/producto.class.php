@@ -245,7 +245,7 @@ class Producto extends validator{
     }
 
     public function getCategoriaNombre(){
-        $sql = "SELECT c.Categoria, p.IdProducto, p.Nombre, p.Descripcion, p.Costo FROM categoria c, producto p Where c.IdCategoria = p.IdCategoria and p.IdCategoria=?";
+        $sql = "SELECT c.Categoria, p.IdProducto, p.Nombre, p.Descripcion, p.Costo, p.Img FROM categoria c, producto p Where c.IdCategoria = p.IdCategoria and p.IdCategoria=?";
         if($this->getBusqueda() != null){
             $sql = $sql . " AND (p.Nombre LIKE '%" . $this->getBusqueda() . "%');";
         }

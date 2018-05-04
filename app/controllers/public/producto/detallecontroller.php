@@ -16,7 +16,6 @@ try{
 				if($comenta){
 					require_once("../../app/views/public/producto/detalleview.php");
 				}else{
-					Page::showMessage(3, "No hay categorías disponibles", null);
 				}
 
 			}else{

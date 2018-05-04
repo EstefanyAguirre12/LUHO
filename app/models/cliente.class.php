@@ -116,7 +116,7 @@ public function getApellido(){
 
  //Metodo para manejar el CRUD
  public function checkCliente(){
-    $sql = "SELECT IdCliente FROM cliente WHERE Usuario = ?";
+    $sql = "SELECT IdCliente FROM cliente WHERE Usuario = ? and Estado=1";
     $params = array($this->usuario);
     $data = Database::getRow($sql, $params);
     if($data){

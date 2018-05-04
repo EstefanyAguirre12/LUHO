@@ -4,8 +4,8 @@
 		<div class='col-lg-5'>
 			<!--Carousel Wrapper-->
 			<div class='carousel-inner'>
-				<div class='carousel-item active'>
-					<img src='../../web/img/an11.jpg' class='img-fluid' alt='photo'>
+                <div class='carousel-item active text-center'>
+                <img src='../../web/img/productos/".$producto->getImg()."' class='img-fluid' alt='photo'>
 				</div>                                  
 			</div>
 		</div>								
