@@ -35,7 +35,7 @@ try{
 				if($carrito->setIdCliente($_SESSION['IdCliente'])){
         			if($carrito->setCantidad($_POST['cantidad'])){ 
 						if($carrito->createCarrito()){
-							Page::showMessage(1, "Se agrego a tu carrito", "index.php");
+							Page::showMessage(1, "Se agrego a tu carrito", "../carrito/index.php");
 						}else{
 							throw new Exception(Database:: getException());
 						}  
