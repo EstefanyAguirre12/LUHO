@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/cliente.class.php");
 try{
+    //Este es el codigo para modificar a un cliente
     if(isset($_GET['id'])){
         $usuario = new Cliente;
         if($usuario->setId($_GET['id'])){

@@ -1,5 +1,6 @@
 <div class="font-cover" id="login">
 	<div class="wrapper">
+	<!-- Este es el formulario para ingresar con tu cuenta-->
 		<div class="containerlogin">
 			<h1>Bienvenid@</h1>	
 			<form method="post" class="form">

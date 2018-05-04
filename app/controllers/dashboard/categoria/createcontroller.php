@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/categoria.class.php");
 try{
+    //Aqui va el codigo para crear una nueva categoria
     $categoria = new Categoria;
         if(isset($_POST['crear'])){
             $_POST = $categoria->validateForm($_POST);

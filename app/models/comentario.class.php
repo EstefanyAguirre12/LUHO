@@ -89,28 +89,31 @@ class Comentario extends validator{
 
 
     //Metodos CRUD
+    // obtener comentarios
 	public function getComentarios(){
 		$sql = "SELECT * FROM comentarios ORDER BY Comentario";
 		$params = array(null);
 		return Database::getRows($sql, $params);
-		}
+        }
+        //buscar comentario
 		public function searchComentario($value){ 
 			$sql = "SELECT * FROM comentario WHERE Comentario LIKE ?  ORDER BY Comentario";
 			$params = array("%$value%");
 			return Database::getRows($sql, $params);
         }
+
         public function getProductos(){
 			$sql = "SELECT IdProducto, Nombre FROM producto ORDER BY Nombre";
 			$params = array(null);
 			return Database::getRows($sql, $params);
 			}
-    //Insertar oferta
+    //Insertar comentario
     public function createComentario(){
 		$sql = "INSERT INTO comentario(IdProducto,IdCliente,Estado,Comentario) VALUES(?,?,?,?)";
 		$params = array($this->idproducto,$this->idcliente,$this->estado,$this->comentario);
 		return Database::executeRow($sql, $params);
     }
-    //Leer oferta
+    //Leer comentario
     public function readComentario(){
 		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentario WHERE IdComentario = ?";
 		$params = array($this->id);
@@ -126,14 +129,14 @@ class Comentario extends validator{
 			return null;
 		}
     }
-    //Modificar oferta
+    //Modificar comentario
     public function updateComentario(){
 		$sql = "UPDATE comentario SET IdProducto = ?, IdCliente = ?, Estado = ?, Comentario = ? WHERE IdComentario = ?";
         $params = array($this->idproducto, $this->idcliente, $this->estado, $this->comentario, $this->id);
         
 		return Database::executeRow($sql, $params);
     }
-    //Eliminar oferta
+    //Eliminar comentario
 	public function deleteOferta(){
 		$sql = "DELETE FROM Comentario WHERE IdComentario = ?";
 		$params = array($this->id);

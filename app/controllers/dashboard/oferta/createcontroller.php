@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/oferta.class.php");
 try{
+    //Este es el codigo para crear una nueva oferta
     $oferta = new Oferta;
     if(isset($_POST['crear'])){
         $_POST = $oferta->validateForm($_POST);

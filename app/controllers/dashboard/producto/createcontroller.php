@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/producto.class.php");
 try{
+    //Este es el codigo para crear un nuevo producto
     $producto = new Producto;
     if(isset($_POST['crear'])){
         $_POST = $producto->validateForm($_POST);

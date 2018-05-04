@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/usuario.class.php");
 try{
+	//Este es el codigo para eliminar un usuario
 	if(isset($_GET['id'])){
 		$usuario = new Usuario;
 		if($usuario->setId($_GET['id'])){

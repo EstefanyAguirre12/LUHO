@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/tipoenvio.class.php");
 try{
+	//Este es el codigo para eliminar un tipo de envio
 	if(isset($_GET['id'])){
 		$tipoenvio = new Tipoenvio;
 		if($tipoenvio->setId($_GET['id'])){

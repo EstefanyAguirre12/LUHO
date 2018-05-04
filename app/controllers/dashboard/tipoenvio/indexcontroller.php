@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/tipoenvio.class.php");
 try{
+	//Este es el codigo para buscar un tipo de envio
 	$tipoenvio = new Tipoenvio;
 	if(isset($_POST['buscar'])){
 		$_POST = $tipoenvio->validateForm($_POST);

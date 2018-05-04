@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/producto.class.php");
 try{
+	//Este es el codigo para buscar un producto
 	$producto = new Producto;
 	if(isset($_POST['buscar'])){
 		$_POST = $producto->validateForm($_POST);

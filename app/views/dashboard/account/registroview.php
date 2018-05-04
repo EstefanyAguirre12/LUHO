@@ -1,4 +1,5 @@
 <form method='post'>
+<!-- Este es el formulario para tu cuenta -->
     <div class="container registeer cuenta">   
         <h1 class="text-center" >Mi cuenta</h1>
         <div class="row">

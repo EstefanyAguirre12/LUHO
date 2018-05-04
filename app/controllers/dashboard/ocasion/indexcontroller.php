@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/ocasion.class.php");
 try{
+	//Este es el codigo para buscar una ocasion
 	$ocasion = new Ocasion;
 	if(isset($_POST['buscar'])){
 		$_POST = $ocasion->validateForm($_POST);

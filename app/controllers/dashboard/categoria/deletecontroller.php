@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/categoria.class.php");
 try{
+	//Aqui va el codigo para eliminar una categoria
 	if(isset($_GET['id'])){
 		$categoria = new Categoria;
 		if($categoria->setId($_GET['id'])){

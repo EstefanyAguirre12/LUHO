@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/ocasion.class.php");
 try{
+    //Este es el codigo para modificar una ocasion
     if(isset($_GET['id'])){
         $ocasion = new Ocasion;
         if($ocasion->setId($_GET['id'])){

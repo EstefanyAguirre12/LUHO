@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/oferta.class.php");
 try{
+	//Este es el codigo para buscar una oferta
 	$oferta = new Oferta;
 	if(isset($_POST['buscar'])){
 		$_POST = $oferta->validateForm($_POST);

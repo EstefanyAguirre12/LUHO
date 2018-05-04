@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/usuario.class.php");
 try{
+    //Aqui va el codigo para modificar los usuarios
     $usuario = new Usuario;
     if($usuario->setId($_SESSION['IdUsuario'])){
         if($usuario->readUsuario()){
