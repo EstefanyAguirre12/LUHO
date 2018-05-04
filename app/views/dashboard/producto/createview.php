@@ -1,3 +1,4 @@
+<!-- Este es el formulario para crear un producto -->
 <form method='post' enctype='multipart/form-data'>
     <div class="container registeer cuenta">   
         <div class="row">
@@ -41,16 +42,11 @@
                 <input type="text" name ="Cantidad" class="form-control validate" id="cantidad" placeholder="Cantidad" value="<?php print($producto->getCantidad()) ?>" required/>
                 <label for="cantidad" class="col-lg-2 control-label"></label>
             </div>
-           
-           
             <div class="form-group col-md-5 sel sel--black-panther">
                 <?php
                 Page::showSelect("Talla", "Talla", $producto->getIdTalla(), $producto->getTallas());
                 ?>
             </div>
-           
-
-
             <div class='form-group col-lg-6 center'>
                 <label for='img'>Imagen de la marca</label>
                 <input type='file' class='file' name ="imag" required/>
@@ -61,7 +57,6 @@
                     </span>
                 </div>
             </div>
-           
             <a href="index.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Cancelar</a>
             <button type="submit" name="crear" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="material-icons">Agregar</i></button>
         </div>                

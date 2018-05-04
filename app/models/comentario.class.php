@@ -140,7 +140,7 @@ class Comentario extends validator{
         
 		return Database::executeRow($sql, $params);
     }
-    //Eliminar oferta
+    //Eliminar comentario
 	public function deleteComentario(){
 		$sql = "DELETE FROM Comentarios WHERE IdComentario = ?";
 		$params = array($this->id);
