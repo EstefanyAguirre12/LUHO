@@ -94,7 +94,7 @@ try{
 		if($valor->setIdProducto($_GET['id'])){
 			if($valor->setValoracion($_POST['valoracion'])){ 
 				if($valor->createValoracion()){
-					Page::showMessage(1, "Se agrego a tu carrito", "index.php");
+					Page::showMessage(1, "Gracias por calificar nuestros productos", "../principal/index.php");
 				}else{
 					throw new Exception(Database:: getException());
 				}  
