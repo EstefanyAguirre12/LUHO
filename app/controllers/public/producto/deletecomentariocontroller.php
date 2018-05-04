@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/comentario.class.php");
 try{
+	//Aqui va el codigo para eliminar un comentario
 	if(isset($_GET['id'])){
 		$comentario = new Comentario;
 		if($comentario->setId($_GET['id'])){

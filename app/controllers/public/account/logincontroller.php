@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/cliente.class.php");
 try{
+	//Este es el codigo para iniciar sesion
 	$object = new Cliente;
 	if($object->getClientes()){
 		if(isset($_POST['iniciar'])){

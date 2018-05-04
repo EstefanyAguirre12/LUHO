@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/cliente.class.php");
 try{
+    //Aqui va el codigo para modificar la informacion de la cuenta
     $usuario = new Cliente;
     if($usuario->setId($_SESSION['IdCliente'])){
         if($usuario->readCliente()){
