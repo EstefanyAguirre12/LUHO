@@ -48,12 +48,9 @@ foreach($productos as $producto){
 			                    <a  href='detalle.php?id=$producto[IdProducto]' class='grey-text'>
 			                        <h3>$producto[Nombre]</h3>
 			                    </a> 
-			                    <h4>Calificanos</h4>
-			                    <span class='fa fa-star checked'></span>
-			                    <span class='fa fa-star checked'></span>
-			                    <span class='fa fa-star checked'></span>
-			                    <span class='fa fa-star'></span>
-			                    <span class='fa fa-star'></span>
+			                    <h4>Calificacion</h4>
+								<p class='card-text'>$producto[Valoracion]</p>
+
 			                    <!--Description-->
 			                    <p class='card-text'>$producto[Descripcion]</p>
 			                    <!--Card footer-->

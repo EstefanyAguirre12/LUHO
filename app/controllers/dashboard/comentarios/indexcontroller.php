@@ -18,7 +18,7 @@ try{
 	if($data){
 		require_once("../../app/views/dashboard/comentarios/indexview.php");
 	}else{
-		Page::showMessage(3, "No hay materiales disponibles", "create.php");
+		Page::showMessage(3, "No hay comentarios disponibles", "../inicio/index.php");
 	}
 	
 }catch(Exception $error){
