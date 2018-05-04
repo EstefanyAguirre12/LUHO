@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/material.class.php");
 try{
+    //Este es el codigo para crear un nuevo material
     $material = new Material;
     if(isset($_POST['crear'])){
         $_POST = $material->validateForm($_POST);

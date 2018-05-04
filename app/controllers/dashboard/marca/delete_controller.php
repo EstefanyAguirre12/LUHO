@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/marca.class.php");
 try{
+	//este es el codigo para eliminar una marca
 	if(isset($_GET['id'])){
 		$marca = new Marca;
 		if($marca->setId($_GET['id'])){

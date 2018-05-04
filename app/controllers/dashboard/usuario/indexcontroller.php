@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/usuario.class.php");
 try{
+	//Este es el codigo para buscar un usuario
 	$usuario = new Usuario;
 	if(isset($_POST['buscar'])){
 		$_POST = $usuario->validateForm($_POST);

@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/producto.class.php");
 try{
+    //Este es el codigo para modificar un producto
     if(isset($_GET['id'])){
         $producto = new Producto;
         if($producto->setId($_GET['id'])){

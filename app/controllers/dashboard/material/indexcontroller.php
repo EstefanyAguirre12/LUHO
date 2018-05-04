@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/material.class.php");
 try{
+	//Este es el codigo para buscar un material
 	$material = new Material;
 	if(isset($_POST['buscar'])){
 		$_POST = $material->validateForm($_POST);

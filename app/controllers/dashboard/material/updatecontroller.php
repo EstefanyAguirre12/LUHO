@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/material.class.php");
 try{
+    //Este es el codigo para modificar un material
     if(isset($_GET['id'])){
         $material = new Material;
         if($material->setId($_GET['id'])){

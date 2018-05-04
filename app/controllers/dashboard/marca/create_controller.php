@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/marca.class.php");
 try{
+    //Este es el codigo para crear una nueva marca
     $marca = new Marca;
     if(isset($_POST['crear'])){
         $_POST = $marca->validateForm($_POST);

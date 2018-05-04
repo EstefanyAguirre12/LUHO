@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/tipoenvio.class.php");
 try{
+    //Este es el codigo para crear un nuevo tipo de envio
     $tipoenvio = new Tipoenvio;
     if(isset($_POST['crear'])){
         $_POST = $tipoenvio->validateForm($_POST);

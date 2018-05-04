@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/usuario.class.php");
 try{
+	//Este es el codigo para el login
 	$object = new Usuario;
 	if($object->getUsuarios()){
 		if(isset($_POST['iniciar'])){

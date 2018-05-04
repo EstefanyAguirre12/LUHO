@@ -42,7 +42,7 @@ class Categoria extends Validator{
 		return $this->genero;
     }
     
-    //Metodos CRUD
+    //Metodos CRUD para cotegoria
 		//Obtener categoria
 		public function getCategoria(){
 			$sql = "SELECT IdCategoria, Categoria, Genero FROM categoria ORDER BY IdCategoria";
@@ -60,7 +60,7 @@ class Categoria extends Validator{
 			return Database::getRows($sql, $params);
 			}
 	
-
+    //Obtener generos 
 		public function getGeneros(){
 			$sql = "SELECT DISTINCT Genero FROM categoria ORDER BY Genero";
 			$params = array(null);

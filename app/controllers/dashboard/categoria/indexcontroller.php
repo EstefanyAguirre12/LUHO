@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/categoria.class.php");
 try{
+	//Aqui va el codigo para buscar una categoria
 	$categoria = new Categoria;
 	if(isset($_POST['buscar'])){
 		$_POST = $categoria->validateForm($_POST);

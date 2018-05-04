@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/talla.class.php");
 try{
+	//Este es el codigo para buscar una talla
 	$talla = new Talla;
 	if(isset($_POST['buscar'])){
 		$_POST = $talla->validateForm($_POST);

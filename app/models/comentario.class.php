@@ -89,6 +89,7 @@ class Comentario extends validator{
 
 
     //Metodos CRUD
+    // obtener comentarios
 	public function getComentarios(){
 		$sql = "SELECT c.Comentario, cli.Usuario FROM comentarios c, cliente cli, producto p where c.IdCliente=cli.IdCliente and p.IdProducto=c.IdProducto and Estado=1";
 		$params = array(null);
@@ -104,18 +105,19 @@ class Comentario extends validator{
 			$params = array("%$value%");
 			return Database::getRows($sql, $params);
         }
+
         public function getProductos(){
 			$sql = "SELECT IdProducto, Nombre FROM producto ORDER BY Nombre";
 			$params = array(null);
 			return Database::getRows($sql, $params);
 			}
-    //Insertar oferta
+    //Insertar comentario
     public function createComentario(){
 		$sql = "INSERT INTO comentarios(IdProducto,IdCliente,Estado,Comentario) VALUES(?,?,0,?)";
 		$params = array($this->idproducto,$this->idcliente,$this->comentario);
 		return Database::executeRow($sql, $params);
     }
-    //Leer oferta
+    //Leer comentario
     public function readComentario(){
 		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentarios WHERE IdComentario = ?";
 		$params = array($this->id);
@@ -131,7 +133,7 @@ class Comentario extends validator{
 			return null;
 		}
     }
-    //Modificar oferta
+    //Modificar comentario
     public function updateComentario(){
 		$sql = "UPDATE comentarios SET Estado=1 WHERE IdComentario = ?";
         $params = array($this->id);

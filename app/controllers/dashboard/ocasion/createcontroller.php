@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/ocasion.class.php");
 try{
+    //Este es el codigo para crear una nueva ocasion
     $ocasion = new Ocasion;
     if(isset($_POST['crear'])){
         $_POST = $ocasion->validateForm($_POST);

@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/oferta.class.php");
 try{
+    //Este es el codigo para modificar una oferta
     if(isset($_GET['id'])){
         $oferta = new Oferta;
         if($oferta->setId($_GET['id'])){

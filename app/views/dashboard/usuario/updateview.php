@@ -1,4 +1,5 @@
 <form method='post'>
+<!-- Este es el formulario para modificar un usuario -->
     <div class="container registeer cuenta">   
         <div class="row">
             <div class="form-group col-md-6">
