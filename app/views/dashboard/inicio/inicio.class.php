@@ -1,4 +1,7 @@
 <!--Imagen parallax-->	
+<!-- -->
+<!-- Este es el formulario de inicio de el dasboard donde se encuentra informacion de que se puede hacer-->
+<!-- -->
 <div class="font-cover tamanoheader" id="f2"></div>
 <div class="container">    
 	<!--Grid row-->
