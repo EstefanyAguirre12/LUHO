@@ -36,11 +36,11 @@
             <input id='cantidad' type='number' name='cantidad' min='1' max='".$producto->getCantidad()."' class='validate'>
             <label for='cantidad'>Compra esta limitada a ".$producto->getCantidad()." piezas</label>
             <button type='submit' name='agregar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a' data-toggle='tooltip' title='Agregar al carrito'><i class='material-icons'>Agregar</i></button>
-        </form>
-       
+            </form>
             </div>
                             
         ");
+       
         ?>
 		
 </div>
@@ -49,12 +49,17 @@
                     <div class="text-center">
                         <h3>Seccion de Comentarios</h3>
                     </div>
+                    <form method='post'>
+
                     <div class="md-form">
                     
-                        <input type="text" class="form-control" class="md-textarea" id="categoria" placeholder="Dejanos tu comentario">
-                        <label for="categoria" class="col-lg-2 control-label"></label>
+					<input type="text" name ="coment" class="form-control validate" id="com" placeholder="Deja aqui tu comentario"  value="<?php print($coment->getComentario()) ?>" required/>
+                        <label for="com" class="col-lg-2 control-label"></label>
                         <button type='submit' name='comentario' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a' data-toggle='tooltip' title='Agregar al carrito'><i class='material-icons'>Agregar</i></button>
+                    
                     </div>
+                    </form>
+
                     <div class="card">
                         <div class="card-body">
                             <div class="scroll-comments">    
@@ -62,59 +67,24 @@
                                 <div class="comments-list text-left">
                                     <!--First row-->
                             <?php 
-                            foreach($comentarios as $coment){
+                            foreach($comenta as $coment){
                                 print("
-                                       
+                                <div class='row'>    
+                                <!--Content column-->
+                                <div class='col-sm-10 col-12'>
+                                    <a><h3 class='user-name'> $coment[Usuario]</h3></a>
+                                    
+                                    <p class='comment-text'>$coment[Comentario]</p>
+                                </div>
+                                <!--/.Content column-->
+                            </div>
                                 ");
                             }
+
                                  ?>
                                     
-                              
-                                    <div class="row">    
-                                        <!--Content column-->
-                                        <div class="col-sm-10 col-12">
-                                            <a><h3 class="user-name">John Doe</h3></a>
-                                            <div class="card-data">
-                                                <ul>
-                                                    <li class="comment-date"><i class="far fa-clock"></i> 08/10/2015</li>
-                                                </ul>
-                                            </div>
-                                            <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                                        </div>
-                                        <!--/.Content column-->
-                                    </div>
-                                    <!--/.First row-->
-                                    <!--Second row-->
-                                    <div class="row">				 
-                                        <!--Content column-->
-                                        <div class="col-sm-10 col-12">
-                                            <a><h3 class="user-name">Marta Tev</h3></a>
-                                            <div class="card-data">
-                                                <ul>
-                                                    <li class="comment-date"><i class="far fa-clock"></i> 08/10/2015</li>
-                                                </ul>
-                                            </div>
-                                            <p class="comment-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-                                        </div>
-                                        <!--/.Content column-->
-                                    </div>
-                                    <!--/.Second row-->
-                                    <!--Third row-->
-                                    <div class="row">											 
-                                        <!--Content column-->
-                                        <div class="col-sm-10 col-12">
-                                            <a><h3 class="user-name">Anna Maria</h3></a>
-                                            <div class="card-data">
-                                                <ul>
-                                                    <li class="comment-date"><i class="fa fa-clock-o"></i> 17/10/2015</li>
-                                                </ul>
-                                            </div>
-                                            <p class="comment-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia.
-                                            </p>
-                                        </div>
-                                        <!--/.Content column-->
-                                    </div>	
-                                    <!--/.Third row-->
+ 
+                               
                                 </div>
                                 <!--/.Main wrapper-->
                             </div>

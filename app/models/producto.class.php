@@ -12,6 +12,7 @@ class Producto extends validator{
     private $img = null;
     private $modelo = null;
     private $nombre = null; 
+    private $busqueda =null;
 
     //Metodos para sobre cargar de las propiedades
     public function setId($value){
@@ -194,6 +195,20 @@ class Producto extends validator{
         return $this->nombre;
     }
 
+    public function setBusqueda($value){
+        if($this->validateAlphanumeric($value, 1, 50)){
+            $this->busqueda = $value;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public function getBusqueda(){
+        return $this->busqueda;
+    }
+
+
     public function getCategoria(){
         $sql = "SELECT IdCategoria, Categoria FROM categoria ORDER BY Categoria";
         $params = array(null);
@@ -231,9 +246,13 @@ class Producto extends validator{
 
     public function getCategoriaNombre(){
         $sql = "SELECT c.Categoria, p.IdProducto, p.Nombre, p.Descripcion, p.Costo FROM categoria c, producto p Where c.IdCategoria = p.IdCategoria and p.IdCategoria=?";
+        if($this->getBusqueda() != null){
+            $sql = $sql . " AND (p.Nombre LIKE '%" . $this->getBusqueda() . "%');";
+        }
         $params = array($this->idcategoria);
         return Database::getRows($sql, $params);
-        }
+    }
+
 public function searchProducto($value){
     $sql = "SELECT p.IdProducto, P.Nombre, P.Modelo, P.Descripcion, P.Costo, c.Categoria, ma.Material, m.Marca, o.Ocasion, t.Talla, p.Cantidad, p.Img FROM producto P, categoria C, material ma, marca m, ocasion o, talla t WHERE p.IdCategoria=c.IdCategoria and p.IdMarca= m.IdMarca and p.IdOcasion=o.IdOcasion and p.IdMaterial= ma.IdMaterial and p.IdTalla= t.IdTalla and Nombre LIKE ? OR Modelo LIKE ? ORDER BY Nombre";
     $params = array("%$value%", "%$value%" );

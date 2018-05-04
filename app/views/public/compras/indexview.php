@@ -43,25 +43,14 @@
                                     <td>$row[Cantidad]</td>
                                     <td>$sub</td>
                                     <td></td>
-                                    <td>
-                                    <a href='delete.php?id=$row[IdCarrito]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
-                                    </td> <!--look on bootstrap for sizes-->	
+                                    
                                 <tr>
                                 
                                 "
                             );
-                            $total = $row['Cantidad']*$row['Costo'] + $total;
 
                                 }
-                                print("
-                                <tr>
-                                    <th scope='row'></th>
-                                    <td colspan='2'>Sub Total:</td>
-                                    <td> ".$total."</td>
-                                </tr>	
-                                
-                                "
-                            );
+                               
                             
                             ?>	
                       										
@@ -70,12 +59,7 @@
 
                     <!--Table-->
                 </div>
-            </div>	        <form method='post'>
-
-            <div class="text-right">	
-
-            <button type='submit' name='modificar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='material-icons'>Comprar ahora</i></button>
-            </div>
-            </form>	
+            </div>	       
+           
 
         </div>

@@ -4,11 +4,24 @@ try{
 	if(isset($_GET['id'])){
 		$producto = new Producto;
 		if($producto->setIdcategoria($_GET['id'])){
-			$productos = $producto->getCategoriaNombre();
-			if($productos){
-				require_once("../../app/views/public/producto/productoview.php");
+			if(isset($_GET['busqueda'])){
+				if($producto->setBusqueda($_GET['busqueda'])){
+					$productos = $producto->getCategoriaNombre();
+					if($productos){
+						require_once("../../app/views/public/producto/productoview.php");
+					}else{
+						throw new Exception("No hay productos disponibles");
+					}
+				}else{
+					throw new Exception("Busqueda incorrecta");
+				}
 			}else{
-				throw new Exception("No hay productos disponibles");
+				$productos = $producto->getCategoriaNombre();
+				if($productos){
+					require_once("../../app/views/public/producto/productoview.php");
+				}else{
+					throw new Exception("No hay productos disponibles");
+				}
 			}
 		}else{
 			throw new Exception("Categoría incorrecta");
@@ -16,6 +29,8 @@ try{
 	}else{
 		throw new Exception("Seleccione categoría");
 	}
+	
+
 }catch(Exception $error){
 	Page::showMessage(3, $error->getMessage(), "index.php");
 }

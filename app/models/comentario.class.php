@@ -74,7 +74,7 @@ class Comentario extends validator{
     }
 
     public function setComentario($value){
-        if($this->validateAlphaNumeric($value)){
+        if($this->validateAlphanumeric($value, 1, 100)){
             $this->comentario = $value;
             return true;
         }
@@ -90,10 +90,15 @@ class Comentario extends validator{
 
     //Metodos CRUD
 	public function getComentarios(){
-		$sql = "SELECT * FROM comentarios ORDER BY Comentario";
+		$sql = "SELECT c.Comentario, cli.Usuario FROM comentarios c, cliente cli, producto p where c.IdCliente=cli.IdCliente and p.IdProducto=c.IdProducto and Estado=1";
 		$params = array(null);
 		return Database::getRows($sql, $params);
-		}
+        }
+        public function getComentarioss(){
+            $sql = "SELECT c.IdComentario, c.Comentario, cli.Usuario, p.Nombre FROM comentarios c, cliente cli, producto p where c.IdCliente=cli.IdCliente and p.IdProducto=c.IdProducto and Estado=0";
+            $params = array(null);
+            return Database::getRows($sql, $params);
+            }
 		public function searchComentario($value){ 
 			$sql = "SELECT * FROM comentario WHERE Comentario LIKE ?  ORDER BY Comentario";
 			$params = array("%$value%");
@@ -106,13 +111,13 @@ class Comentario extends validator{
 			}
     //Insertar oferta
     public function createComentario(){
-		$sql = "INSERT INTO comentario(IdProducto,IdCliente,Estado,Comentario) VALUES(?,?,?,?)";
-		$params = array($this->idproducto,$this->idcliente,$this->estado,$this->comentario);
+		$sql = "INSERT INTO comentarios(IdProducto,IdCliente,Estado,Comentario) VALUES(?,?,0,?)";
+		$params = array($this->idproducto,$this->idcliente,$this->comentario);
 		return Database::executeRow($sql, $params);
     }
     //Leer oferta
     public function readComentario(){
-		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentario WHERE IdComentario = ?";
+		$sql = "SELECT IdComentario, IdProducto, IdCliente, Estado, Comentario FROM comentarios WHERE IdComentario = ?";
 		$params = array($this->id);
 		$comentario = Database::getRow($sql, $params);
 		if($comentario){
@@ -128,14 +133,14 @@ class Comentario extends validator{
     }
     //Modificar oferta
     public function updateComentario(){
-		$sql = "UPDATE comentario SET IdProducto = ?, IdCliente = ?, Estado = ?, Comentario = ? WHERE IdComentario = ?";
-        $params = array($this->idproducto, $this->idcliente, $this->estado, $this->comentario, $this->id);
+		$sql = "UPDATE comentarios SET Estado=1 WHERE IdComentario = ?";
+        $params = array($this->id);
         
 		return Database::executeRow($sql, $params);
     }
     //Eliminar oferta
-	public function deleteOferta(){
-		$sql = "DELETE FROM Comentario WHERE IdComentario = ?";
+	public function deleteComentario(){
+		$sql = "DELETE FROM Comentarios WHERE IdComentario = ?";
 		$params = array($this->id);
 		return Database::executeRow($sql, $params);
 	}

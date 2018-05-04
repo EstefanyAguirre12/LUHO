@@ -4,7 +4,7 @@ try{
     if(isset($_GET['id'])){
         $marca = new Marca;
         if($marca->setId($_GET['id'])){
-            if($marca->readMarca()){
+            if($marca->readComentario()){
                 if(isset($_POST['modificar'])){
                     $_POST = $marca->validateForm($_POST);
                     if($marca->setNombre($_POST['Nombre'])){

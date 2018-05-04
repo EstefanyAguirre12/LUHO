@@ -7,6 +7,25 @@
 <?php
 $categoria = $productos[0]['Categoria'];
 print("<h1 class='text-center margenventas'>$categoria</h1>");
+print("
+
+<div class='row'>	
+    <div class='col-md-12'>
+        <form method='post'>
+            <div class='row'>	
+                <div class='form-group col-md-4'>
+                    <input type='text' name ='Buscar' class='form-control validate' id='buscar' placeholder='Buscar' >
+                    <label for='buscar' class='col-lg-2 control-label'></label>
+                </div>
+                <div class='text-right'>
+                    <button type='submit'  name='buscar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='material-icons'>Buscar</i></button>
+                </div>
+            </div>			
+        </form>
+
+    </div>
+</div>
+");
 print("<section class=' pb-3'>");
 print("<div class='row'>");
 foreach($productos as $producto){
@@ -58,8 +77,4 @@ foreach($productos as $producto){
     </section>
 </div>
 
-                                              
-        <!-- Button trigger modal -->
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullHeightModalRight">
-    Launch demo modal
-</button>
+ 

@@ -5,11 +5,20 @@ require_once("../../app/models/valoracion.class.php");
 require_once("../../app/models/comentario.class.php");
 
 try{
+
+	
 	if(isset($_GET['id'])){
 		$producto = new Producto;
 		if($producto->setId($_GET['id'])){
 			if($producto->readProductos()){
-				require_once("../../app/views/public/producto/detalleview.php");
+				$coment = new Comentario;
+				$comenta = $coment->getComentarios();
+				if($comenta){
+					require_once("../../app/views/public/producto/detalleview.php");
+				}else{
+					Page::showMessage(3, "No hay categorías disponibles", null);
+				}
+
 			}else{
 				throw new Exception("Producto inexistente");
 			}
@@ -20,7 +29,7 @@ try{
 		throw new Exception("Seleccione producto");
 	}
 
-
+	
 	if(isset($_POST['agregar'])){
 		$carrito = new Carrito;
 		$_POST = $carrito->validateForm($_POST);
@@ -46,6 +55,33 @@ try{
 	throw new Exception("Seleccione producto");
 }
 	}
+
+	if(isset($_POST['comentario'])){
+		$coment = new Comentario;
+		$_POST = $coment->validateForm($_POST);
+		if(isset($_GET['id'])){
+			if($coment->setIdProducto($_GET['id'])){
+				if($coment->setIdCliente($_SESSION['IdCliente'])){
+        			if($coment->setComentario($_POST['coment'])){ 
+						if($coment->createComentario()){
+							Page::showMessage(1, "Se agrego a tu coment", null);
+						}else{
+							throw new Exception(Database:: getException());
+						}  
+					}else{
+						throw new Exception("Cantidad incorrecto");
+					}   
+				}else{
+					throw new Exception("No has iniciado sesion");
+        		}        
+	}else{
+		throw new Exception("Producto incorrecto");
+	}
+}else{
+	throw new Exception("Seleccione producto");
+}
+	}
+
 
 	if(isset($_POST['valor'])){
 
@@ -89,19 +125,11 @@ if(isset($_POST['crear'])){
 	}        
 }
 
-$coment = new Comentario;
 
-$comentarios = $coment->getComentarios();
-if($comentarios){
-	require_once("../../app/views/public/producto/detalleview.php");
-}else{
-	Page::showMessage(3, "No hay categorías disponibles", null);
-}
+
 }catch(Exception $error){
 	Page::showMessage(3, $error->getMessage(), "index.php");
 }
-
-
    
 
 require_once("../../app/views/public/producto/detalleview.php");
