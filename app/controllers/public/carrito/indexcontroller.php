@@ -21,7 +21,7 @@ try{
 	if($data){
 		require_once("../../app/views/public/carrito/indexview.php");
 	}else{
-		Page::showMessage(3, "No hay marcas disponibles", "create.php");
+		Page::showMessage(3, "tu carrito esta vacio.", "../principal/index.php");
 	}
 		
 }else{
