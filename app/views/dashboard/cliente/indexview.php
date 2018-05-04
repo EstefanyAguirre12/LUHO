@@ -1,6 +1,5 @@
-
-<div class="container margent"> 
 <!-- Este es el formulario para buscar a un cliente-->
+<div class="container margent"> 
 	<div class="row">	
 		<div class="col-md-12">
 			<form method='post'>
@@ -18,8 +17,6 @@
 		</div>
 	</div>
 </div>
-
-
 <div class="container text-center margenb" >
 	<div class="px-4">
 		<div class="table-wrapper">
@@ -50,7 +47,6 @@
 							<td>
 							<a href='delete.php?id=$row[IdCliente]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
-						
 						<tr>
 						");
 						}

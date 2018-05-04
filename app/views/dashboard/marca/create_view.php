@@ -1,5 +1,5 @@
+<!-- Este es el formulario para el nombre de la marca-->
 <form method="post">
-<!-- Este es el formulario para crear una marca-->
     <div class="container registeer cuenta">   
 		<div class="col-sm-13 offset-sm-4 text-center">
 			<div class="row">
