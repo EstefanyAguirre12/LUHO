@@ -157,7 +157,7 @@ class Producto extends validator{
 	 }
 
     public function setImg($value){
-        if($this->validateAlphanumeric($value, 1, 50)){
+        if($this->validateAlphanumeric($value, 1, 600)){
             $this->img = $value;
             return true;
         }

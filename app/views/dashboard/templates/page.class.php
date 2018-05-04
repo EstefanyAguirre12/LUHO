@@ -65,6 +65,9 @@ class Page extends Component{
                         <li class='nav-item'>
                             <a class='nav-link' href='../cliente/index.php'>Cliente</a>
                         </li>
+                        <li class='nav-item'>
+                        <a class='nav-link' href='../comentarios/index.php'>Comentarios</a>
+                    </li>
                     </ul>
                     <!-- Links Imagen -->
                     <ul class='navbar-nav nav-flex-icons ml-auto'>
