@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/cliente.class.php");
 try{
+    //Este es el codigo para poder crear un usuario
     $usuario = new Cliente;
     if(isset($_POST['crear'])){
         $_POST = $usuario->validateForm($_POST);

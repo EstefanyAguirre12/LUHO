@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/producto.class.php");
 try{
+	//Aqui va el codigo de busqueda de productos
 	if(isset($_GET['id'])){
 		$producto = new Producto;
 		if($producto->setIdcategoria($_GET['id'])){

@@ -1,6 +1,5 @@
-
-<form method='post'>
 <!-- Este es el formulario para modificar tu usuario-->
+<form method='post'>
     <div class="container registeer cuenta">   
         <div class="row">
             <div class="form-group col-md-6">
@@ -19,12 +18,10 @@
                 <input type="email" name ="Correo" class="form-control validate" id="email" placeholder="Correo" value='<?php print($usuario->getCorreo()) ?>' required/>
                 <label for="email" class="col-lg-2 control-label"></label>
             </div>
-            
             <div class="form-group col-md-6">
                 <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" value='<?php print($usuario->getDireccion()) ?>' required/>
                 <label for="direccion" class="col-lg-2 control-label"></label>
             </div>
-
         </div>  
         <a href="../inicio/index.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Cancelar</a>
         <button type="submit" name="modificar" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="material-icons">Modificar</i></button>

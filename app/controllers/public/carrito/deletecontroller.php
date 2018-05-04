@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/carrito.class.php");
 try{
+	//Este es el codigo para poder eliminar algo del carrito
 	if(isset($_GET['id'])){
 		$carro = new Carrito;
 		if($carro->setId($_GET['id'])){

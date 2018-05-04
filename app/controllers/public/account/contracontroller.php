@@ -1,6 +1,7 @@
 <?php
 require_once("../../app/models/cliente.class.php");
 try{
+    //Aqui va el codigo para cambiar contrasena
     if(isset($_POST['modificar'])){
         $usuario = new Cliente;
         $_POST = $usuario->validateForm($_POST);
