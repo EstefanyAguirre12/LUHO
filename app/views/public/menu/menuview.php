@@ -117,16 +117,17 @@ if(isset($_SESSION['IdCliente'])){
                     <li class='nav-item active'>
                     <a class='nav-link' href='../principal/index.php'>Inicio <span class='sr-only'>(current)</span></a>
                     </li>
-                    <li class='nav-item'>
-                    <a class='nav-link' href='#' data-toggle='modal' data-target='#exampleModal'>Contactanos</a>
-                    </li>
+                   
                 </li>
             </ul>
             <!-- Links Imagen -->
             <ul class='navbar-nav nav-flex-icons ml-auto'>
                 <li class='nav-item'>
-                    <a class='nav-link' href='#' data-toggle='modal' data-target='#carritoModal'><i class='fas fa-shopping-cart' aria-hidden='true'></i></a>
+                    <a class='nav-link' href='../carrito/index.php' data-toggle='tooltip' title='Carrito compras'><i class='fas fa-shopping-cart' aria-hidden='true'></i></a>
                 </li>
+                <li class='nav-item'>
+                <a class='nav-link' href='../compras/index.php' data-toggle='tooltip' title='Compras realizadas'><i class='fas fa-shopping-bag' aria-hidden='true'></i></a>
+            </li>
                 <li class='nav-item'>
                 <a class='nav-link' href='../account/contra.php' data-toggle='tooltip' title='Cambiar Clave'><i class='fas fa-key' aria-hidden='true'></i></a>
                 </li>
@@ -260,9 +261,7 @@ if(isset($_SESSION['IdCliente'])){
                     <li class='nav-item active'>
                     <a class='nav-link' href='../principal/index.php'>Inicio <span class='sr-only'>(current)</span></a>
                     </li>
-                    <li class='nav-item'>
-                    <a class='nav-link' href='#' data-toggle='modal' data-target='#exampleModal'>Contactanos</a>
-                    </li>
+                  
                 </li>
             </ul>
             <!-- Links Imagen -->
