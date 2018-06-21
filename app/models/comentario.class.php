@@ -91,12 +91,12 @@ class Comentario extends validator{
     //Metodos CRUD
     // obtener comentarios
 	public function getComentarios(){
-		$sql = "SELECT c.Comentario, cli.Usuario FROM comentarios c, cliente cli, producto p where c.IdCliente=cli.IdCliente and p.IdProducto=c.IdProducto and Estado=1";
+		$sql = "SELECT c.Comentario, cli.Usuario FROM comentarios c, cliente cli, producto p where c.IdCliente=cli.IdCliente and p.IdProducto=c.IdProducto and c.Estado=1";
 		$params = array(null);
 		return Database::getRows($sql, $params);
         }
         public function getComentarioss(){
-            $sql = "SELECT c.IdComentario, c.Comentario, cli.Usuario, p.Nombre FROM comentarios c, cliente cli, producto p where c.IdCliente=cli.IdCliente and p.IdProducto=c.IdProducto and Estado=0";
+            $sql = "SELECT c.IdComentario, c.Comentario, cli.Usuario, p.Nombre FROM comentarios c, cliente cli, producto p where c.IdCliente=cli.IdCliente and p.IdProducto=c.IdProducto and c.Estado=0";
             $params = array(null);
             return Database::getRows($sql, $params);
             }
