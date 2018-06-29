@@ -43,9 +43,14 @@ class Compra extends Validator{
 	}
 
 	//Metodos para el manejo del CRUD
+	public function getComprass(){
+		$sql = "SELECT compra.IdCompra from compra WHERE compra.EstadoCompra=0";
+		$params = array(null);
+		return Database::executeRow($sql, $params);
+    }
 	//Insertar compra
     public function createCompra(){
-		$sql = "INSERT INTO compra(Fecha, IdUsuario) VALUES(?, ?)";
+		$sql = "INSERT INTO compra(Fecha, IdUsuario, EstadoCompra) VALUES(?, ?, 0)";
 		$params = array($this->fecha, $this->idusuario);
 		return Database::executeRow($sql, $params);
     }

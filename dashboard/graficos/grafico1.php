@@ -12,14 +12,14 @@ require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_bar.php');
 require_once('../../app/models/database.class.php');
 
 //Buscamos si encontramos un registro con los datos del usuario
-$sql="SELECT * FROM producto";
+$sql="SELECT Categoria, COUNT(producto.IdCategoria)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria GROUP BY Categoria";
 $params=array(null);
 $res=Database::getRows($sql,$params);
 foreach($res as $row)
 {
     //agregamos los datos al array
     $datos[] = $row['Cantidad'];
-    $labels[] = $row['Nombre'];
+    $labels[] = $row['Categoria'];
 }
 
 //definimos los formatos generales

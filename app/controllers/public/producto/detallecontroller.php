@@ -1,6 +1,6 @@
 <?php
 require_once("../../app/models/producto.class.php");
-require_once("../../app/models/carrito.class.php");
+require_once("../../app/models/compra.class.php");
 require_once("../../app/models/valoracion.class.php");
 require_once("../../app/models/comentario.class.php");
 
@@ -28,29 +28,40 @@ try{
 	}
     //Aqui va el codigo para agregar items al carrito
 	if(isset($_POST['agregar'])){
-		$carrito = new Carrito;
-		$_POST = $carrito->validateForm($_POST);
-		if(isset($_GET['id'])){
-			if($carrito->setIdProducto($_GET['id'])){
-				if($carrito->setIdCliente($_SESSION['IdCliente'])){
-        			if($carrito->setCantidad($_POST['cantidad'])){ 
-						if($carrito->createCarrito()){
-							Page::showMessage(1, "Se agrego a tu carrito", "../carrito/index.php");
+		$compra = new Compra;
+		$cuenta = $compra->getComprass();
+		if($cuenta){
+			Page::showMessage(1, "Se  a tu carrito $cuenta", "");
+
+		}else{
+			if($carrito->createCompra()){
+				Page::showMessage(1, "Se agrego a tu carrito", "../carrito/index.php");
+			}else{
+				throw new Exception(Database:: getException());
+			}  
+		}
+							/*	$_POST = $carrito->validateForm($_POST);
+								if(isset($_GET['id'])){
+									if($carrito->setIdProducto($_GET['id'])){
+										if($carrito->setIdCliente($_SESSION['IdCliente'])){
+											if($carrito->setCantidad($_POST['cantidad'])){ 
+												if($carrito->createCarrito()){
+													Page::showMessage(1, "Se agrego a tu carrito", "../carrito/index.php");
+												}else{
+													throw new Exception(Database:: getException());
+												}  
+											}else{
+												throw new Exception("Cantidad incorrecto");
+											}   
+										}else{
+											throw new Exception("No has iniciado sesion");
+										}        
+							}else{
+								throw new Exception("Producto incorrecto");
+							}
 						}else{
-							throw new Exception(Database:: getException());
-						}  
-					}else{
-						throw new Exception("Cantidad incorrecto");
-					}   
-				}else{
-					throw new Exception("No has iniciado sesion");
-        		}        
-	}else{
-		throw new Exception("Producto incorrecto");
-	}
-}else{
-	throw new Exception("Seleccione producto");
-}
+							throw new Exception("Seleccione producto");
+						}*/
 	}
     //Aqui va el codigo para comentar un producto
 	if(isset($_POST['comentario'])){

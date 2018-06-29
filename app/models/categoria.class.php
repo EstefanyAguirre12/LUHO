@@ -49,6 +49,18 @@ class Categoria extends Validator{
 			$params = array(null);
 			return Database::getRows($sql, $params);
 			}
+			public function getProdxCat(){
+				$sql = "SELECT Nombre, Descripcion, Modelo, Costo FROM producto INNER JOIN categoria on producto.IdCategoria=categoria.IdCategoria Where  categoria.IdCategoria=?";
+				$params = array($this->id);
+				return Database::getRows($sql, $params);
+				}
+				public function getNombrec(){
+					$sql = "SELECT Categoria, COUNT(producto.IdCategoria)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria GROUP BY Categoria";
+					$params = array(null);
+					return Database::getRows($sql, $params);
+					}
+
+
     public function getCategoriaF(){
 		$sql = "SELECT IdCategoria, Categoria, Genero FROM categoria Where Genero='F' ORDER BY IdCategoria";
 		$params = array(null);

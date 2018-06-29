@@ -39,7 +39,7 @@
 							<td>$row[Categoria]</td>
 							<td>$row[Genero]</td>
 							<td>
-							<a href='update.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
+							<a href='../reportes/funciona.1.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
 							<td>
 							<a href='delete.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>

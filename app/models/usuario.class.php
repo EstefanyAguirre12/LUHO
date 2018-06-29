@@ -153,6 +153,7 @@ public function logOut(){
     $params = array(null);
     return Database::getRows($sql, $params);
 }
+
 //obtener clientes
 public function getClientes(){
     $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario where TipoUsuario=1 ORDER BY Apellido";
@@ -163,6 +164,11 @@ public function getClientes(){
 public function getGeneros(){
     $sql = "SELECT IdTipo, Tipo FROM tipousuario ORDER BY Tipo";
     $params = array(null);
+    return Database::getRows($sql, $params);
+}
+public function getNombreU(){
+    $sql = "SELECT Usuario FROM usuario where IdUsuario=?";
+    $params = array($this->id);
     return Database::getRows($sql, $params);
 }
 //buscar usuarios
