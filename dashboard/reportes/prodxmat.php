@@ -11,7 +11,7 @@
 require_once('../../web/fpdf/fpdf.php');
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
-require_once("../../app/models/categoria.class.php");
+require_once("../../app/models/material.class.php");
 session_start();
 
 // Begin configuration
@@ -31,7 +31,7 @@ $reportNameYPos = 160;
 $logoXPos = 50;
 $logoYPos = 108;
 $logoWidth = 110;
-$columnLabels = array( "Nombre", "Descripcion", "Modelo", "Costo", "Categoria");
+$columnLabels = array( "Nombre", "Descripcion", "Modelo", "Costo", "Material");
 $chartXPos = 20;
 $chartYPos = 250;
 $chartWidth = 160;
@@ -48,9 +48,9 @@ $chartColours = array(
 setlocale(LC_ALL, '');
 date_default_timezone_set('America/El_Salvador');
 $time = strftime('%c');
-$datos = new Categoria;
+$datos = new Material;
 $datos->setId($_GET['id']);
-$data = $datos->getProdxCat();
+$data = $datos->getProdxMat();
 $NombreU = $_SESSION['Usuario'];
 
 /*$data = array(
@@ -71,9 +71,7 @@ class PDF extends FPDF
 function Header()
 {
   // Begin configuration
-  $datoss= new Categoria;
-  $datoss->setId($_GET['id']);
-  $datas = $datoss->getNombrec();
+  
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
   $reportName = "Cantidad de Productos";
