@@ -6,7 +6,7 @@
 require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph.php');
 
 //Requerimos el tipo de grafico que vamos a utilizar
-require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_bar.php');
+require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_pie.php');
 
 //Conexion a la base de datos
 require_once('../../app/models/database.class.php');
@@ -22,26 +22,27 @@ foreach($res as $row)
     $labels[] = $row['Nombre'];
 }
 
-//definimos los formatos generales
-$grafico = new Graph(500, 400, 'auto');
-$grafico->SetScale("textint");
+//Creamos el grafico de pastel
+$grafico = new PieGraph(350,250);
+
+$theme_class="DefaultTheme";
+
+//Le ponemos un nomnbre al grafico
 $grafico->title->Set("Costo de los productos");
-$grafico->xaxis->title->Set("Nombre");
-$grafico->xaxis->SetTickLabels($labels);
-$grafico->yaxis->title->Set("Costo");
+$grafico->SetBox(true);
+
 
 //Ingresamos los datos del array que van a ir en el grafico
-$barplot1 = new BarPlot($datos);
+$p1 = new PiePlot($datos);
 
-//Definimos formatos especificos
 
-//Un gradial horizontal morado
-$barplot1->SetFillGradient("#BE81F7", "#E3CEF6", GRAD_HOR);
-//30 PIXELES DE ANCHO PARA CADA BARRA
-$barplot1->SetWidth(30);
+//Colores y esas cosas del grafico
+$p1->ShowBorder();
+$p1->SetColor('black');
+$p1->SetSliceColors(array('#1E90FF','#2E8B57','#ADFF2F','#DC143C','#BA55D3'));
 
 //al grafico le agregamos los datos
-$grafico->Add($barplot1);
+$grafico->Add($p1);
 
 //Salida por pantalla
 $grafico->Stroke();
