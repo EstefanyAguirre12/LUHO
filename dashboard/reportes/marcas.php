@@ -11,7 +11,7 @@
 require_once('../../web/fpdf/fpdf.php');
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
-require_once("../../app/models/categoria.class.php");
+require_once("../../app/models/marca.class.php");
 session_start();
 
 // Begin configuration
@@ -31,7 +31,7 @@ $reportNameYPos = 160;
 $logoXPos = 50;
 $logoYPos = 108;
 $logoWidth = 110;
-$columnLabels = array( "Nombre", "Descripcion", "Modelo", "Costo", "Categoria");
+$columnLabels = array( "Marca", "Productos");
 $chartXPos = 20;
 $chartYPos = 250;
 $chartWidth = 160;
@@ -48,9 +48,8 @@ $chartColours = array(
 setlocale(LC_ALL, '');
 date_default_timezone_set('America/El_Salvador');
 $time = strftime('%c');
-$datos = new Categoria;
-$datos->setId($_GET['id']);
-$data = $datos->getProdxCat();
+$datos = new Marca;
+$data = $datos->getCantidadM();
 $NombreU = $_SESSION['Usuario'];
 
 /*$data = array(
@@ -71,9 +70,7 @@ class PDF extends FPDF
 function Header()
 {
   // Begin configuration
-  $datoss= new Categoria;
-  $datoss->setId($_GET['id']);
-  $datas = $datoss->getNombrec();
+  
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
   $reportName = "Cantidad de Productos";
@@ -115,9 +112,9 @@ $pdf->AddPage();
 
 
 $pdf->SetFont( 'Arial', '', 12 );
-$pdf->Write( 6, $NombreU);
+$pdf->Write( 6, "Usuario: $NombreU");
 $pdf->Ln( 7 );
-$pdf->Write( 6, $time);
+$pdf->Write( 6, "Fecha: $time");
 $pdf->Ln( 12 );
 $pdf->Write( 6, "Despite the economic downturn, WidgetCo had a strong year. Sales of the HyperWidget in particular exceeded expectations. The fourth quarter was generally the best performing; this was most likely due to our increased ad spend in Q3." );
 
@@ -164,6 +161,9 @@ foreach ( $data as $dataRow ) {
   $fill = !$fill;
   $pdf->Ln( 9 );
 }
+
+
+
 
 
 
