@@ -29,17 +29,17 @@ class Material extends Validator{
 			return $this->nombre;
 		}
 	
-		public function getProdxMat(){
-			$sql = "SELECT Nombre, Descripcion, Modelo, Costo, material.Material FROM producto INNER JOIN material on material.IdMaterial=material.IdMaterial Where  material.IdMaterial=?";
-			$params = array($this->id);
-			return Database::getRows($sql, $params);
-			}
+	public function getProdxMat(){
+		$sql = "SELECT Nombre, Descripcion, Modelo, Costo, Cantidad FROM producto INNER JOIN material on producto.IdMaterial=material.IdMaterial Where  material.IdMaterial=?";
+		$params = array($this->id);
+		return Database::getRows($sql, $params);
+	}
 
-			public function getCantidadM(){
-				$sql = "SELECT Material, COUNT(producto.IdMaterial)Cantidad from Material INNER JOIN producto on producto.IdMaterial=Material.IdMaterial GROUP BY Material";
-				$params = array(null);
-				return Database::getRows($sql, $params);
-				}
+	public function getCantidadM(){
+		$sql = "SELECT Material, COUNT(producto.IdMaterial)Cantidad from Material INNER JOIN producto on producto.IdMaterial=Material.IdMaterial GROUP BY Material";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
 
     //Metodos CRUD
 	public function getMaterial(){

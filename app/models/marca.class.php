@@ -41,7 +41,7 @@ class Marca extends Validator{
 			return Database::getRows($sql, $params);
 			}
 			public function getProdxMarc(){
-				$sql = "SELECT Nombre, Descripcion, Modelo, Costo, marca.Marca FROM producto INNER JOIN Marca on producto.IdMarca=Marca.IdMarca Where  marca.IdMarca=?";
+				$sql = "SELECT Nombre, Descripcion, Modelo, Costo, Cantidad FROM producto INNER JOIN Marca on producto.IdMarca=Marca.IdMarca Where  marca.IdMarca=?";
 				$params = array($this->id);
 				return Database::getRows($sql, $params);
 				}

@@ -50,7 +50,7 @@ class Categoria extends Validator{
 			return Database::getRows($sql, $params);
 			}
 			public function getProdxCat(){
-				$sql = "SELECT Nombre, Descripcion, Modelo, Costo, categoria.Categoria FROM producto INNER JOIN categoria on producto.IdCategoria=categoria.IdCategoria Where  categoria.IdCategoria=?";
+				$sql = "SELECT Nombre, Descripcion, Modelo, Costo, Cantidad FROM producto INNER JOIN categoria on producto.IdCategoria=categoria.IdCategoria Where  categoria.IdCategoria=?";
 				$params = array($this->id);
 				return Database::getRows($sql, $params);
 				}
@@ -59,6 +59,7 @@ class Categoria extends Validator{
 					$params = array(null);
 					return Database::getRows($sql, $params);
 					}
+
 
 
     public function getCategoriaF(){

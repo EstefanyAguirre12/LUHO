@@ -30,6 +30,17 @@ class talla extends validator{
         return $this->nombre;
     }
     
+    public function getProdxTa(){
+		$sql = "SELECT Nombre, Descripcion, Modelo, Costo, Cantidad FROM producto INNER JOIN talla on producto.IdTalla=Talla.IdTalla Where  Talla.IdTalla=?";
+		$params = array($this->id);
+		return Database::getRows($sql, $params);
+	}
+
+	public function getCantidadT(){
+		$sql = "SELECT Talla, COUNT(producto.IdTalla)Cantidad from Talla INNER JOIN producto on producto.IdTalla=Talla.IdTalla GROUP BY Talla";
+		$params = array(null);
+		return Database::getRows($sql, $params);
+	}
     //Metodos CRUD
 	public function getTalla(){
 		$sql = "SELECT IdTalla, Talla FROM Talla ORDER BY Talla";

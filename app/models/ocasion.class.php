@@ -28,7 +28,18 @@ class Ocasion extends Validator{
 		public function getNombre(){
 			return $this->nombre;
 		}
-    
+		
+		public function getProdxOc(){
+			$sql = "SELECT Nombre, Descripcion, Modelo, Costo, Cantidad FROM producto INNER JOIN ocasion on ocasion.IdOcasion=producto.IdOcasion Where  ocasion.IdOcasion=?";
+			$params = array($this->id);
+			return Database::getRows($sql, $params);
+		}
+
+		public function getCantidadO(){
+			$sql = "SELECT Ocasion, COUNT(producto.IdOcasion)Cantidad from Ocasion INNER JOIN producto on producto.IdOcasion=ocasion.IdOcasion GROUP BY ocasion";
+			$params = array(null);
+			return Database::getRows($sql, $params);
+		}
     //Metodos CRUD
     //Obtener Ocasion
     public function getOcasion(){

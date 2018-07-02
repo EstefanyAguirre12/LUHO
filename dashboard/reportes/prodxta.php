@@ -11,7 +11,7 @@
 require_once('../../web/fpdf/fpdf.php');
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
-require_once("../../app/models/categoria.class.php");
+require_once("../../app/models/talla.class.php");
 session_start();
 
 // Configuracion de variables
@@ -26,13 +26,15 @@ $tableHeaderLeftFillColour = array( 184, 207, 229 );
 $tableBorderColour = array( 50, 50, 50 );
 $tableRowFillColour = array(203, 168, 149);
 $reportNameYPos = 160;
-$columnLabels = array( "Categoria", "Productos");
+$columnLabels = array( "Nombre", "Descripcion", "Modelo", "Costo", "Cantidad");
 setlocale(LC_ALL, '');
 date_default_timezone_set('America/El_Salvador');
 $time = strftime('%c');
-$datos = new Categoria;
-$data = $datos->getNombrec();
+$datos = new Talla;
+$datos->setId($_GET['id']);
+$data = $datos->getProdxTa();
 $NombreU = $_SESSION['Usuario'];
+
 
 /**
 **/
@@ -41,11 +43,20 @@ class PDF extends FPDF
 // Cabecera de página
 function Header()
 {
-  // Begin configuration
   $this->Image('../../web/img/logos.png',10,10,-300);
+  $idc = $_GET['id'];
+  $sql = "SELECT Talla from talla where IdTalla=$idc";
+  $params=array(null);
+  $res=Database::getRows($sql,$params);
+  foreach($res as $row)
+  {
+      //agregamos los datos al array
+      $Titulo = $row['Talla'];
+  }
+
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
-  $reportName = "Cantidad de Productos por Categoria";
+  $reportName = "Productos con la talla: $Titulo";
   $reportNameYPos = 160;
   $this->SetTextColor( $headerColour[0], $headerColour[1], $headerColour[2] );
   $this->SetFont( 'Arial', '', 17 );
@@ -83,7 +94,6 @@ $pdf->AddPage();
 //$pdf->Image( $logoFile, $logoXPos, $logoYPos, $logoWidth );
 
 
-
 $pdf->SetFont( 'Arial', 'B', 12 );
 $pdf->Write( 6, "Usuario: ");
 $pdf->SetFont( 'Arial', '', 12 );
@@ -113,7 +123,7 @@ $pdf->SetTextColor( $tableHeaderTopTextColour[0], $tableHeaderTopTextColour[1], 
 $pdf->SetFillColor( $tableHeaderTopFillColour[0], $tableHeaderTopFillColour[1], $tableHeaderTopFillColour[2] );
 
 for ( $i=0; $i<count($columnLabels); $i++ ) {
-  $pdf->Cell( 97.5, 9, $columnLabels[$i], 1, 0, 'C', true );
+  $pdf->Cell(39, 9, $columnLabels[$i], 1, 0, 'C', true );
 }
 
 $pdf->Ln( 9 );
@@ -132,16 +142,13 @@ foreach ( $data as $dataRow ) {
   $pdf->SetFont( 'Arial', '', 12 );
 
   for ( $i=0; $i<count($columnLabels); $i++ ) {
-    $pdf->Cell( 97.5, 9,( $dataRow[$i] ), 1, 0, 'C', $fill );
+    $pdf->Cell(39, 9,( $dataRow[$i] ), 1, 0, 'C', $fill );
   }
 
   $row++;
   $fill = !$fill;
   $pdf->Ln( 9 );
 }
-
-
-
 
 
 

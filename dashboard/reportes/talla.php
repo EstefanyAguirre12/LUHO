@@ -11,7 +11,7 @@
 require_once('../../web/fpdf/fpdf.php');
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
-require_once("../../app/models/categoria.class.php");
+require_once("../../app/models/talla.class.php");
 session_start();
 
 // Configuracion de variables
@@ -26,16 +26,15 @@ $tableHeaderLeftFillColour = array( 184, 207, 229 );
 $tableBorderColour = array( 50, 50, 50 );
 $tableRowFillColour = array(203, 168, 149);
 $reportNameYPos = 160;
-$columnLabels = array( "Categoria", "Productos");
+$columnLabels = array( "Talla", "Productos");
 setlocale(LC_ALL, '');
 date_default_timezone_set('America/El_Salvador');
 $time = strftime('%c');
-$datos = new Categoria;
-$data = $datos->getNombrec();
+$datos = new Talla;
+$data = $datos->getCantidadT();
 $NombreU = $_SESSION['Usuario'];
 
-/**
-**/
+
 class PDF extends FPDF
 {
 // Cabecera de página
@@ -45,7 +44,7 @@ function Header()
   $this->Image('../../web/img/logos.png',10,10,-300);
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
-  $reportName = "Cantidad de Productos por Categoria";
+  $reportName = "Cantidad de Productos por Talla";
   $reportNameYPos = 160;
   $this->SetTextColor( $headerColour[0], $headerColour[1], $headerColour[2] );
   $this->SetFont( 'Arial', '', 17 );

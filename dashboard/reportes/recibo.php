@@ -11,28 +11,57 @@
 require_once('../../web/fpdf/fpdf.php');
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
-require_once("../../app/models/categoria.class.php");
+require_once("../../app/models/carrito.class.php");
 session_start();
 
-// Configuracion de variables
+// Begin configuration
 $textColour = array( 0, 0, 0 );
 $headerColour = array( 100, 100, 100 );
 $tableHeaderTopTextColour = array( 255, 255, 255 );
-$tableHeaderTopFillColour = array(142, 142, 142);
+$tableHeaderTopFillColour = array( 125, 152, 179 );
 $tableHeaderTopProductTextColour = array( 0, 0, 0 );
 $tableHeaderTopProductFillColour = array( 143, 173, 204 );
 $tableHeaderLeftTextColour = array( 99, 42, 57 );
 $tableHeaderLeftFillColour = array( 184, 207, 229 );
 $tableBorderColour = array( 50, 50, 50 );
-$tableRowFillColour = array(203, 168, 149);
+$tableRowFillColour = array( 213, 170, 170 );
+$reportName = "2009 Widget Sales Report";
 $reportNameYPos = 160;
-$columnLabels = array( "Categoria", "Productos");
+//$logoFile = "widget-company-logo.png";
+$logoXPos = 50;
+$logoYPos = 108;
+$logoWidth = 110;
+$columnLabels = array( "Nombre", "Descripcion", "Modelo", "Costo");
+$chartXPos = 20;
+$chartYPos = 250;
+$chartWidth = 160;
+$chartHeight = 80;
+$chartXLabel = "Product";
+$chartYLabel = "2009 Sales";
+$chartYStep = 20000;
+$chartColours = array(
+                  array( 255, 100, 100 ),
+                  array( 100, 255, 100 ),
+                  array( 100, 100, 255 ),
+                  array( 255, 255, 100 ),
+                );
 setlocale(LC_ALL, '');
 date_default_timezone_set('America/El_Salvador');
 $time = strftime('%c');
-$datos = new Categoria;
-$data = $datos->getNombrec();
+$datos = new Carrito;
+$datos->setId($_SESSION['IdCliente']);
+$data = $datos->getCompra();
 $NombreU = $_SESSION['Usuario'];
+
+/*$data = array(
+          array( 9940, 10100, 9490, 11730 ),
+          array( 19310, 21140, 20560, 22590 ),
+          array( 25110, 26260, 25210, 28370 ),
+          array( 27650, 24550, 30040, 31980 ),
+);*/
+
+// End configuration
+
 
 /**
 **/
@@ -41,11 +70,11 @@ class PDF extends FPDF
 // Cabecera de página
 function Header()
 {
-  // Begin configuration
+
   $this->Image('../../web/img/logos.png',10,10,-300);
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
-  $reportName = "Cantidad de Productos por Categoria";
+  $reportName = "Productos en la categoria de: ";
   $reportNameYPos = 160;
   $this->SetTextColor( $headerColour[0], $headerColour[1], $headerColour[2] );
   $this->SetFont( 'Arial', '', 17 );
@@ -139,9 +168,6 @@ foreach ( $data as $dataRow ) {
   $fill = !$fill;
   $pdf->Ln( 9 );
 }
-
-
-
 
 
 
