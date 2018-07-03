@@ -93,7 +93,7 @@ $pdf->Write( 6, "Fecha y Hora: ");
 $pdf->SetFont( 'Arial', '', 12 );
 $pdf->Write( 6, $time);
 $pdf->Ln( 12 );
-$pdf->Write( 6, "Despite the economic downturn, WidgetCo had a strong year. Sales of the HyperWidget in particular exceeded expectations. The fourth quarter was generally the best performing; this was most likely due to our increased ad spend in Q3." );
+$pdf->Write( 6, "En el siguiente reporte se muestran a continuacion los productos existentes por material en LUHO." );
 
 
 /**
