@@ -28,7 +28,8 @@
 						<th>Categoria</th>
 						<th>Genero</th>
 						<th>Modificar</th>							
-						<th>Eliminar</th>														
+						<th>Eliminar</th>	
+						<th>Reporte</th>													
 					</tr>
 				</thead>
 				<tbody>
@@ -39,11 +40,16 @@
 							<td>$row[Categoria]</td>
 							<td>$row[Genero]</td>
 							<td>
-							<a href='../reportes/funciona.1.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
+							<a href='../reportes/categorias.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
 							<td>
 							<a href='delete.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
-							</td> <!--look on bootstrap for sizes-->	
+							</td> <!--look on bootstrap for sizes-->
+							<td>
+							<a href='../reportes/categorias.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
+							</td> <!--look on bootstrap for sizes-->
+
+
 						<tr>
 						");
 						}
