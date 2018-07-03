@@ -40,13 +40,13 @@
 							<td>$row[Categoria]</td>
 							<td>$row[Genero]</td>
 							<td>
-							<a href='../reportes/categorias.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
+							<a href='update.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
 							<td>
 							<a href='delete.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->
 							<td>
-							<a href='../reportes/categorias.php?id=$row[IdCategoria]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-pencil-alt'></i></a>
+							<a href='../reportes/prodxcat.php?id=$row[IdCategoria]' data-toggle='tooltip' title='Productos existentes en esta categoria' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-file-alt'></i></a>
 							</td> <!--look on bootstrap for sizes-->
 
 
@@ -58,7 +58,11 @@
 			</table>
 			<!--Table-->
 		</div>
-	</div>			
+	</div>	
+	<div class="text-left">
+		<a href="../reportes/categorias.php" data-toggle='tooltip' title='Cantidad de productos existentes en cada categoria' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Reporte</a>
+		<a href="../graficos/prodxcat.php" data-toggle='tooltip' title='Cantidad de productos existentes en cada categoria' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Greaficos</a>
+	</div>		
 </div>
 
     
