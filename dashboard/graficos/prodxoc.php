@@ -12,21 +12,21 @@ require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_scatter.php');
 require_once('../../app/models/database.class.php');
 
 //Buscamos si encontramos un registro con los datos del usuario
-$sql="SELECT Categoria, COUNT(producto.IdCategoria)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria GROUP BY Categoria";
+$sql="SELECT Ocasion, COUNT(producto.IdOcasion)Cantidad from Ocasion INNER JOIN producto on producto.IdOcasion=Ocasion.IdOcasion GROUP BY Ocasion";
 $params=array(null);
 $res=Database::getRows($sql,$params);
 foreach($res as $row)
 {
     //agregamos los datos al array
     $datos[] = $row['Cantidad'];
-    $labels[] = $row['Categoria'];
+    $labels[] = $row['Ocasion'];
 }
 
 $graph = new Graph(900,600);
-$graph->SetScale("textint");
+$graph->SetScale("intlin");
 $graph->img->SetMargin(60,60,60,60);        
 $graph->SetShadow();
-$graph->title->Set("A simple scatter plot");
+$graph->title->Set("Cantidad de productos por ocasion");
 $graph->xaxis->title->Set("Productos");
 $graph->xaxis->SetTickLabels($labels);
 $graph->yaxis->title->Set("Cantidad");

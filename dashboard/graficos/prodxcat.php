@@ -24,7 +24,7 @@ foreach($res as $row)
 
 //definimos los formatos generales
 $grafico = new Graph(500, 400, 'auto');
-$grafico->SetScale("textint");
+$grafico->SetScale("intlin");
 $grafico->title->Set("Cantidad de productos en cada categoria");
 $grafico->xaxis->title->Set("Categorias");
 $grafico->xaxis->SetTickLabels($labels);

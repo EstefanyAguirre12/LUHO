@@ -34,7 +34,15 @@ $datos = new Talla;
 $datos->setId($_GET['id']);
 $data = $datos->getProdxTa();
 $NombreU = $_SESSION['Usuario'];
-
+$idc = $_GET['id'];
+$sql = "SELECT Talla from Talla where IdTalla=$idc";
+$params=array(null);
+$res=Database::getRows($sql,$params);
+foreach($res as $row)
+{
+    //agregamos los datos al array
+    $Titulo = $row['Talla'];
+}
 
 /**
 **/

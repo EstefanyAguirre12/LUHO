@@ -10,21 +10,21 @@ require_once('../../app/models/database.class.php');
 
 
 //Buscamos si encontramos un registro con los datos del usuario
-$sql="SELECT Categoria, COUNT(producto.IdCategoria)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria GROUP BY Categoria";
+$sql="SELECT Talla, COUNT(producto.IdTalla)Cantidad from Talla INNER JOIN producto on producto.IdTalla=Talla.IdTalla GROUP BY Talla";
 $params=array(null);
 $res=Database::getRows($sql,$params);
 foreach($res as $row)
 {
     //agregamos los datos al array
     $datos[] = $row['Cantidad'];
-    $labels[] = $row['Categoria'];
+    $labels[] = $row['Talla'];
 }
 
 $graph = new Graph(900,600);
 $graph->SetScale("intlin");
 $graph->img->SetMargin(60,60,60,60);        
 $graph->SetShadow();
-$graph->title->Set("A simple scatter plot");
+$graph->title->Set("Cantidad de productos por talla");
 $graph->xaxis->title->Set("Productos");
 $graph->xaxis->SetTickLabels($labels);
 $graph->yaxis->title->Set("Cantidad");

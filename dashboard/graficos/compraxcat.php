@@ -25,7 +25,7 @@ foreach($res as $row)
 
 //definimos los formatos generales
 $grafico = new Graph(900, 600);
-$grafico->SetScale("textint");
+$grafico->SetScale("intlin");
 $grafico->img->SetMargin(60,60,60,60);        
 $grafico->title->Set("Productos comprados en cada categoria");
 $grafico->xaxis->title->Set("Categoria");

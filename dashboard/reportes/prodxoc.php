@@ -34,7 +34,15 @@ $datos = new Ocasion;
 $datos->setId($_GET['id']);
 $data = $datos->getProdxOc();
 $NombreU = $_SESSION['Usuario'];
-
+$idc = $_GET['id'];
+$sql = "SELECT Ocasion from ocasion where IdOcasion=$idc";
+$params=array(null);
+$res=Database::getRows($sql,$params);
+foreach($res as $row)
+{
+    //agregamos los datos al array
+    $Titulo = $row['Ocasion'];
+}
 
 class PDF extends FPDF
 {

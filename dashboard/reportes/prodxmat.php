@@ -34,7 +34,15 @@ $datos = new Material;
 $datos->setId($_GET['id']);
 $data = $datos->getProdxMat();
 $NombreU = $_SESSION['Usuario'];
-
+$idc = $_GET['id'];
+$sql = "SELECT Material from Material where IdMaterial=$idc";
+$params=array(null);
+$res=Database::getRows($sql,$params);
+foreach($res as $row)
+{
+    //agregamos los datos al array
+    $Titulo = $row['Material'];
+}
 
 class PDF extends FPDF
 {
