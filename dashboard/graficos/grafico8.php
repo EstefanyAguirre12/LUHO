@@ -5,18 +5,32 @@ require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph.php');
 //Requerimos el tipo de grafico que vamos a utilizar
 require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_scatter.php');
 
-$datay = array(20,22,12,13,17,20,16,19,30,31,40,43);
- 
-$graph = new Graph(300,200);
-$graph->SetScale("textlin");
- 
+//Conexion a la base de datos
+require_once('../../app/models/database.class.php');
+
+
+//Buscamos si encontramos un registro con los datos del usuario
+$sql="SELECT Categoria, COUNT(producto.IdCategoria)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria GROUP BY Categoria";
+$params=array(null);
+$res=Database::getRows($sql,$params);
+foreach($res as $row)
+{
+    //agregamos los datos al array
+    $datos[] = $row['Cantidad'];
+    $labels[] = $row['Categoria'];
+}
+
+$graph = new Graph(900,600);
+$graph->SetScale("textint");
+$graph->img->SetMargin(60,60,60,60);        
 $graph->SetShadow();
-$graph->img->SetMargin(40,40,40,40);        
+$graph->title->Set("A simple scatter plot");
+$graph->xaxis->title->Set("Productos");
+$graph->xaxis->SetTickLabels($labels);
+$graph->yaxis->title->Set("Cantidad");
  
-$graph->title->Set("Simple mpuls plot");
-$graph->title->SetFont(FF_FONT1,FS_BOLD);
  
-$sp1 = new ScatterPlot($datay);
+$sp1 = new ScatterPlot($datos);
 $sp1->mark->SetType(MARK_SQUARE);
 $sp1->SetImpuls();
  

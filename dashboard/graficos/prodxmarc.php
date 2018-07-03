@@ -12,19 +12,20 @@ require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_pie.php');
 require_once('../../app/models/database.class.php');
 
 //Buscamos si encontramos un registro con los datos del usuario
-$sql="SELECT * FROM producto";
+$sql="SELECT Marca, COUNT(producto.IdMarca)Cantidad from Marca INNER JOIN producto on producto.IdMarca=Marca.IdMarca GROUP BY Marca";
 $params=array(null);
 $res=Database::getRows($sql,$params);
 foreach($res as $row)
 {
     //agregamos los datos al array
-    $datos[] = $row['Costo'];
-    $labels[] = $row['Nombre'];
+    $datos[] = $row['Cantidad'];
+    $labels[] = $row['Marca'];
 }
 
-$graph = new PieGraph(600,600);
+$graph = new PieGraph(900,600);
+$graph->img->SetMargin(60,60,60,60);        
 $graph->SetShadow();
-$graph->title->Set("A simple Pie plot");
+$graph->title->Set("Cantidad de productos por marca");
  
 $p1 = new PiePlot($datos);
 $p1->SetTheme("sand");
@@ -35,4 +36,3 @@ $graph->Add($p1);
 $graph->Stroke();
 
 //Salida archivo formato PNG
-//$grafico->Stroke("IMG.PNG");
