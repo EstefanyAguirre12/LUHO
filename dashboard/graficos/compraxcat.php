@@ -10,10 +10,11 @@ require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_bar.php');
 
 //Conexion a la base de datos
 require_once('../../app/models/database.class.php');
+$idc = $_GET['id'];
 
 //Buscamos si encontramos un registro con los datos del usuario
-$sql="SELECT Categoria, COUNT(producto.IdCategoria)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria GROUP BY Categoria";
-$params=array(null);
+$sql="SELECT Categoria, sum(carrito.Cantidad)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria Inner Join carrito on carrito.IdProducto=producto.IdProducto where carrito.IdCliente=? and EstadoCompra=1 GROUP BY Categoria";
+$params=array($idc);
 $res=Database::getRows($sql,$params);
 foreach($res as $row)
 {
@@ -23,10 +24,11 @@ foreach($res as $row)
 }
 
 //definimos los formatos generales
-$grafico = new Graph(500, 400, 'auto');
+$grafico = new Graph(900, 600);
 $grafico->SetScale("textint");
-$grafico->title->Set("Cantidad de los productos");
-$grafico->xaxis->title->Set("Productos");
+$grafico->img->SetMargin(60,60,60,60);        
+$grafico->title->Set("Productos comprados en cada categoria");
+$grafico->xaxis->title->Set("Categoria");
 $grafico->xaxis->SetTickLabels($labels);
 $grafico->yaxis->title->Set("Cantidad");
 

@@ -12,23 +12,23 @@ require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_bar.php');
 require_once('../../app/models/database.class.php');
 
 //Buscamos si encontramos un registro con los datos del usuario
-$sql="SELECT * FROM producto";
+$sql="SELECT Categoria, COUNT(producto.IdCategoria)Cantidad from categoria INNER JOIN producto on producto.IdCategoria=categoria.IdCategoria GROUP BY Categoria";
 $params=array(null);
 $res=Database::getRows($sql,$params);
 foreach($res as $row)
 {
     //agregamos los datos al array
-    $datos[] = $row['valoracion'];
-    $labels[] = $row['Nombre'];
+    $datos[] = $row['Cantidad'];
+    $labels[] = $row['Categoria'];
 }
 
 //definimos los formatos generales
 $grafico = new Graph(500, 400, 'auto');
 $grafico->SetScale("textint");
-$grafico->title->Set("Valoracion de los productos");
-$grafico->xaxis->title->Set("Productos");
+$grafico->title->Set("Cantidad de productos en cada categoria");
+$grafico->xaxis->title->Set("Categorias");
 $grafico->xaxis->SetTickLabels($labels);
-$grafico->yaxis->title->Set("Valoracion");
+$grafico->yaxis->title->Set("Cantidad");
 
 //Ingresamos los datos del array que van a ir en el grafico
 $barplot1 = new BarPlot($datos);
@@ -48,3 +48,12 @@ $grafico->Stroke();
 
 //Salida archivo formato PNG
 //$grafico->Stroke("IMG.PNG");
+
+
+
+
+
+
+
+
+?>
