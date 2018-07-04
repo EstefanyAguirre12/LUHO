@@ -3,6 +3,7 @@ class Carrito extends Validator{
     private $id = null;
     private $idcliente = null;
     private $idproducto = null;
+    private $idcuenta = null;
     private $cantidad = null;
 
     //Métodos para sobrecarga de propiedades
@@ -18,6 +19,20 @@ class Carrito extends Validator{
     public function getId(){
 			return $this->id;
     }
+
+    public function setIdCuenta($value){
+        if($this->validateId($value)){
+            $this->idcuenta = $value;
+            return true;  
+        }
+        else{
+            return false;
+        }
+    }
+    public function getIdCuenta(){
+			return $this->idcuenta;
+    }
+    
 
     public function setIdCliente($value){
         if($this->validateId($value)){
@@ -66,6 +81,16 @@ class Carrito extends Validator{
 		$params = array($this->id);
 		return Database::getRows($sql, $params);
     }
+    public function getCuenta(){
+		$sql = "SELECT cuenta.IdCuenta from cuenta WHERE cuenta.EstadoCompra=0 AND cuenta.IdCliente=?";
+		$params = array($this->idcliente);
+		return Database::getRows($sql, $params);
+    }
+    public function getCuenta2(){
+		$sql = "SELECT carrito.IdCuenta from carrito WHERE carrito.EstadoCompra=0 and carrito.IdCliente=?";
+		$params = array($this->idcliente);
+		return Database::getRows($sql, $params);
+    }
 
        //Buscar carrito con parametros
        public function searchCarrito($value){
@@ -89,8 +114,14 @@ class Carrito extends Validator{
     }
     //Insertar carrito
     public function createCarrito(){
-		$sql = "INSERT INTO carrito(IdCliente, IdProducto, Cantidad, EstadoCompra) VALUES(?, ?, ?, 0)";
-		$params = array($this->idcliente, $this->idproducto, $this->cantidad);
+		$sql = "INSERT INTO carrito(IdCliente, IdProducto, Cantidad, EstadoCompra, IdCuenta) VALUES(?,?, ?, 0, (SELECT cuenta.IdCuenta from cuenta WHERE cuenta.EstadoCompra=0 AND cuenta.IdCliente=?))";
+		$params = array($this->idcliente, $this->idproducto, $this->cantidad, $this->idcliente);
+		return Database::executeRow($sql, $params);
+    }
+     //Insertar carrito
+     public function createCuenta(){
+		$sql = "INSERT INTO cuenta(IdCliente, EstadoCompra) VALUES(?,0)";
+		$params = array($this->idcliente);
 		return Database::executeRow($sql, $params);
     }
     //Leer carrito
@@ -111,6 +142,11 @@ class Carrito extends Validator{
     public function updateCarrito(){
 		$sql = "UPDATE carrito SET EstadoCompra=1 WHERE IdCliente = ?";
 		$params = array($this->id);
+		return Database::executeRow($sql, $params);
+    }
+    public function updateCuenta(){
+		$sql = "UPDATE cuenta SET EstadoCompra=1 WHERE IdCliente = ? and IdCuenta=(SELECT DISTINCT(carrito.IdCuenta) from carrito WHERE carrito.EstadoCompra=0 and carrito.IdCliente=?)";
+		$params = array($this->idcliente, $this->idcliente);
 		return Database::executeRow($sql, $params);
     }
     //Eliminar carrito

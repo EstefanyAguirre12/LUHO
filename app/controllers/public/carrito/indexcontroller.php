@@ -28,16 +28,26 @@ try{
 $compra = new Carrito;
 //Este es el codigo para poder modificar algo en el carrito
 	if($compra->setId($_SESSION['IdCliente'])){
+		if($compra->setIdCliente($_SESSION['IdCliente'])){
 			if(isset($_POST['modificar'])){
+				$compra->setIdCliente($_SESSION['IdCliente']);
+				$compra->setIdCliente($_SESSION['IdCliente']);
+				if($compra->updateCuenta()){
 					if($compra->updateCarrito()){
-						Page::showMessage(1, "marca modificada", "index.php");
+						Page::showMessage(1, "Compra realizada con exito", "../reportes/recibo.php");
 					}else{
 						throw new Exception(Database::getException());
 					}
+				}else{
+					throw new Exception(Database::getException());
+				}
 			}
 	}else{
 		Page::showMessage(2, "marca incorrecta", "index.php");
 	}
+}else{
+	Page::showMessage(2, "marca incorrecta", "index.php");
+}
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "../account/");
 }

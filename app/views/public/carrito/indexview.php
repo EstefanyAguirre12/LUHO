@@ -1,3 +1,4 @@
+
 <div class="container margent"> 
 
 <div class="row">	
@@ -73,8 +74,7 @@
             </div>	        <form method='post'>
 
             <div class="text-right">	
-
-            <button type='submit' name='modificar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='material-icons'>Comprar ahora</i></button>
+                <button type='submit' name='modificar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='material-icons'>Comprar ahora</i></button>
             </div>
             </form>	
 

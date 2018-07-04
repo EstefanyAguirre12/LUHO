@@ -14,54 +14,36 @@ require_once("../../app/helpers/validator.class.php");
 require_once("../../app/models/carrito.class.php");
 session_start();
 
-// Begin configuration
+// Configuracion de variables
 $textColour = array( 0, 0, 0 );
 $headerColour = array( 100, 100, 100 );
 $tableHeaderTopTextColour = array( 255, 255, 255 );
-$tableHeaderTopFillColour = array( 125, 152, 179 );
+$tableHeaderTopFillColour = array(142, 142, 142);
 $tableHeaderTopProductTextColour = array( 0, 0, 0 );
 $tableHeaderTopProductFillColour = array( 143, 173, 204 );
 $tableHeaderLeftTextColour = array( 99, 42, 57 );
 $tableHeaderLeftFillColour = array( 184, 207, 229 );
 $tableBorderColour = array( 50, 50, 50 );
-$tableRowFillColour = array( 213, 170, 170 );
-$reportName = "2009 Widget Sales Report";
+$tableRowFillColour = array(203, 168, 149);
 $reportNameYPos = 160;
-//$logoFile = "widget-company-logo.png";
-$logoXPos = 50;
-$logoYPos = 108;
-$logoWidth = 110;
-$columnLabels = array( "Nombre", "Descripcion", "Modelo", "Costo");
-$chartXPos = 20;
-$chartYPos = 250;
-$chartWidth = 160;
-$chartHeight = 80;
-$chartXLabel = "Product";
-$chartYLabel = "2009 Sales";
-$chartYStep = 20000;
-$chartColours = array(
-                  array( 255, 100, 100 ),
-                  array( 100, 255, 100 ),
-                  array( 100, 100, 255 ),
-                  array( 255, 255, 100 ),
-                );
+$columnLabels = array( "Producto", "Modelo", "Costo", "Cantidad", "Subtotal");
 setlocale(LC_ALL, '');
 date_default_timezone_set('America/El_Salvador');
 $time = strftime('%c');
-$datos = new Carrito;
-$datos->setId($_SESSION['IdCliente']);
-$data = $datos->getCompra();
 $NombreU = $_SESSION['Usuario'];
+$IdC = $_SESSION['IdCliente'];
+$total=null;
 
-/*$data = array(
-          array( 9940, 10100, 9490, 11730 ),
-          array( 19310, 21140, 20560, 22590 ),
-          array( 25110, 26260, 25210, 28370 ),
-          array( 27650, 24550, 30040, 31980 ),
-);*/
+$sql = "SELECT producto.Nombre, producto.Modelo, producto.Costo, carrito.Cantidad, (producto.Costo*carrito.Cantidad)SubTotal FROM carrito INNER JOIN producto ON carrito.IdProducto=producto.IdProducto WHERE carrito.IdCliente=$IdC and carrito.IdCuenta=(SELECT max(cuenta.IdCuenta)max from cuenta where cuenta.EstadoCompra=1 and cuenta.IdCliente=$IdC)";
+$params=array(null);
+$res=Database::getRows($sql,$params);
+
+foreach($res as $row)
+{
+  $total = $row['Cantidad']*$row['Costo'] + $total;
+}
 
 // End configuration
-
 
 /**
 **/
@@ -74,7 +56,7 @@ function Header()
   $this->Image('../../web/img/logos.png',10,10,-300);
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
-  $reportName = "Productos en la categoria de: ";
+  $reportName = "Comprobante de venta";
   $reportNameYPos = 160;
   $this->SetTextColor( $headerColour[0], $headerColour[1], $headerColour[2] );
   $this->SetFont( 'Arial', '', 17 );
@@ -122,8 +104,6 @@ $pdf->SetFont( 'Arial', 'B', 12 );
 $pdf->Write( 6, "Fecha y Hora: ");
 $pdf->SetFont( 'Arial', '', 12 );
 $pdf->Write( 6, $time);
-$pdf->Ln( 12 );
-$pdf->Write( 6, "Despite the economic downturn, WidgetCo had a strong year. Sales of the HyperWidget in particular exceeded expectations. The fourth quarter was generally the best performing; this was most likely due to our increased ad spend in Q3." );
 
 
 /**
@@ -142,7 +122,7 @@ $pdf->SetTextColor( $tableHeaderTopTextColour[0], $tableHeaderTopTextColour[1], 
 $pdf->SetFillColor( $tableHeaderTopFillColour[0], $tableHeaderTopFillColour[1], $tableHeaderTopFillColour[2] );
 
 for ( $i=0; $i<count($columnLabels); $i++ ) {
-  $pdf->Cell( 97.5, 9, $columnLabels[$i], 1, 0, 'C', true );
+  $pdf->Cell( 39, 9, $columnLabels[$i], 1, 0, 'C', true );
 }
 
 $pdf->Ln( 9 );
@@ -152,7 +132,7 @@ $pdf->Ln( 9 );
 $fill = false;
 $row = 0;
 
-foreach ( $data as $dataRow ) {
+foreach ( $res as $dataRow ) {
 
   
   // Create the data cells
@@ -161,13 +141,16 @@ foreach ( $data as $dataRow ) {
   $pdf->SetFont( 'Arial', '', 12 );
 
   for ( $i=0; $i<count($columnLabels); $i++ ) {
-    $pdf->Cell( 97.5, 9,( $dataRow[$i] ), 1, 0, 'C', $fill );
+    $pdf->Cell( 39, 9,( $dataRow[$i] ), 1, 0, 'C', $fill );
   }
 
   $row++;
   $fill = !$fill;
   $pdf->Ln( 9 );
 }
+
+$pdf->Cell( 156, 9,( "Total"), 1, 0, 'R', $fill );
+$pdf->Cell( 39, 9,( "$$total"), 1, 0, 'R', $fill );
 
 
 

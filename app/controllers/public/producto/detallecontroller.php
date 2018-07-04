@@ -26,32 +26,76 @@ try{
 	}else{
 		throw new Exception("Seleccione producto");
 	}
-    //Aqui va el codigo para agregar items al carrito
-	if(isset($_POST['agregar'])){
-		$carrito = new Carrito;
-		$_POST = $carrito->validateForm($_POST);
-		if(isset($_GET['id'])){
-			if($carrito->setIdProducto($_GET['id'])){
-				if($carrito->setIdCliente($_SESSION['IdCliente'])){
-        			if($carrito->setCantidad($_POST['cantidad'])){ 
-						if($carrito->createCarrito()){
-							Page::showMessage(1, "Se agrego a tu carrito", "../carrito/index.php");
+	//Aqui va el codigo para agregar items al carrito
+	$carrito = new Carrito;
+	$carrito->setIdCliente($_SESSION['IdCliente']);
+	$cuenta = $carrito->getCuenta();
+	if($cuenta){
+		if(isset($_POST['agregar'])){
+			$_POST = $carrito->validateForm($_POST);
+			if(isset($_GET['id'])){
+				if($carrito->setIdProducto($_GET['id'])){
+					if($carrito->setIdCliente($_SESSION['IdCliente'])){
+						if($carrito->setCantidad($_POST['cantidad'])){ 
+							if($carrito->createCarrito()){
+								Page::showMessage(1, "Se agrego a tu carrito", "../carrito/index.php");
+							}else{
+								throw new Exception(Database:: getException());
+							}  	
 						}else{
-							throw new Exception(Database:: getException());
+							throw new Exception("Cantidad incorrecto");
 						}  
 					}else{
-						throw new Exception("Cantidad incorrecto");
-					}   
+						throw new Exception("No has iniciado sesion");
+					}        
 				}else{
-					throw new Exception("No has iniciado sesion");
-        		}        
+					throw new Exception("Producto incorrecto");
+				}
+			}else{
+				throw new Exception("Seleccione producto");
+			}
+		}
 	}else{
-		throw new Exception("Producto incorrecto");
+		if($carrito->setIdCliente($_SESSION['IdCliente'])){
+			if($carrito->createCuenta()){
+				$carrito->setIdCliente($_SESSION['IdCliente']);
+				$cuenta = $carrito->getCuenta();
+				if($cuenta){
+					if(isset($_POST['agregar'])){
+						$_POST = $carrito->validateForm($_POST);
+						if(isset($_GET['id'])){
+							if($carrito->setIdProducto($_GET['id'])){
+								if($carrito->setIdCliente($_SESSION['IdCliente'])){
+									if($carrito->setCantidad($_POST['cantidad'])){ 
+										if($carrito->createCarrito()){
+											Page::showMessage(1, "Se agrego a tu carrito", "../carrito/index.php");
+										}else{
+											throw new Exception(Database:: getException());
+										}  	
+									}else{
+										throw new Exception("Cantidad incorrecto");
+									}  
+								}else{
+									throw new Exception("No has iniciado sesion");
+								}        
+							}else{
+								throw new Exception("Producto incorrecto");
+							}
+						}else{
+							throw new Exception("Seleccione producto");
+						}
+					}
+				}
+			}else{
+				throw new Exception(Database:: getException());
+			}  
+		}
+		else{
+
+		}
 	}
-}else{
-	throw new Exception("Seleccione producto");
-}
-	}
+
+	
     //Aqui va el codigo para comentar un producto
 	if(isset($_POST['comentario'])){
 		$coment = new Comentario;
