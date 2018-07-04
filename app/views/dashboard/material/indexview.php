@@ -28,7 +28,8 @@
                             <tr>
                                 <th>Material</th>
                                 <th>Modificar</th>							
-                                <th>Eliminar</th>														
+                                <th>Eliminar</th>	
+                                <th>Reporte</th>													
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +44,10 @@
                                     <td>
                                     <a href='delete.php?id=$row[IdMaterial]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
                                     </td> <!--look on bootstrap for sizes-->	
+                                    <td>
+							        <a href='../reportes/prodxmat.php?id=$row[IdMaterial]' data-toggle='tooltip' title='Reporte de material' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-file-alt'></i></a>
+							        </td> <!--look on bootstrap for sizes-->
+	
                                 
                                 <tr>
                                 ");
@@ -52,5 +57,9 @@
                     </table>
                     <!--Table-->
                 </div>
-            </div>			
+            </div>	
+            <div class="text-left">
+		<a href="../reportes/material.php" data-toggle='tooltip' title='Reporte de material' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Reporte</a>
+		<a href="../graficos/prodxmat.php" data-toggle='tooltip' title='Grafico de material' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Greaficos</a>
+	</div>			
         </div>
