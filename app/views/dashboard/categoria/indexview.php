@@ -61,7 +61,7 @@
 	</div>	
 	<div class="text-left">
 		<a href="../reportes/categorias.php" data-toggle='tooltip' title='Cantidad de productos existentes en cada categoria' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Reporte</a>
-		<a href="../graficos/prodxcat.php" data-toggle='tooltip' title='Cantidad de productos existentes en cada categoria' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Greaficos</a>
+		<a href="../graficos/prodxcat.php" data-toggle='tooltip' title='Cantidad de productos existentes en cada categoria' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Graficos</a>
 	</div>		
 </div>
 

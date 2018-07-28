@@ -50,12 +50,4 @@ $grafico->Stroke();
 
 //Salida archivo formato PNG
 //$grafico->Stroke("IMG.PNG");
-
-
-
-
-
-
-
-
 ?>

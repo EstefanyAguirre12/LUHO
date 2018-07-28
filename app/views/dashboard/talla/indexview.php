@@ -61,6 +61,6 @@
     </div>	
     <div class="text-left">
 		<a href="../reportes/talla.php" data-toggle='tooltip' title='Reporte de talla' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Reporte</a>
-		<a href="../graficos/prodxta.php" data-toggle='tooltip' title='Grafico de talla' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Greaficos</a>
+		<a href="../graficos/prodxta.php" data-toggle='tooltip' title='Grafico de talla' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Graficos</a>
 	</div>	
 </div>

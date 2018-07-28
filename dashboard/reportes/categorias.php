@@ -1,8 +1,8 @@
 <?php
 
 /*
-  An Example PDF Report Using FPDF
-  by Matt Doyle
+  Un ejemplo de reporte con FPDF 
+  by Rolo Lezama & EstefanyxD >:v
 
   From "Create Nice-Looking PDFs with PHP and FPDF"
   http://www.elated.com/articles/create-nice-looking-pdfs-php-fpdf/
@@ -41,7 +41,7 @@ class PDF extends FPDF
 // Cabecera de página
 function Header()
 {
-  // Begin configuration
+  // comenzando la configuracion
   $this->Image('../../web/img/logos.png',10,10,-300);
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
@@ -98,17 +98,17 @@ $pdf->Write( 6, "En este reporte se muestra a continuacion la cantidad de produc
 
 
 /**
-  Create the table
+  Crear la tabla.
 **/
 
 $pdf->SetDrawColor( $tableBorderColour[0], $tableBorderColour[1], $tableBorderColour[2] );
 $pdf->Ln( 15 );
 
-// Create the table header row
+// creamos el encabezado de la tabla
 $pdf->SetFont( 'Arial', 'B', 14 );
 
 
-// Remaining header cells
+// celdas de encabezado restante 
 $pdf->SetTextColor( $tableHeaderTopTextColour[0], $tableHeaderTopTextColour[1], $tableHeaderTopTextColour[2] );
 $pdf->SetFillColor( $tableHeaderTopFillColour[0], $tableHeaderTopFillColour[1], $tableHeaderTopFillColour[2] );
 
@@ -118,7 +118,7 @@ for ( $i=0; $i<count($columnLabels); $i++ ) {
 
 $pdf->Ln( 9 );
 
-// Create the table data rows
+// creamos la rows de las tablas 
 
 $fill = false;
 $row = 0;
@@ -126,7 +126,7 @@ $row = 0;
 foreach ( $data as $dataRow ) {
 
   
-  // Create the data cells
+  // creamos las celdas de la tabla
   $pdf->SetTextColor( $textColour[0], $textColour[1], $textColour[2] );
   $pdf->SetFillColor( $tableRowFillColour[0], $tableRowFillColour[1], $tableRowFillColour[2] );
   $pdf->SetFont( 'Arial', '', 12 );

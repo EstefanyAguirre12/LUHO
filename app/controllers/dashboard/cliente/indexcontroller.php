@@ -22,7 +22,10 @@ try{
 	}else{
 		Page::showMessage(3, "No hay ocasiones disponibles", "create.php");
 	}
-	
+
+
+
+
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), "../account/");
 }

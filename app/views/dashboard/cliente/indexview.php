@@ -28,12 +28,16 @@
 						<th>Apellido</th>
 						<th>Usuario</th>
 						<th>Correo</th>	
-						<th>Direccion</th>														
+						<th>Direccion</th>		
+						<th>Editar</th>														
+						<th>Eliminar</th>														
+						<th>Grafico</th>																										
 					</tr>
 				</thead>
 				<tbody>
 					<?php
 						foreach($data as $row){
+							$id=null;
 						print("
 						<tr>
 							<td>$row[Nombre]</td>
@@ -46,7 +50,11 @@
 							</td> <!--look on bootstrap for sizes-->	
 							<td>
 							<a href='delete.php?id=$row[IdCliente]' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-trash-alt'></i></a>
+							</td> <!--look on bootstrap for sizes-->
+							<td>
+							<a href='grafico.php?id=$row[IdCliente]'  class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='fas fa-chart-pie'></i></a>
 							</td> <!--look on bootstrap for sizes-->	
+							
 						<tr>
 						");
 						}
@@ -57,5 +65,32 @@
 		</div>
 	</div>			
 </div>
+<!-- Modal -->
+<div class="modal fade" id="Reporte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Elija una opción</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group input-field col s12 m6">
+				<?php
+										print("
+				<a href= 'dsfd.php?ids=$id'  class='btn btn-dark' name='grafico' type='submit'>Categoria</a>
+				<a href=''  class='btn btn-dark' name='grafico' type='submit'>Marca</a>
+				<a href=''  class='btn btn-dark' name='grafico' type='submit'>Material</a>
+				<a href=''  class='btn btn-dark' name='grafico' type='submit'>Ocasion</a>
+				<a href=''  class='btn btn-dark' name='grafico' type='submit'>Talla</a>
+					");
+				?>
 
-    
+                </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Fin Modal de Contacto-->
+

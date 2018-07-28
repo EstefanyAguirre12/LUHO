@@ -58,6 +58,6 @@
             </div>
             <div class="text-left">
 		<a href="../reportes/marcas.php" data-toggle='tooltip' title='Reporte de marca' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Reporte</a>
-		<a href="../graficos/prodxmarc.php" data-toggle='tooltip' title='Grafico de marca' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Greaficos</a>
+		<a href="../graficos/prodxmarc.php" data-toggle='tooltip' title='Grafico de marca' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Graficos</a>
 	</div>				
         </div>

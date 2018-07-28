@@ -60,6 +60,6 @@
             </div>	
             <div class="text-left">
 		<a href="../reportes/material.php" data-toggle='tooltip' title='Reporte de material' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Reporte</a>
-		<a href="../graficos/prodxmat.php" data-toggle='tooltip' title='Grafico de material' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Greaficos</a>
+		<a href="../graficos/prodxmat.php" data-toggle='tooltip' title='Grafico de material' class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Graficos</a>
 	</div>			
         </div>
