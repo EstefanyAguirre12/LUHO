@@ -116,11 +116,25 @@ class Validator{
 	}
 
 	public function validatePassword($value){
-		if(strlen($value) > 5){
-			return true;
-		}else{
+		if(strlen($value) < 8){
 			return false;
 		}
+		if(strlen($value) > 16){
+			return false;
+		}
+		if(!preg_match('`[a-z]`',$value)){
+			return false;
+		}
+		if(!preg_match('`[A-Z]`',$value)){
+			return false;
+		}
+		if(!preg_match('`[0-9]`',$value)){
+			return false;
+		}
+		return true; 
 	}
 }
 ?>
+
+
+
