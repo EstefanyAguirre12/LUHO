@@ -24,7 +24,7 @@ class Page extends Component{
             //Destruimos sesión.
             session_destroy();              
             //Redirigimos pagina.
-            header("Location: tupagina");
+            header("Location: ../principal/index.php");
 
             exit();
         }
