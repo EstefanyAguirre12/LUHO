@@ -11,7 +11,7 @@ class Page extends Component{
  if(isset($_SESSION['tiempo']) ) {
 
     //Tiempo en segundos para dar vida a la sesión.
-    $inactivo = 1200;//20min en este caso.
+    $inactivo = 60;//1min en este caso.
 
     //Calculamos tiempo de vida inactivo.
     $vida_session = time() - $_SESSION['tiempo'];
