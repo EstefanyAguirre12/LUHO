@@ -14,7 +14,7 @@ try{
                                 if($_POST['clave1'] == $_POST['clave2']){
                                     if($usuario->setContrasena($_POST['clave1'])){
                                         if($usuario->createUsuario()){
-                                            Page::showMessage(1, "Usuario creado", "index.php");
+                                            Page::showMessage(1, "Usuario creado", "login.php");
                                         }else{
                                             throw new Exception(Database::getException());
                                         }

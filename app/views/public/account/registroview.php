@@ -11,11 +11,11 @@
                 <label for="apellido" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
-                <input type="text" name ="Usuario" class="form-control validate" id="usuario" placeholder="Usuario" value="<?php print($usuario->getUsuario()) ?>" required/>
+                <input type="text" name ="Usuario" class="form-control validate" id="usuario" placeholder="Usuario" autocomplete="off" value="<?php print($usuario->getUsuario()) ?>" required/>
                 <label for="usuario" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
-                <input type="email" name ="Correo" class="form-control validate" id="email" placeholder="Correo" value='<?php print($usuario->getCorreo()) ?>' required/>
+                <input type="email" name ="Correo" class="form-control validate" id="email" placeholder="Correo" autocomplete="off" value='<?php print($usuario->getCorreo()) ?>' required/>
                 <label for="email" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
@@ -27,7 +27,7 @@
                 <label for="contrasena2" class="col-lg-2 control-label"></label>
             </div>
             <div class="form-group col-md-6">
-                <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" value='<?php print($usuario->getDireccion()) ?>' required/>
+                <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" autocomplete="off" value='<?php print($usuario->getDireccion()) ?>' required/>
                 <label for="direccion" class="col-lg-2 control-label"></label>
             </div>
             <button type='submit' name='crear' class='btn waves-effect blue tooltipped'><i class='material-icons'>save</i></button>
