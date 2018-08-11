@@ -12,6 +12,7 @@ require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_regstat.php');
 
 //Conexion a la base de datos
 require_once('../../app/models/database.class.php');
+
 $idc = $_GET['id'];
 
 //Buscamos si encontramos un registro con los datos del usuario
