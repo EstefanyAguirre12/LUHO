@@ -3,6 +3,232 @@ require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
 require_once("../../app/helpers/component.class.php");
 class Page extends Component{
+    
+    public static function Administrador(){
+        print("
+        <header class='fixed-top'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark '>
+            <a class='navbar-brand' href='../inicio/index.php'>LUHO</a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarNav'>
+                <ul class='navbar-nav'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../categoria/index.php'>Categoria</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../marca/index.php'>Marca</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../material/index.php'>Material</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../ocasion/index.php'>Ocasion</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../oferta/index.php'>Ofertas</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../producto/index.php'>Producto</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../talla/index.php'>Talla</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../tipoenvio/index.php'>Tipo Envio</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../usuario/index.php'>Usuario</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../cliente/index.php'>Cliente</a>
+                    </li>
+                    <li class='nav-item'>
+                    <a class='nav-link' href='../comentarios/index.php'>Comentarios</a>
+                </li>
+                </ul>
+                <!-- Links Imagen -->
+                <ul class='navbar-nav nav-flex-icons ml-auto'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/contra.php'><i class='fas fa-key' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/cuenta.php'><i class='fas fa-user' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                    <a class='nav-link' href='../account/logout.php'><i class='fas fa-sign-in-alt' aria-hidden='true'></i></a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        ");
+    }
+    public static function AdministradorProductos(){
+        print("
+        <header class='fixed-top'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark '>
+            <a class='navbar-brand' href='../inicio/index.php'>LUHO</a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarNav'>
+                <ul class='navbar-nav'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../categoria/index.php'>Categoria</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../producto/index.php'>Producto</a>
+                    </li>
+                </ul>
+                <!-- Links Imagen -->
+                <ul class='navbar-nav nav-flex-icons ml-auto'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/contra.php'><i class='fas fa-key' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/cuenta.php'><i class='fas fa-user' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                    <a class='nav-link' href='../account/logout.php'><i class='fas fa-sign-in-alt' aria-hidden='true'></i></a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        ");
+    }
+    public static function AdministradorUsuarios(){
+        print("
+        <header class='fixed-top'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark '>
+            <a class='navbar-brand' href='../inicio/index.php'>LUHO</a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarNav'>
+                <ul class='navbar-nav'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../categoria/index.php'>Categoria</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../marca/index.php'>Marca</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../material/index.php'>Material</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../ocasion/index.php'>Ocasion</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../oferta/index.php'>Ofertas</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../producto/index.php'>Producto</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../talla/index.php'>Talla</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../tipoenvio/index.php'>Tipo Envio</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../usuario/index.php'>Usuario</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../cliente/index.php'>Cliente</a>
+                    </li>
+                    <li class='nav-item'>
+                    <a class='nav-link' href='../comentarios/index.php'>Comentarios</a>
+                </li>
+                </ul>
+                <!-- Links Imagen -->
+                <ul class='navbar-nav nav-flex-icons ml-auto'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/contra.php'><i class='fas fa-key' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/cuenta.php'><i class='fas fa-user' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                    <a class='nav-link' href='../account/logout.php'><i class='fas fa-sign-in-alt' aria-hidden='true'></i></a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        ");
+    }
+    public static function AdministradorCatalogos(){
+        print("
+        <header class='fixed-top'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-dark '>
+            <a class='navbar-brand' href='../inicio/index.php'>LUHO</a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarNav'>
+                <ul class='navbar-nav'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../marca/index.php'>Marca</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../material/index.php'>Material</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../ocasion/index.php'>Ocasion</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../talla/index.php'>Talla</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../tipoenvio/index.php'>Tipo Envio</a>
+                    </li>
+                </ul>
+                <!-- Links Imagen -->
+                <ul class='navbar-nav nav-flex-icons ml-auto'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/contra.php'><i class='fas fa-key' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='../account/cuenta.php'><i class='fas fa-user' aria-hidden='true'></i></a>
+                    </li>
+                    <li class='nav-item'>
+                    <a class='nav-link' href='../account/logout.php'><i class='fas fa-sign-in-alt' aria-hidden='true'></i></a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        ");
+    }
+    public static function ObtenerPermisos($valu){
+        switch ($valu) {
+            case 1:
+                Page::Administrador();
+                break;
+            case 2:
+                Page::AdministradorProductos();
+                break;
+            case 3:
+                Page::AdministradorUsuarios();
+                break;
+            case 4:
+                Page::AdministradorCatalogos();
+                break;
+            default:
+                echo "";
+        }	
+    }
     public static function templateHeader($title){
         session_start();
 		ini_set("date.timezone","America/El_Salvador");
@@ -27,13 +253,16 @@ class Page extends Component{
             </head>
             <body>
         ");
+
+
+
         if(isset($_SESSION['IdUsuario'])){
 
  //Comprobamos si esta definida la sesión 'tiempo'.
  if(isset($_SESSION['tiempo']) ) {
 
     //Tiempo en segundos para dar vida a la sesión.
-    $inactivo = 60;//5min en este caso.
+    $inactivo = 300;//5min en este caso.
 
     //Calculamos tiempo de vida inactivo.
     $vida_session = time() - $_SESSION['tiempo'];
@@ -52,74 +281,14 @@ class Page extends Component{
         }
 
 }
+
+
 $_SESSION['tiempo'] = time();
 
 
-            print("
-            <header class='fixed-top'>
-            <nav class='navbar navbar-expand-lg navbar-dark bg-dark '>
-                <a class='navbar-brand' href='../inicio/index.php'>LUHO</a>
-                <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
-                    <span class='navbar-toggler-icon'></span>
-                </button>
-                <div class='collapse navbar-collapse' id='navbarNav'>
-                    <ul class='navbar-nav'>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../categoria/index.php'>Categoria</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../marca/index.php'>Marca</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../material/index.php'>Material</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../ocasion/index.php'>Ocasion</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../oferta/index.php'>Ofertas</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../producto/index.php'>Producto</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../talla/index.php'>Talla</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../tipoenvio/index.php'>Tipo Envio</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../usuario/index.php'>Usuario</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../cliente/index.php'>Cliente</a>
-                        </li>
-                        <li class='nav-item'>
-                        <a class='nav-link' href='../comentarios/index.php'>Comentarios</a>
-                    </li>
-                    </ul>
-                    <!-- Links Imagen -->
-                    <ul class='navbar-nav nav-flex-icons ml-auto'>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../account/contra.php'><i class='fas fa-key' aria-hidden='true'></i></a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='../account/cuenta.php'><i class='fas fa-user' aria-hidden='true'></i></a>
-                        </li>
-                        <li class='nav-item'>
-                        <a class='nav-link' href='../account/logout.php'><i class='fas fa-sign-in-alt' aria-hidden='true'></i></a>
-                    </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-
-            ");
+          
             
-      
-
-
+            Page::ObtenerPermisos($_SESSION['cargo']);					
 		}else{
 			print("
             <nav class='navbar navbar-expand-lg navbar-dark bg-dark fixed-top'>
@@ -218,5 +387,6 @@ $_SESSION['tiempo'] = time();
 		");
 	}
 }
+
 
 ?>

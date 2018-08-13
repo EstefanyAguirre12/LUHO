@@ -8,6 +8,7 @@ class Usuario extends Validator{
     private $correo = null;
     private $contrasena = null;
     private $apellido = null;
+    private $id_Cargo = null;
 
 //Metodos para sobrecarga de propiedades
 public function setId($value){
@@ -23,7 +24,9 @@ public function getId(){
     return $this->id;
 
 }
-
+public function getCargo(){
+    return $this->id_Cargo;
+}
 public function setUsuario($value){
     if($this->validateAlphanumeric($value, 1, 60)){
         $this->usuario = $value;
@@ -49,6 +52,7 @@ public function setTipousuario($value){
 public function getTipousuario(){
     return $this->tipousuario;
 }
+
 
 public function setNombre($value){
     if($this->validateAlphabetic($value, 1, 50)){
@@ -127,10 +131,11 @@ public function getApellido(){
     }
 }
 public function checkContra(){
-    $sql = "SELECT Contrasena FROM usuario WHERE IdUsuario = ?";
+    $sql = "SELECT Contrasena, IdTipo FROM usuario Inner Join tipousuario on usuario.TipoUsuario=tipousuario.IdTipo WHERE IdUsuario = ?";
     $params = array($this->id);
     $data = Database::getRow($sql, $params);
     if(password_verify($this->contrasena, $data['Contrasena'])){
+        $this->id_Cargo = $data['IdTipo'];
         return true;
     }else{
         return false;
@@ -163,6 +168,11 @@ public function getClientes(){
 //obtener generos
 public function getGeneros(){
     $sql = "SELECT IdTipo, Tipo FROM tipousuario ORDER BY Tipo";
+    $params = array(null);
+    return Database::getRows($sql, $params);
+}
+public function getTipo(){
+    $sql = "SELECT * FROM tipousuario ORDER BY Tipo";
     $params = array(null);
     return Database::getRows($sql, $params);
 }
