@@ -13,7 +13,7 @@ try{
                                 if($_POST['clave1'] == $_POST['clave2']){
                                     if($usuario->setContrasena($_POST['clave1'])){
                                         if($usuario->createCliente()){
-                                            Page::showMessage(1, "¡Ya puedes iniciar sesion!", "index.php");
+                                            Page::showMessage(1, "¡Ya puedes iniciar sesion!", "login.php");
                                         }else{
                                             throw new Exception(Database::getException());
                                         }

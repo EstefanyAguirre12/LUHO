@@ -29,10 +29,12 @@
             <div class="form-group col-md-6">
                 <input type="text" name ="Direccion" class="form-control validate" autocomplete="off" id="direccion" placeholder="Direccón" value='<?php print($usuario->getDireccion()) ?>' required/>
                 <label for="direccion" class="col-lg-2 control-label"></label>
-            </div>
-        </div>  
+            </div> 
+
         <a href="index.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Cancelar</a>
         <button type="submit" name="crear" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a"><i class="material-icons">Agregar</i></button>
-            
+    </div>
+    <div class="g-recaptcha" data-sitekey="6LcRgWkUAAAAAM3rMy9U1UHlaWipOq1fOqtuoyzP"></div>
+
     </div>
 </form>

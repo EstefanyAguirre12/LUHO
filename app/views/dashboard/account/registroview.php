@@ -1,4 +1,5 @@
 <!-- Este es el formulario para tu cuenta -->
+
 <form method='post'>
     <div class="container registeer cuenta">   
         <h1 class="text-center" >Mi cuenta</h1>
@@ -38,6 +39,8 @@
             </div>
 
             <button type='submit' name='crear' class='btn waves-effect blue tooltipped'><i class='material-icons'>save</i></button>
+
+
         </div>              
     </div>
 </form>

@@ -22,6 +22,8 @@ class Page extends Component{
                 <link href='../../web/css/fontawesome-all.css' rel='stylesheet'>
                 <script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
 
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+
             </head>
             <body>
         ");
