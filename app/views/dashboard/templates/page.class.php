@@ -274,7 +274,7 @@ class Page extends Component{
             session_destroy();              
             //Redirigimos pagina.
             header("Location: ../inicio/index.php");
-
+            Page::showMessage(3, "Sesión inactiva, vuelva a iniciar sesión", '../account/login.php');
             exit();
         }
 

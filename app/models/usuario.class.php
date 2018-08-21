@@ -118,7 +118,7 @@ public function getApellido(){
     return $this->apellido;
 }
 
- //Metodo para manejar el CRUD
+ //Métodos para manejar la sesión del usuario
  public function checkUsuario(){
     $sql = "SELECT IdUsuario FROM usuario WHERE Usuario = ?";
     $params = array($this->usuario);
@@ -130,25 +130,24 @@ public function getApellido(){
         return false;
     }
 }
+
 public function checkContra(){
-    $sql = "SELECT Contrasena, IdTipo FROM usuario Inner Join tipousuario on usuario.TipoUsuario=tipousuario.IdTipo WHERE IdUsuario = ?";
+    $sql = "SELECT Contrasena,cargo.IdCargo FROM usuario, cargo WHERE usuario.TipoUsuario = cargo.IdCargo and IdUsuario = ?";
     $params = array($this->id);
     $data = Database::getRow($sql, $params);
     if(password_verify($this->contrasena, $data['Contrasena'])){
-        $this->id_Cargo = $data['IdTipo'];
+        $this->id_Cargo = $data['IdCargo'];
         return true;
     }else{
         return false;
     }
 }
-//cambiar contrasena
-	public function changePassword(){
-		$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-		$sql = "UPDATE usuario SET Contrasena = ? WHERE IdUsuario = ?";
-		$params = array($hash, $this->id);
-		return Database::executeRow($sql, $params);
-	}
-//cerrar sesion
+public function changePassword(){
+    $hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
+    $sql = "UPDATE usuario SET Contrasena = ? WHERE IdUsuario = ?";
+    $params = array($hash, $this->id);
+    return Database::executeRow($sql, $params);
+}
 public function logOut(){
     return session_destroy();
 }
