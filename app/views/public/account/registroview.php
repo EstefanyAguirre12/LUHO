@@ -30,7 +30,10 @@
                 <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" autocomplete="off" value='<?php print($usuario->getDireccion()) ?>' required/>
                 <label for="direccion" class="col-lg-2 control-label"></label>
             </div>
+			<div class="g-recaptcha" data-sitekey="6LcRgWkUAAAAAM3rMy9U1UHlaWipOq1fOqtuoyzP"></div>
             <button type='submit' name='crear' class='btn waves-effect blue tooltipped'><i class='material-icons'>save</i></button>
         </div>              
     </div>
 </form>
+
+

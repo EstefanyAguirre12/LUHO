@@ -13,7 +13,7 @@ try{
                             if($usuario->setUsuario($_POST['Usuario'])){
                                 if($usuario->setDireccion($_POST['Direccion'])){
                                     if($usuario->updateUsuario()){
-                                        Page::showMessage(1, "Usuario moficado", "../inicio/index.php");
+                                        Page::showMessage(1, "Usuario moficado", "login.php");
                                     }else{
                                         throw new Exception(Database::getException());
                                     }

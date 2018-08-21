@@ -49,6 +49,8 @@ $_SESSION['tiempo'] = time();
                 <!-- CSS -->
                 <link rel='stylesheet' href='../../web/css/style.css'> 
                 <script type='text/javascript' src='../../web/js/sweetalert.min.js'></script>
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+
             </head>
             <body class='z'>    
                 
