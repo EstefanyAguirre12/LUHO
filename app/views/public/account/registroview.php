@@ -1,92 +1,39 @@
+<form method='post'>
+    <div class="container registeer cuenta">   
+        <h1 class="text-center" >Mi cuenta</h1>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input type="text" name ="Nombre" class="form-control validate" id="nombre" placeholder="Nombre" value="<?php print($usuario->getNombre()) ?>" required/>
+                <label for="nombre" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name ="Apellido" class="form-control validate" id="apellido" placeholder="Apellido" value="<?php print($usuario->getApellido()) ?>" required/>
+                <label for="apellido" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name ="Usuario" class="form-control validate" id="usuario" placeholder="Usuario" autocomplete="off" value="<?php print($usuario->getUsuario()) ?>" required/>
+                <label for="usuario" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="email" name ="Correo" class="form-control validate" id="email" placeholder="Correo" autocomplete="off" value='<?php print($usuario->getCorreo()) ?>' required/>
+                <label for="email" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="password" name ="clave1" class="form-control validate" id="contrasena1" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
+                <label for="contrasena1" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="password" name ="clave2" class="form-control validate" id="contrasena2" placeholder="Contraseña" value="<?php print($usuario->getContrasena()) ?>" required/>
+                <label for="contrasena2" class="col-lg-2 control-label"></label>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name ="Direccion" class="form-control validate" id="direccion" placeholder="Direccón" autocomplete="off" value='<?php print($usuario->getDireccion()) ?>' required/>
+                <label for="direccion" class="col-lg-2 control-label"></label>
+            </div>
+			<div class="g-recaptcha" data-sitekey="6LcRgWkUAAAAAM3rMy9U1UHlaWipOq1fOqtuoyzP"></div>
+            <button type='submit' name='crear' class='btn waves-effect blue tooltipped'><i class='material-icons'>save</i></button>
+        </div>              
+    </div>
+</form>
 
-
-
-
-<style type="text/css">
-	
-.captcha{
-	border-radius: 5px;
-	font-size: 20px;
-	text-transform: uppercase;
-	height: 45px;
-	border-color: #000000;
-	text-align: center;
-
-}	
-
-.boton{
-	border-radius: 8px;
-	font-size: 15px;
-	text-transform: uppercase;
-	height: 45px;
-	color: #FFF;
-	background-color: #FF0040;	
-	text-align: center;
-	width: 150px;
-}
-
-</style>
-
-</head>
-<body background="fondo.jpg">
-
-<center>
-<span style="color:CC0000"><h1>SIMULADOR CODIGO CAPTCHA</h1></span>
-<br><br>
-	<table>
-	<tr>
-		<td>
-			<strong>Nombre</strong>
-		</td>
-		<td>
-			<input type="text" name="txtnom" id="txtnom">
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<strong>Apellido</strong>
-		</td>
-		<td>
-			<input type="text" name="txtape" id="txtape">
-		</td>
-	</tr>	
-
-<?php
-
-		function codigo_captcha(){
-
-				$k="";
-				$paramentros="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-				$maximo=strlen($paramentros)-1;
-
-				for($i=0; $i<5; $i++){
-
-					$k.=$paramentros{mt_rand(0,$maximo)};
-
-				}
-
-				return $k;
-
-		}
-
-?>
-
-	<tr>
-		<td>
-			<input type="text" name="txtcopia" id="txtcopia" size="10">
-		</td>
-		<td>
-			<input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha" size="4" readonly>
-		</td>
-	</tr>		
-	<tr>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan="2" align="center">
-			<input type="button" name="entrar" id="entrar" value="SIGUIENTE" class="boton" onclick="validar();">
-		</td>
-	</tr>
-	</table>
-</center>
 
