@@ -17,11 +17,11 @@ try{
 							$_SESSION['Contrasena'] = $object->getContrasena();
 							Page::showMessage(1, "Autenticación correcta", "../inicio/index.php");
 						}else{
-							$_SESSION['intentos'] += 1;
+							
 							throw new Exception("Clave inexistente");
 						}
 					}else{
-						$_SESSION['intentos'] += 1;  
+						 
 						throw new Exception("Clave menor a 6 caracteres");
 					}
 				}else{
@@ -34,11 +34,6 @@ try{
 	}else{
 		Page::showMessage(3, "No hay usuarios disponibles", "registro.php");
 	}
-	if($_SESSION['intentos'] >= 3) {
-		Page::showMessage(3, "No hay usuarios disponibles", "registro.php");
-	 }
-	 else {
-	 }  
 }catch(Exception $error){
 	Page::showMessage(2, $error->getMessage(), null);
 }
