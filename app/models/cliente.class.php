@@ -8,6 +8,7 @@ class Cliente extends Validator{
     private $correo = null;
     private $contrasena = null;
     private $apellido = null;
+    private $fecha = null;
 
 //Metodos para sobrecarga de propiedades
 public function setId($value){
@@ -114,6 +115,14 @@ public function getApellido(){
     return $this->apellido;
 }
 
+public function setFecha($value){
+    $this->fecha = $value;
+    return true;
+}
+public function getFecha(){
+    return $this->fecha;
+}
+
  //Metodo para manejar el CRUD
  public function checkCliente(){
     $sql = "SELECT IdCliente FROM cliente WHERE Usuario = ? and Estado=1";
@@ -161,9 +170,10 @@ public function searchCliente($value){
 }
 //Crear clientes
 public function createCliente(){
-	$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO cliente(IdCliente, Usuario, Nombre, Direccion, Correo, Apellido, Contrasena, Estado) VALUES( ?, ?, ?, ?, ?, ?, ?, 1)";
-    $params = array($this->id, $this->usuario, $this->nombre,  $this->direccion, $this->correo, $this->apellido, $hash);
+    $hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
+    $fecha = date('Y/m/d');
+    $sql = "INSERT INTO cliente(IdCliente, Usuario, Nombre, Direccion, Correo, FechaCliente, Apellido, Contrasena, Estado) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, 1)";
+    $params = array($this->id, $this->usuario, $this->nombre,  $this->direccion, $this->correo, $this->fecha, $this->apellido, $hash);
     return Database::executeRow($sql, $params);    
 }
 //Leer clientes

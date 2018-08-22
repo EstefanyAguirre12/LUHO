@@ -58,6 +58,19 @@ $_SESSION['tiempo'] = time();
 		require_once("../../app/views/public/sections/modals_view.php");
     }
 
+    public static function actualizacionN(){
+        $cliente = new Cliente;
+                $cliente->setId($_SESSION['IdCliente']);
+                if ($cliente->readCliente()) {
+                    $ingreso   = date_create($cliente->getFecha());
+                    $val       = date("Y-m-d");
+                    $valor     = date_create($val);
+                    $intervalo = date_diff($ingreso,$valor);
+                    if ($intervalo->format('%a') >= 2) {
+                        Page::showMessage(3, "Debe cambiar contraseña", "actualizarC.php");
+                    }
+                 }
+      }
 
 public static function templateFooter(){
     print("
