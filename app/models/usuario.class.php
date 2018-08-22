@@ -120,11 +120,12 @@ public function getApellido(){
 
  //Métodos para manejar la sesión del usuario
  public function checkUsuario(){
-    $sql = "SELECT IdUsuario FROM usuario WHERE Usuario = ?";
+    $sql = "SELECT IdUsuario, Correo FROM usuario WHERE Usuario = ?";
     $params = array($this->usuario);
     $data = Database::getRow($sql, $params);
     if($data){
         $this->id = $data['IdUsuario'];
+        $this->correo = $data['Correo'];
         return true;
     }else{
         return false;
@@ -153,14 +154,14 @@ public function logOut(){
 }
 //obtener usuarios
  public function getUsuarios(){
-    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario where TipoUsuario=2 ORDER BY Apellido";
+    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario ORDER BY Apellido";
     $params = array(null);
     return Database::getRows($sql, $params);
 }
 
 //obtener clientes
 public function getClientes(){
-    $sql = "SELECT IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario where TipoUsuario=1 ORDER BY Apellido";
+    $sql = "SELECT IdCliente, Usuario, TipoUsuario, Nombre, Direccion, Correo, Contrasena, Apellido FROM usuario where TipoUsuario=1 ORDER BY Apellido";
     $params = array(null);
     return Database::getRows($sql, $params);
 }
@@ -178,6 +179,11 @@ public function getTipo(){
 public function getNombreU(){
     $sql = "SELECT Usuario FROM usuario where IdUsuario=?";
     $params = array($this->id);
+    return Database::getRows($sql, $params);
+}
+public function getCorreoU(){
+    $sql = "SELECT Correo FROM usuario where Usuario=?";
+    $params = array($this->usuario);
     return Database::getRows($sql, $params);
 }
 //buscar usuarios
@@ -224,6 +230,13 @@ public function deleteUsuario(){
     $params = array($this->id);
     return Database::executeRow($sql, $params);
 }
+public function Recuperar($contrasena){
+    $hash = password_hash($contrasena, PASSWORD_DEFAULT);
+    $sql = "UPDATE usuario SET Contrasena = ? WHERE Usuario = ?";
+    $params = array($hash, $this->usuario);
+    return Database::executeRow($sql, $params);
+}
+
 }
 
 ?>

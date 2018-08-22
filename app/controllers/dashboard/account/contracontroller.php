@@ -14,7 +14,7 @@ try{
                                 if($_POST['clave1'] == $_POST['clave2']){
                                     if($usuario->setContrasena($_POST['clave1'])){
                                         if($usuario->changePassword()){
-                                            Page::showMessage(1, "Clave cambiada", "../principal/index.php");
+                                            Page::showMessage(1, "Clave cambiada", "../inicio/index.php");
                                         }else{
                                             throw new Exception(Database::getException());
                                         }
@@ -25,13 +25,13 @@ try{
                                     throw new Exception("Claves diferentes");
                                 }
                             }else{
-                                throw new Exception("La clave no puede ser igual a tu Usuario :)");
+                                throw new Exception("La clave no puede ser igual a tu Usuario");
                             }
                         }else{
                             throw new Exception("Claves nuevas diferentes");
                         }
                     }else{
-                        throw new Exception("Clave actuale iguale a la clave nueva");
+                        throw new Exception("Clave actual igual a la clave nueva");
                     }
                 }else{
                     throw new Exception("Clave menor a 6 caracteres");

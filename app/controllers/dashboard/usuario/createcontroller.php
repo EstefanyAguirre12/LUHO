@@ -1,7 +1,7 @@
 <?php
 require_once("../../app/models/usuario.class.php");
 try{
-    //Este es el codigo para crear un nuevo usuario
+    //Aqui va todo el codigo para poder crear un nuevo usuario
     $usuario = new Usuario;
     if(isset($_POST['crear'])){
         $_POST = $usuario->validateForm($_POST);
@@ -10,19 +10,26 @@ try{
                 if($usuario->setCorreo($_POST['Correo'])){
                     if($usuario->setUsuario($_POST['Usuario'])){
                         if($usuario->setDireccion($_POST['Direccion'])){
-                            $usuario->setTipousuario(2);
-                            if($_POST['clave1'] == $_POST['clave2']){
-                                if($usuario->setContrasena($_POST['clave1'])){
-                                    if($usuario->createUsuario()){
-                                        Page::showMessage(1, "Usuario creado", "index.php");
+                            if($usuario->setTipousuario($_POST['TUsuario'])){
+                                if($_POST['clave1'] == $_POST['clave2']){
+                                    if($_POST['clave1'] != $_POST['Usuario']){
+                                        if($usuario->setContrasena($_POST['clave1'])){
+                                            if($usuario->createUsuario()){
+                                                Page::showMessage(1, "Usuario creado", "index.php");
+                                            }else{
+                                                throw new Exception(Database::getException());
+                                            }
+                                        }else{
+                                            throw new Exception("Clave menor a 6 caracteres");
+                                        }
                                     }else{
-                                        throw new Exception(Database::getException());
+                                        throw new Exception("La clave no puede ser igual a tu Usuario");
                                     }
                                 }else{
-                                    throw new Exception("Clave menor a 8 caracteres, recuerde usar mayusculas, minusculas y numeros.");
-                                }
-                            }else{
                                 throw new Exception("Claves diferentes");
+                            }
+                            }else{
+                                throw new Exception("Tipo usuario incorrecto");
                             }
                         }else{
                             throw new Exception("Direccion incorrecta");
@@ -43,5 +50,5 @@ try{
 }catch(Exception $error){
     Page::showMessage(2, $error->getMessage(), null);
 }
-require_once("../../app/views/dashboard/usuario/createview.php");
+require_once("../../app/views/dashboard/account/registroview.php");
 ?>

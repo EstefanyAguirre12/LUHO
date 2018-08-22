@@ -12,14 +12,18 @@ try{
                         if($usuario->setDireccion($_POST['Direccion'])){
                             if($usuario->setTipousuario($_POST['TUsuario'])){
                                 if($_POST['clave1'] == $_POST['clave2']){
-                                    if($usuario->setContrasena($_POST['clave1'])){
-                                        if($usuario->createUsuario()){
-                                            Page::showMessage(1, "Usuario creado", "login.php");
+                                    if($_POST['clave1'] != $_POST['Usuario']){
+                                        if($usuario->setContrasena($_POST['clave1'])){
+                                            if($usuario->createUsuario()){
+                                                Page::showMessage(1, "Usuario creado", "login.php");
+                                            }else{
+                                                throw new Exception(Database::getException());
+                                            }
                                         }else{
-                                            throw new Exception(Database::getException());
+                                            throw new Exception("Clave menor a 6 caracteres");
                                         }
                                     }else{
-                                        throw new Exception("Clave menor a 6 caracteres");
+                                        throw new Exception("La clave no puede ser igual a tu Usuario");
                                     }
                                 }else{
                                 throw new Exception("Claves diferentes");

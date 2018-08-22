@@ -11,29 +11,33 @@ try{
                     if($usuario->setUsuario($_POST['Usuario'])){
                         if($usuario->setDireccion($_POST['Direccion'])){
                                 if($_POST['clave1'] == $_POST['clave2']){
-                                    if($usuario->setContrasena($_POST['clave1'])){
-                                        $response_recaptcha = $_POST['g-recaptcha-response'];
-                                        if(isset($response_recaptcha)&& $response_recaptcha){
-                                        $secret= "6LcRgWkUAAAAAD_ax5eJNQtdx-J3vBC91mnCld4I";
-                                        $ip = $_SERVER['REMOTE_ADDR'];
-                                        $validation_server = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response_recaptcha&remoteip=$ip");
-                                        if ($validation_server!= null) {
-                                        if($usuario->createCliente()){
-                                            Page::showMessage(1, "¡Ya puedes iniciar sesion!", "login.php");
+                                    if($_POST['clave1'] != $_POST['Usuario']){
+                                        if($usuario->setContrasena($_POST['clave1'])){
+                                            $response_recaptcha = $_POST['g-recaptcha-response'];
+                                            if(isset($response_recaptcha)&& $response_recaptcha){
+                                                $secret= "6LcRgWkUAAAAAD_ax5eJNQtdx-J3vBC91mnCld4I";
+                                                $ip = $_SERVER['REMOTE_ADDR'];
+                                                $validation_server = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response_recaptcha&remoteip=$ip");
+                                                if ($validation_server!= null) {
+                                                    if($usuario->createCliente()){
+                                                        Page::showMessage(1, "¡Ya puedes iniciar sesion!", "login.php");
+                                                    }else{
+                                                        throw new Exception(Database::getException());
+                                                    }
+                                                }else{
+                                                    throw new Exception("Error al confirmar el REcaptcha");
+                                                }
+                                            }else{
+                                                throw new Exception("Captcha erroneo!");
+                                            }
                                         }else{
-                                            throw new Exception(Database::getException());
+                                            throw new Exception("Clave menor a 6 caracteres");
                                         }
                                     }else{
-                                        throw new Exception("Error al confirmar el REcaptcha");
+                                        throw new Exception("La clave no puede ser igual a tu Usuario");
                                     }
                                 }else{
-                                    throw new Exception("Captcha erroneo!");
-                                }
-                                    }else{
-                                        throw new Exception("Clave menor a 6 caracteres");
-                                    }
-                                }else{
-                                throw new Exception("Claves diferentes");
+                                    throw new Exception("Claves diferentes");
                             }
                         }else{
                             throw new Exception("Direccion incorrecta");
