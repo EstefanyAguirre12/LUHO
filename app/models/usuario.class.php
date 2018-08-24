@@ -9,6 +9,7 @@ class Usuario extends Validator{
     private $contrasena = null;
     private $apellido = null;
     private $id_Cargo = null;
+	private $fecha = null;
 
 //Metodos para sobrecarga de propiedades
 public function setId($value){
@@ -117,7 +118,14 @@ public function setApellido($value){
 public function getApellido(){
     return $this->apellido;
 }
-
+//Este es el Fecha-------------------------------------------------------------------
+public function setFecha($value){
+    $this->fecha = $value;
+    return true;
+}
+public function getFecha(){
+return $this->fecha;
+}
  //Métodos para manejar la sesión del usuario
  public function checkUsuario(){
     $sql = "SELECT IdUsuario, Correo FROM usuario WHERE Usuario = ?";
@@ -194,14 +202,15 @@ public function searchUsuario($value){
 }
 //crear usuario
 public function createUsuario(){
-	$hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO usuario(IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Apellido, Contrasena) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-    $params = array($this->id, $this->usuario, $this->tipousuario, $this->nombre,  $this->direccion, $this->correo, $this->apellido, $hash);
+    $hash = password_hash($this->contrasena, PASSWORD_DEFAULT);
+    $fechacsa = date("Y/m/d");
+    $sql = "INSERT INTO usuario(IdUsuario, Usuario, TipoUsuario, Nombre, Direccion, Correo, Apellido, Contrasena, Fecha) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $params = array($this->id, $this->usuario, $this->tipousuario, $this->nombre,  $this->direccion, $this->correo, $this->apellido, $hash, $fechacsa);
     return Database::executeRow($sql, $params);    
 }
 //leer usuario
 public function readUsuario(){
-    $sql = "SELECT Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido FROM usuario WHERE IdUsuario = ?";
+    $sql = "SELECT Usuario, TipoUsuario, Nombre, IdUsuario, Direccion, Correo, Contrasena, Apellido, Fecha FROM usuario WHERE IdUsuario = ?";
     $params = array($this->id);
     $user = Database::getRow($sql, $params);
     if($user){
@@ -213,6 +222,7 @@ public function readUsuario(){
         $this->correo = $user['Correo'];
         $this->contrasena = $user['Contrasena'];
         $this->apellido = $user['Apellido'];
+        $this->fecha = $user['Fecha'];
         return true;
     }else{
         return null;
@@ -236,7 +246,12 @@ public function Recuperar($contrasena){
     $params = array($hash, $this->usuario);
     return Database::executeRow($sql, $params);
 }
-
+public function Cactualizado(){
+    $sql = "UPDATE usuario SET Fecha = ? WHERE IdUsuario = ?";
+    $fecha = date('Y/m/d');
+    $params = array($fecha,$this->id);
+    return Database::executeRow($sql, $params);
+}
 }
 
 ?>

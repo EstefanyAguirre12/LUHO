@@ -2,6 +2,7 @@
 require_once("../../app/models/database.class.php");
 require_once("../../app/helpers/validator.class.php");
 require_once("../../app/helpers/component.class.php");
+require_once("../../app/models/usuario.class.php");
 class Page extends Component{
     
     public static function Administrador(){
@@ -311,6 +312,20 @@ $_SESSION['tiempo'] = time();
 			");
 			
 		}
+    }
+
+    public static function actualizacionNecesaria(){
+        $usuario = new Usuario;
+        $usuario->setId($_SESSION['IdUsuario']);
+        if ($usuario->readUsuario()) {
+            $ingreso   = date_create($usuario->getFecha());
+            $val       = date("Y-m-d");
+            $valor     = date_create($val);
+            $intervalo = date_diff($ingreso,$valor);
+            if ($intervalo->format('%a') >= 2) {
+                Page::showMessage(3, "Debe cambiar contraseña", "../account/cambiarcontra.php");
+            }
+        }
     }
     public static function templateFooter(){
         print("
