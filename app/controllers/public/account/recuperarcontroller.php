@@ -38,25 +38,25 @@ try{
                     <meta charset="utf-8">
                     <style type ="txt/css">
                     h1{
-                        color: #607d8b;
+                        color: #333131;
                     }
                     .l{
                         font-size: 13px;
-                        color: #607d8b;
+                        color: #ada9a9;
                     }        
                     </style>
                     </head>
                     <body>
-                    <h1> Recuperación de contraseña </h1> <p>Hola Estimado Usuario nos has solicitado restablecer tu clave. 
-                    </p> <p> Para ingresar utiliza la nueva clave: <strong>'.$nueva.'</strong> <p>Recuerda cambiar de contraseña al acceder a tu cuenta.</p>  <br> <p> <strong> Gracias por confiar en nosotros, </strong> </p> <p> Anike SV. </p>
+                    <h1> Recuperación de contraseña </h1> <p>LUHO le saluda, por medio de su usuario nos ha solicitado restablecer su contrasena. 
+                    </p> <p> Para ingresar utiliza la nueva clave: <strong>'.$nueva.'</strong> <p>Recuerda cambiar de contraseña al acceder a tu cuenta.</p>  <br> <p> <strong> Le agradecemos su proferencia, </strong> </p> <p> L U H O ®. </p>
                     <p> ------------------- </p>
-                    <p class="l" ><strong> A N I K E </strong></p>
-                    <p class="l"> <strong> "Just Do It" </strong></p>
+                    <p class="l" ><strong> L U H O ® </strong></p>
+                    <p class="l"> <strong> "La elegancia y clase significa algo para ti? si es asi llamanos." </strong></p>
                     ';
                      
 
                     if(!$mail->send()){
-                        throw new Exception("No se pudo". $mail->ErrorInfo);
+                        throw new Exception("No se pudo enviar tu correo.". $mail->ErrorInfo);
                     }
                     else{
                         Page::showMessage(1, "Correo enviado", "../account/login.php");
