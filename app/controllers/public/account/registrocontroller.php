@@ -31,7 +31,7 @@ try{
                                                 throw new Exception("Captcha erroneo!");
                                             }
                                         }else{
-                                            throw new Exception("Clave menor a 6 caracteres");
+                                            throw new Exception("Clave menor a 8 caracteres");
                                         }
                                     }else{
                                         throw new Exception("La clave no puede ser igual a tu Usuario");

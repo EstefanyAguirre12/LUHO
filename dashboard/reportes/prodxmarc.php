@@ -60,6 +60,7 @@ function Header()
       //agregamos los datos al array
       $Titulo = $row['marca'];
   }
+  if($res != null){
 
   $textColour = array( 0, 0, 0 );
   $headerColour = array( 100, 100, 100 );
@@ -72,7 +73,19 @@ function Header()
   $this->SetFont( 'Arial', '', 20 );
   // Salto de línea
   $this->Ln(20);
-    
+}else{
+  $textColour = array( 0, 0, 0 );
+  $headerColour = array( 100, 100, 100 );
+  $reportName = "Informacion inxistente";
+  $reportNameYPos = 160;
+  $this->SetTextColor( $headerColour[0], $headerColour[1], $headerColour[2] );
+  $this->SetFont( 'Arial', '', 17 );
+  $this->Cell( 0, 15, $reportName, 0, 0, 'C' );
+  $this->SetTextColor( $textColour[0], $textColour[1], $textColour[2] );
+  $this->SetFont( 'Arial', '', 20 );
+  // Salto de línea
+  $this->Ln(20);
+}
 }
 
 // Pie de página
@@ -112,7 +125,6 @@ $pdf->Write( 6, "Fecha y Hora: ");
 $pdf->SetFont( 'Arial', '', 12 );
 $pdf->Write( 6, $time);
 $pdf->Ln( 12 );
-$pdf->Write( 6, "En el siguiente reporte se muestran a continuacion los datos de los productos existentes en la marca de: $Titulo.." );
 
 
 /**

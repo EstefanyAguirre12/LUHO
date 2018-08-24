@@ -270,13 +270,13 @@ class Page extends Component{
         //Compraración para redirigir página, si la vida de sesión sea mayor a el tiempo insertado en inactivo.
         if($vida_session > $inactivo)
         {
+            
             //Removemos sesión.
             session_unset();
             //Destruimos sesión.
             session_destroy();              
             //Redirigimos pagina.
-            header("Location: ../inicio/index.php");
-            Page::showMessage(3, "Sesión inactiva, vuelva a iniciar sesión", '../account/login.php');
+            header("Location: ../account/login.php");
             exit();
         }
 
@@ -290,6 +290,14 @@ $_SESSION['tiempo'] = time();
             
             Page::ObtenerPermisos($_SESSION['cargo']);					
 		}else{
+            $filename = basename($_SERVER['PHP_SELF']);
+			if($filename != "login.php" && $filename != "registro.php"  && $filename != "recuperar.php"){
+				self::showMessage(3, "¡Debe iniciar sesión!", "../account/login.php");
+				self::templateFooter();
+				exit;
+			}else{
+			}
+          
 			print("
             <nav class='navbar navbar-expand-lg navbar-dark bg-dark fixed-top'>
                 <a class='navbar-brand' href=''>LUHO</a>

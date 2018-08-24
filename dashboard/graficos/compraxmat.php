@@ -4,7 +4,8 @@
 
 //Requiere la libreria generica
 require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph.php');
-
+require_once("../../app/views/dashboard/templates/page.class.php");
+Page::templateHeader("Inicio");
 //Requerimos el tipo de grafico que vamos a utilizar
 require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_line.php');
 require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_scatter.php');
@@ -27,7 +28,8 @@ foreach($res as $row)
 }
 // Some (random) data
  
- 
+if($res!=null){
+
 // Create the graph and set a scale.
 // These two calls are always required
 $graph = new Graph(900,600);
@@ -46,4 +48,11 @@ $graph->Add($lineplot);
  
 // Display the graph
 $graph->Stroke();
+}else{
+    Page::showMessage(2, "Datos inexistente", "../cliente/index.php");
+    Page::templateFooter();
+
+}
+//Salida archivo formato PNG
+//$grafico->Stroke("IMG.PNG");
 ?>

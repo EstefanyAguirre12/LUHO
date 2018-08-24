@@ -12,6 +12,8 @@
 
 			<a href="registro.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Registrarse</a>
 			<button type='submit' name='iniciar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='material-icons'>Iniciar Sesion</i></button>
+			<a href="recuperar.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Recuperar contraseña</a>
+
 		</div>
 		</form>
 		</div>	

@@ -9,7 +9,9 @@
 			<input type="password" name ="Clave" class="form-control validate" id="contra" placeholder="Contraseña" value="<?php print($object->getContrasena()) ?>" required/>
 			<label for="contra" class="col-lg-2 control-label"></label>
 			<button type='submit' name='iniciar' class='btn btn-grey btn-rounded mr-md-3 z-depth-1a'><i class='material-icons'>Iniciar Sesion</i></button>
-			</form>
+			<a href="recuperar.php" class="btn btn-grey btn-rounded mr-md-3 z-depth-1a" >Recuperar contraseña</a>
+
+</form>
 		</div>	
 	</div>
 </div>

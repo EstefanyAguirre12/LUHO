@@ -4,7 +4,8 @@
 
 //Requiere la libreria generica
 require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph.php');
-
+require_once("../../app/views/dashboard/templates/page.class.php");
+Page::templateHeader("Inicio");
 //Requerimos el tipo de grafico que vamos a utilizar
 require_once('../../app/librerias/jpgraph-4.2.1/src/jpgraph_bar.php');
 
@@ -22,6 +23,7 @@ foreach($res as $row)
     $datos[] = $row['Cantidad'];
     $labels[] = $row['Categoria'];
 }
+if($res!=null){
 
 //definimos los formatos generales
 $grafico = new Graph(900, 600);
@@ -47,7 +49,11 @@ $grafico->Add($barplot1);
 
 //Salida por pantalla
 $grafico->Stroke();
+}else{
+    Page::showMessage(2, "Datos inexistente", "../cliente/index.php");
+    Page::templateFooter();
 
+}
 //Salida archivo formato PNG
 //$grafico->Stroke("IMG.PNG");
 ?>
